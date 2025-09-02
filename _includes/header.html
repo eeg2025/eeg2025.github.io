@@ -59,7 +59,6 @@
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
         <div class="container">
-          {% if page.permalink != '/' -%}
           <a class="navbar-brand title font-weight-lighter" href="https://eeg2025.github.io">
             <img src="https://eeg2025.github.io/assets/img/logo.png" alt="logo" style="height: 60px;">
             &nbsp;
@@ -77,12 +76,6 @@
               {{- site.title -}}
             {%- endif -%}
           </a>
-          {%- elsif site.enable_navbar_social -%}
-          <!-- Social Icons -->
-          <div class="navbar-brand social">
-            {% include social.html %}
-          </div>
-          {% endif %}
           <!-- Navbar Toggle -->
           <button class="navbar-toggler collapsed ml-auto position-relative" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="notification" id="notif-navbar-toggler"></span>
