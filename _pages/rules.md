@@ -35,7 +35,7 @@ score = rmse(y_trues, y_preds) / std(y_trues)
 ### Challenge 2: Psychopathology Factor Prediction
 - Similarly, challenge 2 also uses the **normalized root mean square error**.
 - We encourage participants to use all tasks to make the inference.
-- At the inference stage, we will only use the XXX task to predict the metrics. This is to ensure a timely evaluation due to the competition scale.
+- At the inference stage, we will only use the XXX (will be decided soon after more testing) task to predict the metrics. This is to ensure a timely evaluation due to the competition scale.
 
 ### Overall Ranking
 - Challenge 1 contributes 30% to final score
