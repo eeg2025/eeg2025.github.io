@@ -21,7 +21,9 @@ The rules provided to contestants are as follows:
 ## Evaluation Criteria
 
 ### Challenge 1: Cross-Task Transfer Learning
-The metric used for challenge 1 is the **normalized root mean square error**.
+- The metric used for challenge 1 is the **normalized root mean square error** for the response time prediction.
+- The response time should be quantified for each trial.
+- We decided **not to use correct/incorrect classifications** for this challenge.
 
 Formally, the score will be computed as follows:
 ```python 
@@ -31,7 +33,9 @@ score = rmse(y_trues, y_preds) / std(y_trues)
 ```
 
 ### Challenge 2: Psychopathology Factor Prediction
-Similarly, challenge 2 also uses the **normalized root mean square error**.
+- Similarly, challenge 2 also uses the **normalized root mean square error**.
+- We encourage participants to use all tasks to make the inference.
+- At the inference stage, we will only use the XXX task to predict the metrics. This is to ensure a timely evaluation due to the competition scale.
 
 ### Overall Ranking
 - Challenge 1 contributes 30% to final score
