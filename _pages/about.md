@@ -17,7 +17,7 @@ social: false # includes social icons at the bottom of the page
 bibliography: about.bib
 ---
 <iframe width="560" height="315" 
-        src="https://www.youtube.com/watch?v=2LHeYjAkF-Y" 
+        src="https://www.youtube.com/embed/v=2LHeYjAkF-Y"
         title="How to get started with the EEG 2025 Foundation challenge" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
