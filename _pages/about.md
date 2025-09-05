@@ -26,7 +26,7 @@ bibliography: about.bib
   <iframe
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/U6c5A24FFQ0"
+    src="https://www.youtube.com/embed/kSpnB_Rdo5c"
     title="Welcome Video for the EEG Foundation Challenge: From Cross-Task to Cross-Subject EEG Decoding."
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
