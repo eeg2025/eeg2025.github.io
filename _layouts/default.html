@@ -65,17 +65,16 @@
   </head>
 
   <!-- Body -->
-  <!-- <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} banner-visible">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if site.banner_enabled %} banner-visible{% endif %}">
+    {% if site.banner_enabled %}
     <div class="banner">
       <div class="banner__content">
         <div class="banner__text">
-        
-        <div style="text-align: center; width: 100%;" >
-          <strong>Update:</strong>  The number of registrants on the platform far exceeded our expectations!
-            Given the code-submission nature of this competition, we are working to increase the number of clusters. 
+          <div style="text-align: center; width: 100%;">
+            <strong>Update:</strong>  The number of registrants on the platform far exceeded our expectations!
+            Given the code-submission nature of this competition, we are working to increase the number of clusters.
             The entire timeline has been adjusted. Please check <a href="https://www.codabench.org/competitions/9975/" style="text-decoration: underline;">the Codabench page</a> for updates.
-          </p>
-        </div>
+          </div>
         </div>
         <button class="banner__close" type="button" data-dismiss="banner" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -83,11 +82,18 @@
       </div>
     </div>
     <script>
-    document.querySelector('.banner__close').addEventListener('click', function() {
-      document.querySelector('.banner').style.display = 'none';
-      document.body.classList.remove('banner-visible');
-    });
-    </script> -->
+      (function() {
+        var closeBtn = document.querySelector('.banner__close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            var banner = document.querySelector('.banner');
+            if (banner) banner.style.display = 'none';
+            document.body.classList.remove('banner-visible');
+          });
+        }
+      })();
+    </script>
+    {% endif %}
 
     <!-- Header -->
     {% include scripts/jquery.html %}
