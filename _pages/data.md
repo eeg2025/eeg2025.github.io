@@ -20,7 +20,7 @@ bibliography: data.bib
 - [Downloading the Data](#downloading-the-data)
   - [Release Names](#release-names)
   - [AWS S3](#aws-s3)
-  - [Google Drive](#google-drive)
+  - [Google Drive/ZIP](#google-drive)
   - [Original Data](#original-data)
 - [Reference](#reference)
 
@@ -106,10 +106,10 @@ aws s3 cp --recursive s3://nmdatasets/NeurIPS25/R1_mini_L100_bdf ./local_directo
 This command will download the specified mini release R1 with the BDF format from the AWS S3 bucket to your local directory without requiring AWS credentials.
 
 ### Google Drive
-The mini releases, both BDF and SET formats, are also available on Google Drive. You can download them directly from the [HBN Data Page](https://neuromechanist.github.io/data/hbn/).
+The mini releases, both BDF and SET formats, are also available on Google Drive as ZIP files. You can download them directly from the [HBN Data Page](https://neuromechanist.github.io/data/hbn/).
 
 ### Original Data
-If you need access to the original data, please visit the [HBN Data Page](https://neuromechanist.github.io/data/hbn/) or search for `HBN-EEG` on [Nemar](https://nemar.org).
+If you need access to the original data, please visit the [HBN Data Page](https://neuromechanist.github.io/data/hbn/) or search for `HBN-EEG` on [Nemar](https://nemar.org). The data for the competition was derived from this original data by resampling it at 100 Hz, so it is not as large. We recommend that you do NOT use the original data, as models trained with it might not work on the competition data because of the sampling rate discrepancy.
 
 ## Reference
 
