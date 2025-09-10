@@ -97,7 +97,7 @@ We are using only the downsampled versions of the dataset for the competition. D
 We used a consistent naming convention for the dataset releases as `R{release_number}_L100_(mini)_(bdf)`, where `release_number` is the release number (1,.., 11), `mini` (if present) indicates whether it is a mini release, and `bdf` (if present) indicates the `bdf` file format.
 
 ### Task Names
-These are the names used for the different tasks when querying the EEGDash database: 'RestingState', 'DespicableMe', 'DiaryOfAWimpyKid', 'FunwithFractals', 'ThePresent', 'contrastChangeDetection', 'seqLearning6target', 'seqLearning8target', 'surroundSupp', 'symbolSearch'.
+These are the names used for the different tasks when querying the EEGDash database: `RestingState`, `DespicableMe`, `DiaryOfAWimpyKid`, `FunwithFractals`, `ThePresent`, `contrastChangeDetection`, `seqLearning6target`, `seqLearning8target`, `surroundSupp`, `symbolSearch`.
 
 ### AWS S3
 All four types of dataset releases are also available on AWS S3 under `s3://nmdatasets/NeurIPS2025/`. You can use the AWS CLI or rsync to download the data.
