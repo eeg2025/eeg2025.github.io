@@ -22,6 +22,9 @@ ACCENT = os.environ.get("LB_ACCENT", "#F2994A")
 ACCENT_DARK = os.environ.get("LB_ACCENT_DARK", "#D97E2E")
 TITLE_PREFIX = os.environ.get("LB_TITLE_PREFIX", "Leaderboard")
 
+# Track phase names seen so we can render a figure even if a phase has no data
+PHASE_NAMES_SEEN: set[str] = set()
+
 
 def parse_time(s: str | None, fallback: float) -> datetime:
     if s:
@@ -51,35 +54,61 @@ def discover_summaries(base: Path) -> list[Path]:
     return uniq
 
 
-def find_phase_csv(summary: dict) -> tuple[Path | None, str | None]:
-    phases = summary.get("phases") or []
-    chosen = None
-    # Prefer regex match if provided
-    rx = None
-    if PHASE_REGEX:
+def list_phase_entries(summary: dict) -> list[dict]:
+    """Return a list of dicts with keys: name, csv, json for each phase.
+    Paths are absolute where possible; missing or tiny CSVs are kept as None.
+    """
+    out: list[dict] = []
+    for p in summary.get("phases") or []:
+        name = p.get("name") or ""
         try:
-            rx = re.compile(PHASE_REGEX)
-        except re.error:
-            rx = None
-    if rx:
-        for p in phases:
-            if rx.search(str(p.get("name", ""))) and p.get("csv"):
-                chosen = p
-                break
-    # Fallback to first with CSV
-    if not chosen:
-        for p in phases:
-            if p.get("csv"):
-                chosen = p
-                break
-    if not chosen:
-        return None, None
-    csv_path = Path(chosen.get("csv"))
-    if not csv_path.is_absolute():
-        csv_path = (ROOT / csv_path).resolve()
-    if not csv_path.exists() or csv_path.stat().st_size < 10:
-        return None, chosen.get("name")
-    return csv_path, chosen.get("name")
+            if name:
+                PHASE_NAMES_SEEN.add(str(name))
+        except Exception:
+            pass
+        csv = p.get("csv")
+        j = p.get("json")
+        csv_path = None
+        if csv:
+            cp = Path(csv)
+            if not cp.is_absolute():
+                cp = (ROOT / cp).resolve()
+            if cp.exists() and cp.stat().st_size >= 10:
+                csv_path = cp
+        json_path = None
+        if j:
+            jp = Path(j)
+            if not jp.is_absolute():
+                jp = (ROOT / jp).resolve()
+            if jp.exists() and jp.stat().st_size >= 10:
+                json_path = jp
+        out.append({"name": name, "csv": csv_path, "json": json_path})
+    # If none, try merged file fallback (rare)
+    if not out:
+        merged = summary.get("merged_results_json")
+        if merged:
+            mp = Path(merged)
+            if not mp.is_absolute():
+                mp = (ROOT / mp).resolve()
+            if mp.exists():
+                out.append({"name": "", "csv": None, "json": mp})
+    return out
+
+
+def phase_xrange(phase_name: str | None) -> tuple[str, str] | None:
+    """Return a hard-coded x-axis date range based on phase name.
+    Warmup: 2025-09-01 → 2025-10-03
+    Final:  2025-10-04 → 2025-11-03
+    Else:   LB_X_START/LB_X_END if provided; otherwise None.
+    """
+    nm = (phase_name or "").lower()
+    if "warm" in nm or "phase 1" in nm or "development" in nm or "dev" in nm:
+        return ("2025-09-01", "2025-10-03")
+    if "final" in nm:
+        return ("2025-10-04", "2025-11-03")
+    if X_START and X_END:
+        return (X_START, X_END)
+    return None
 
 
 def select_metric_column(df: pd.DataFrame) -> tuple[str | None, str, str]:
@@ -187,82 +216,95 @@ def load_dataframe() -> pd.DataFrame:
         except Exception:
             continue
         when = parse_time(summary.get("generated_at_utc") or summary.get("generated_at"), sp.stat().st_mtime)
-        # Primary: CSV
-        csv_info = find_phase_csv(summary)
-        used_any = False
-        if csv_info:
-            csv_path, phase_name = csv_info
-        else:
-            csv_path, phase_name = None, None
-        if csv_path:
+        # Iterate all phases present in this snapshot
+        for ph in list_phase_entries(summary):
+            phase_name = ph.get("name") or ""
+            used_any = False
+            # CSV first
+            csv_path = ph.get("csv")
+            if csv_path:
+                try:
+                    df = pd.read_csv(csv_path)
+                    # Username column
+                    user_col = None
+                    for cand in ["Username", "user", "User", "team", "Team", "participant", "Participant"]:
+                        if cand in df.columns:
+                            user_col = cand
+                            break
+                    if user_col is None:
+                        user_col = df.columns[0]
+                    mcol, direction, label = select_metric_column(df)
+                    if mcol:
+                        tmp = df[[user_col, mcol]].copy()
+                        tmp.columns = ["user", "score"]
+                        tmp["user"] = tmp["user"].astype(str).str.replace(r"-\d+$", "", regex=True)
+                        tmp["score"] = pd.to_numeric(tmp["score"], errors="coerce")
+                        tmp = tmp.dropna(subset=["score"]).reset_index(drop=True)
+                        if not tmp.empty:
+                            tmp["when"] = when
+                            tmp["label"] = label
+                            tmp["direction"] = direction
+                            tmp["phase"] = phase_name
+                            # best per snapshot within this phase
+                            idx = tmp["score"].idxmax() if direction == "higher" else tmp["score"].idxmin()
+                            tmp["is_best"] = False
+                            tmp.loc[idx, "is_best"] = True
+                            rows.append(tmp)
+                            used_any = True
+                except Exception:
+                    pass
+            if used_any:
+                continue
+            # JSON fallback for this phase
+            jpath = ph.get("json")
+            if not jpath:
+                continue
             try:
-                df = pd.read_csv(csv_path)
-                user_col = None
-                for cand in ["Username", "user", "User", "team", "Team", "participant", "Participant"]:
-                    if cand in df.columns:
-                        user_col = cand
-                        break
-                if user_col is None:
-                    user_col = df.columns[0]
-                mcol, direction, label = select_metric_column(df)
-                if mcol:
-                    tmp = df[[user_col, mcol]].copy()
-                    tmp.columns = ["user", "score"]
-                    tmp["user"] = tmp["user"].astype(str).str.replace(r"-\d+$", "", regex=True)
-                    tmp["score"] = pd.to_numeric(tmp["score"], errors="coerce")
-                    tmp = tmp.dropna(subset=["score"]).reset_index(drop=True)
-                    if not tmp.empty:
-                        tmp["when"] = when
-                        tmp["label"] = label
-                        tmp["direction"] = direction
-                        tmp["phase"] = phase_name or ""
-                        idx = tmp["score"].idxmax() if direction == "higher" else tmp["score"].idxmin()
-                        tmp["is_best"] = False
-                        tmp.loc[idx, "is_best"] = True
-                        rows.append(tmp)
-                        used_any = True
-            except Exception:
-                pass
-        if used_any:
-            continue
-        # Fallback: JSON structure
-        rjson = find_result_json(summary, sp)
-        if not rjson:
-            continue
-        try:
-            results = json.loads(rjson.read_text())
-        except Exception:
-            continue
-        phase_name, entries = pick_phase_block(results)
-        if not entries:
-            continue
-        first_metrics = next(iter(entries.values())) if isinstance(entries, dict) and entries else {}
-        mkey, direction, label = metric_from_keys(list(first_metrics.keys()))
-        if not mkey:
-            continue
-        recs = []
-        for user_key, metrics in entries.items():
-            try:
-                v = float(metrics.get(mkey))
+                results = json.loads(jpath.read_text())
             except Exception:
                 continue
-            name = str(user_key)
-            if "-" in name:
-                parts = name.split("-")
-                if parts[-1].isdigit():
-                    name = "-".join(parts[:-1])
-            recs.append({"user": name, "score": v})
-        if not recs:
-            continue
-        tmp = pd.DataFrame(recs)
-        tmp["when"] = when
-        tmp["label"] = label
-        tmp["direction"] = direction
-        tmp["phase"] = phase_name or ""
-        idx = tmp["score"].idxmax() if direction == "higher" else tmp["score"].idxmin()
-        tmp["is_best"] = False
-        tmp.loc[idx, "is_best"] = True
-        rows.append(tmp)
+            # Find the block for this phase by name if possible
+            entries = None
+            if isinstance(results, dict):
+                for k, v in results.items():
+                    if phase_name and phase_name.lower() in k.lower():
+                        entries = v
+                        break
+                if entries is None:
+                    # fallback to first non-empty
+                    for k, v in results.items():
+                        if isinstance(v, dict) and v:
+                            entries = v
+                            break
+            if not entries:
+                continue
+            first_metrics = next(iter(entries.values())) if isinstance(entries, dict) and entries else {}
+            mkey, direction, label = metric_from_keys(list(first_metrics.keys()))
+            if not mkey:
+                continue
+            recs = []
+            for user_key, metrics in entries.items():
+                try:
+                    v = float(metrics.get(mkey))
+                except Exception:
+                    continue
+                name = str(user_key)
+                if "-" in name:
+                    parts = name.split("-")
+                    if parts[-1].isdigit():
+                        name = "-".join(parts[:-1])
+                recs.append({"user": name, "score": v})
+            if not recs:
+                continue
+            tmp = pd.DataFrame(recs)
+            tmp["when"] = when
+            tmp["label"] = label
+            tmp["direction"] = direction
+            tmp["phase"] = phase_name
+            idx = tmp["score"].idxmax() if direction == "higher" else tmp["score"].idxmin()
+            tmp["is_best"] = False
+            tmp.loc[idx, "is_best"] = True
+            rows.append(tmp)
     if not rows:
         return pd.DataFrame(columns=["when", "user", "score", "label", "direction", "is_best"])
     all_df = pd.concat(rows, ignore_index=True)
@@ -277,60 +319,88 @@ def build_html_from_df(df: pd.DataFrame) -> str:
             'codabench_results/. Run get_leaderboard.py first.</p></div>'
         )
     last = df["when"].max()
-    label = df["label"].iloc[0] if "label" in df.columns else "Score"
-    phase_name = None
-    if "phase" in df.columns and df["phase"].notna().any():
-        phase_name = str(df["phase"].dropna().iloc[0])
-    title_text = f"{TITLE_PREFIX} - {phase_name}" if phase_name else TITLE_PREFIX
+    pieces: list[str] = [
+        f"<div>\n  <p style=\"color:#666; margin-bottom:8px;\">Last updated: {last.strftime('%Y-%m-%dT%H:%M:%SZ')} (UTC)</p>"
+    ]
 
-    # Palette and marker sizes
-    accent = ACCENT
-    accent_dark = ACCENT_DARK
-    grey_pts = "rgba(140,140,140,0.38)"
+    # Group by phase and render a figure for each
+    phases_from_df = df["phase"].dropna().unique().tolist() if "phase" in df.columns else []
+    # Union with names seen in summaries to ensure empty phases also render
+    phases = list({*(phases_from_df or []), *PHASE_NAMES_SEEN}) or [None]
+    for idx, ph in enumerate(phases, start=1):
+        sub = df[df["phase"].eq(ph)] if ph is not None else df
+        label = (sub["label"].iloc[0] if (not sub.empty and "label" in sub.columns) else (OVR_LABEL or "Score"))
+        title_text = f"{TITLE_PREFIX} - {ph}" if ph else TITLE_PREFIX
 
-    all_trace = go.Scatter(
-        x=df["when"], y=df["score"], text=df["user"], mode="markers",
-        name="All models", marker=dict(color=grey_pts, size=12),
-        hovertemplate="%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>" + label + ": %{y:.5f}<extra></extra>"
-    )
-    best_df = df[df["is_best"]].sort_values("when")
-    best_trace = go.Scatter(
-        x=best_df["when"], y=best_df["score"], text=best_df["user"],
-        mode="lines+markers+text", name="Best Model",
-        marker=dict(color=accent, size=14, line=dict(width=2, color=accent_dark)),
-        line=dict(color=accent, width=3), textposition="top center",
-        textfont=dict(size=13, color="#333"),
-        hovertemplate="%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>Best " + label + ": %{y:.5f}<extra></extra>"
-    )
-    layout = go.Layout(
-        title=dict(text=title_text, x=0.5, font=dict(size=24, color="#2f2f2f")),
-        margin=dict(l=70, r=20, t=70, b=80),
-        paper_bgcolor="white", plot_bgcolor="white",
-        xaxis=dict(
-            title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")),
-            type="date", showgrid=True,
-            gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
-            tickfont=dict(size=14, color="#3a3a3a")
-        ),
-        yaxis=dict(
-            title=dict(text=label, font=dict(size=16, color="#334155")),
-            autorange=True, showgrid=True,
-            gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
-            tickfont=dict(size=14, color="#3a3a3a")
-        ),
-        legend=dict(orientation="h", x=0.15, y=-0.18, font=dict(size=13, color="#3a3a3a")),
-        hovermode="closest",
-        height=560,
-    )
-    # Optional fixed x-axis range
-    if X_START and X_END:
-        layout.update(xaxis=dict(title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")), type="date", showgrid=True, range=[X_START, X_END], gridcolor="#e9e9e9", gridwidth=1, zeroline=False, tickfont=dict(size=14, color="#3a3a3a")))
-    fig = go.Figure(data=[all_trace, best_trace], layout=layout)
-    plot_html = fig.to_html(full_html=False, include_plotlyjs="cdn", div_id="leaderboard-plot", config={"displaylogo": False})
-    return (
-        f"<div>\n  <p style=\"color:#666; margin-bottom:8px;\">Last updated: {last.strftime('%Y-%m-%dT%H:%M:%SZ')} (UTC)</p>\n" 
-        f"  {plot_html}\n</div>\n"
-    )
+        accent = ACCENT
+        accent_dark = ACCENT_DARK
+        grey_pts = "rgba(140,140,140,0.38)"
+
+        traces = []
+        if not sub.empty:
+            all_trace = go.Scatter(
+                x=sub["when"], y=sub["score"], text=sub["user"], mode="markers",
+                name="All models", marker=dict(color=grey_pts, size=12),
+                hovertemplate="%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>" + label + ": %{y:.5f}<extra></extra>"
+            )
+            traces.append(all_trace)
+            # Best-of-day line: pick best score for each date
+            direction = sub["direction"].iloc[0] if "direction" in sub.columns else "lower"
+            day = sub["when"].dt.normalize()
+            sub2 = sub.copy()
+            sub2["day"] = day
+            if direction == "higher":
+                idxs = sub2.groupby("day")["score"].idxmax()
+            else:
+                idxs = sub2.groupby("day")["score"].idxmin()
+            best_df = sub2.loc[idxs].sort_values("day")
+            best_trace = go.Scatter(
+                x=best_df["day"], y=best_df["score"], text=best_df["user"],
+                mode="lines+markers+text", name="Best Model",
+                marker=dict(color=accent, size=14, line=dict(width=2, color=accent_dark)),
+                line=dict(color=accent, width=3), textposition="top center",
+                textfont=dict(size=13, color="#333"),
+                hovertemplate="%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>Best " + label + ": %{y:.5f}<extra></extra>"
+            )
+            traces.append(best_trace)
+        layout = go.Layout(
+            title=dict(text=title_text, x=0.5, font=dict(size=24, color="#2f2f2f")),
+            margin=dict(l=70, r=20, t=70, b=80),
+            paper_bgcolor="white", plot_bgcolor="white",
+            xaxis=dict(
+                title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")),
+                type="date", showgrid=True,
+                gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
+                tickfont=dict(size=14, color="#3a3a3a")
+            ),
+            yaxis=dict(
+                title=dict(text=label, font=dict(size=16, color="#334155")),
+                autorange=True, showgrid=True,
+                gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
+                tickfont=dict(size=14, color="#3a3a3a")
+            ),
+            legend=dict(orientation="h", x=0.15, y=-0.18, font=dict(size=13, color="#3a3a3a")),
+            hovermode="closest",
+            height=560,
+        )
+        # Apply per-phase x-axis range, hard-coded for Warmup/Final
+        xr = phase_xrange(ph)
+        if xr:
+            layout.update(xaxis=dict(title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")), type="date", showgrid=True, range=list(xr), gridcolor="#e9e9e9", gridwidth=1, zeroline=False, tickfont=dict(size=14, color="#3a3a3a")))
+        elif X_START and X_END:
+            layout.update(xaxis=dict(title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")), type="date", showgrid=True, range=[X_START, X_END], gridcolor="#e9e9e9", gridwidth=1, zeroline=False, tickfont=dict(size=14, color="#3a3a3a")))
+
+        fig = go.Figure(data=traces, layout=layout)
+        if not traces:
+            # Add a subtle placeholder annotation when no data yet
+            fig.add_annotation(text="No data yet", xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False, font=dict(color="#888", size=14))
+        div_id = f"leaderboard-plot-{idx}"
+        plot_html = fig.to_html(full_html=False, include_plotlyjs="cdn", div_id=div_id, config={"displaylogo": False})
+        pieces.append("  " + plot_html)
+        pieces.append("  <div style=\"height:12px\"></div>")
+
+    pieces.append("</div>")
+    return "\n".join(pieces)
 
 
 def main() -> int:
