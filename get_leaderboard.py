@@ -25,9 +25,9 @@ def parse_int(value: str | None, default: int) -> int:
 BASE = normalize_base(os.environ.get("CB_BASE"))
 PK = parse_int(os.environ.get("CB_PK"), DEFAULT_PK)
 # Read credentials from environment; do NOT hardcode secrets in the repo
-USERNAME = os.environ.get("CB_USERNAME", "")
-PASSWORD = os.environ.get("CB_PASSWORD", "")
-SECRET_KEY = os.environ.get("CB_SECRET_KEY", "")
+USERNAME = (os.environ.get("CB_USERNAME", "") or "").strip()
+PASSWORD = (os.environ.get("CB_PASSWORD", "") or "").strip()
+SECRET_KEY = (os.environ.get("CB_SECRET_KEY", "") or "").strip()
 OUT = pathlib.Path(os.environ.get("CB_OUT", "codabench_results"))
 OUT.mkdir(exist_ok=True, parents=True)
 
@@ -39,6 +39,19 @@ def add_secret(url: str) -> str:
 
 def now_utc_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+def prime_secret_cookie(session: requests.Session) -> None:
+    """Visit the competition page with `?secret_key=...` to let the server
+    set any session flags/cookies that unlock results for secret viewers.
+    """
+    if not SECRET_KEY:
+        return
+    try:
+        url = add_secret(urljoin(BASE, f"/competitions/{PK}/"))
+        r = session.get(url, timeout=30, allow_redirects=True)
+        print(f"Primed secret via competition page: HTTP {r.status_code}")
+    except Exception as e:
+        print(f"Warning: failed to prime secret on competition page: {e}")
 
 def try_login(session: requests.Session) -> bool:
     """Attempt to login; return True if a session is established.
@@ -69,7 +82,11 @@ with requests.Session() as s:
     print(f"Using BASE={BASE}, PK={PK}")
     print("Auth present:", bool(USERNAME and PASSWORD))
     print("Secret key present:", bool(SECRET_KEY))
+    # Prime secret access first (if provided) — some deployments require
+    # hitting the page with the secret to set a session flag used by APIs
+    prime_secret_cookie(s)
     try_login(s)
+    print("Cookies set:", [c.name for c in s.cookies])
     # Public competition details endpoint
     test = s.get(urljoin(BASE, f"/api/competitions/{PK}/"), timeout=30)
     test.raise_for_status()
@@ -82,7 +99,8 @@ with requests.Session() as s:
 
     # 3) Try merged JSON (may be forbidden without secret/admin)
     merged_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.json"))
-    r = s.get(merged_url, timeout=60)
+    merged_referer = add_secret(urljoin(BASE, f"/competitions/{PK}/"))
+    r = s.get(merged_url, timeout=60, headers={"Referer": merged_referer})
     merged_saved = None
     if r.status_code == 200:
         merged_saved = OUT / "results_all.json"
@@ -103,7 +121,8 @@ with requests.Session() as s:
         pname = p.get("name")
         # CSV
         csv_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.csv?phase={pid}"))
-        rc = s.get(csv_url, timeout=60)
+        referer = add_secret(urljoin(BASE, f"/competitions/{PK}/"))
+        rc = s.get(csv_url, timeout=60, headers={"Referer": referer})
         if rc.ok:
             out_csv = OUT / f"results_phase_{pid}.csv"
             out_csv.write_bytes(rc.content)
@@ -116,7 +135,7 @@ with requests.Session() as s:
 
         # JSON
         json_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.json?phase={pid}"))
-        rj = s.get(json_url, timeout=60)
+        rj = s.get(json_url, timeout=60, headers={"Referer": referer})
         if rj.ok:
             out_json = OUT / f"results_phase_{pid}.json"
             out_json.write_bytes(rj.content)
