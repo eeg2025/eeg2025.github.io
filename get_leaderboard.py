@@ -5,8 +5,25 @@ from datetime import datetime, timezone
 import requests
 from urllib.parse import urljoin, urlencode
 
-BASE = os.environ.get("CB_BASE", "https://www.codabench.org")
-PK = 9975 # Competition primary key
+DEFAULT_BASE = "https://www.codabench.org"
+DEFAULT_PK = 9975  # Competition primary key
+
+def normalize_base(value: str | None) -> str:
+    v = (value or "").strip()
+    if not v:
+        return DEFAULT_BASE
+    if not (v.startswith("http://") or v.startswith("https://")):
+        v = "https://" + v
+    return v.rstrip("/")
+
+def parse_int(value: str | None, default: int) -> int:
+    try:
+        return int(value) if value not in (None, "") else default
+    except Exception:
+        return default
+
+BASE = normalize_base(os.environ.get("CB_BASE"))
+PK = parse_int(os.environ.get("CB_PK"), DEFAULT_PK)
 # Read credentials from environment; do NOT hardcode secrets in the repo
 USERNAME = os.environ.get("CB_USERNAME", "")
 PASSWORD = os.environ.get("CB_PASSWORD", "")
@@ -30,6 +47,7 @@ if not USERNAME or not PASSWORD:
     )
 
 with requests.Session() as s:
+    print(f"Using BASE={BASE}, PK={PK}")
     # 1) CSRF from login page
     login_url = urljoin(BASE, "/accounts/login/")
     r = s.get(login_url, timeout=30)
