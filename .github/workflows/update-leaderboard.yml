@@ -2,7 +2,8 @@ name: Update Leaderboard
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # every 6 hours
+    - cron: '0 * * * *'  # every hour
+
   workflow_dispatch: {}
 
 permissions:
