@@ -67,6 +67,8 @@ def try_login(session: requests.Session) -> bool:
 
 with requests.Session() as s:
     print(f"Using BASE={BASE}, PK={PK}")
+    print("Auth present:", bool(USERNAME and PASSWORD))
+    print("Secret key present:", bool(SECRET_KEY))
     try_login(s)
     # Public competition details endpoint
     test = s.get(urljoin(BASE, f"/api/competitions/{PK}/"), timeout=30)

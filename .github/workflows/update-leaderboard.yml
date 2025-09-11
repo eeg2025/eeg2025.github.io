@@ -26,6 +26,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
+      - name: Debug secrets presence (masked)
+        env:
+          CB_USERNAME: ${{ secrets.CB_USERNAME }}
+          CB_PASSWORD: ${{ secrets.CB_PASSWORD }}
+          CB_SECRET_KEY: ${{ secrets.CB_SECRET_KEY }}
+          CB_BASE: ${{ secrets.CB_BASE }}
+          CB_PK: ${{ secrets.CB_PK }}
+        run: |
+          echo "CB_USERNAME set: $([ -n \"$CB_USERNAME\" ] && echo yes || echo no)"
+          echo "CB_PASSWORD set: $([ -n \"$CB_PASSWORD\" ] && echo yes || echo no)"
+          echo "CB_SECRET_KEY set: $([ -n \"$CB_SECRET_KEY\" ] && echo yes || echo no)"
+          echo "CB_BASE set: $([ -n \"$CB_BASE\" ] && echo yes || echo no)"
+          echo "CB_PK set: $([ -n \"$CB_PK\" ] && echo yes || echo no)"
+
       - name: Run leaderboard fetch
         env:
           CB_USERNAME: ${{ secrets.CB_USERNAME }}
