@@ -1,0 +1,20 @@
+{
+  "generated_at_utc": "2025-09-11T14:09:06Z",
+  "base": "https://www.codabench.org",
+  "competition_pk": 9975,
+  "merged_results_json": null,
+  "phases": [
+    {
+      "id": 16261,
+      "name": "Warmup Phase",
+      "csv": null,
+      "json": null
+    },
+    {
+      "id": 16262,
+      "name": "Final Phase",
+      "csv": null,
+      "json": null
+    }
+  ]
+}
