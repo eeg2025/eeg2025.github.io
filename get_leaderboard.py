@@ -40,45 +40,45 @@ def add_secret(url: str) -> str:
 def now_utc_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-# Fail early if creds are missing (most endpoints require auth)
-if not USERNAME or not PASSWORD:
-    raise SystemExit(
-        "Missing CB_USERNAME/CB_PASSWORD in environment. Set them as CI secrets."
-    )
+def try_login(session: requests.Session) -> bool:
+    """Attempt to login; return True if a session is established.
+    If CB_USERNAME/PASSWORD are not set, skip and return False.
+    """
+    if not USERNAME or not PASSWORD:
+        print("CB_USERNAME/CB_PASSWORD not set; will try public or secret_key access only.")
+        return False
 
-with requests.Session() as s:
-    print(f"Using BASE={BASE}, PK={PK}")
-    # 1) CSRF from login page
     login_url = urljoin(BASE, "/accounts/login/")
-    r = s.get(login_url, timeout=30)
+    r = session.get(login_url, timeout=30)
     r.raise_for_status()
-    csrftoken = s.cookies.get("csrftoken", "")
-
-    # 2) Try common field names
-    headers = {"Referer": login_url}
+    csrftoken = session.cookies.get("csrftoken", "")
+    headers = {"Referer": login_url, "X-CSRFToken": csrftoken}
     payloads = [
         {"username": USERNAME, "password": PASSWORD, "csrfmiddlewaretoken": csrftoken, "next": "/"},
         {"login": USERNAME, "password": PASSWORD, "csrfmiddlewaretoken": csrftoken, "next": "/"},
     ]
-    authed = False
     for payload in payloads:
-        rp = s.post(login_url, data=payload, headers=headers, timeout=30)
-        # Don’t require 2xx here; some sites redirect after login
-        # Check auth by hitting a protected-but-readable endpoint:
-        test = s.get(urljoin(BASE, f"/api/competitions/{PK}/"), timeout=30)
-        if test.status_code == 200:
-            authed = True
-            comp = test.json()
-            break
-    if not authed:
-        raise SystemExit("Login failed: check BASE/USERNAME/PASSWORD and keep BASE domain consistent.")
+        rp = session.post(login_url, data=payload, headers=headers, timeout=30, allow_redirects=True)
+        if session.cookies.get("sessionid"):
+            print("Login successful (session established).")
+            return True
+    print("Login attempt did not establish a session; proceeding without auth.")
+    return False
+
+with requests.Session() as s:
+    print(f"Using BASE={BASE}, PK={PK}")
+    try_login(s)
+    # Public competition details endpoint
+    test = s.get(urljoin(BASE, f"/api/competitions/{PK}/"), timeout=30)
+    test.raise_for_status()
+    comp = test.json()
 
     phases = comp.get("phases", [])
     print("Phases:")
     for p in phases:
         print(f"- {p.get('id')} : {p.get('name')}")
 
-    # 3) Try merged JSON (may be forbidden)
+    # 3) Try merged JSON (may be forbidden without secret/admin)
     merged_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.json"))
     r = s.get(merged_url, timeout=60)
     merged_saved = None
@@ -87,7 +87,10 @@ with requests.Session() as s:
         merged_saved.write_bytes(r.content)
         print("Saved merged JSON ->", merged_saved)
     elif r.status_code == 403:
-        print("Merged JSON is forbidden for your account; continuing with per-phase endpoints…")
+        msg = "Merged JSON forbidden (need secret_key or admin)."
+        if not SECRET_KEY:
+            msg += " Set CB_SECRET_KEY in CI for access."
+        print(msg)
     else:
         print(f"Skipping merged JSON: HTTP {r.status_code}")
 
@@ -104,7 +107,10 @@ with requests.Session() as s:
             out_csv.write_bytes(rc.content)
             print("Saved CSV ->", out_csv)
         else:
-            print(f"CSV HTTP {rc.status_code} for phase {pid}")
+            if rc.status_code == 403 and not SECRET_KEY:
+                print(f"CSV HTTP 403 for phase {pid} (set CB_SECRET_KEY for access)")
+            else:
+                print(f"CSV HTTP {rc.status_code} for phase {pid}")
 
         # JSON
         json_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.json?phase={pid}"))
@@ -115,7 +121,10 @@ with requests.Session() as s:
             print("Saved JSON ->", out_json)
             json_path = str(out_json)
         else:
-            print(f"JSON HTTP {rj.status_code} for phase {pid}")
+            if rj.status_code == 403 and not SECRET_KEY:
+                print(f"JSON HTTP 403 for phase {pid} (set CB_SECRET_KEY for access)")
+            else:
+                print(f"JSON HTTP {rj.status_code} for phase {pid}")
             json_path = None
 
         phase_entries.append({
