@@ -1,0 +1,51 @@
+name: Update Leaderboard
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # every 6 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # allow pushing changes back
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run leaderboard fetch
+        env:
+          CB_USERNAME: ${{ secrets.CB_USERNAME }}
+          CB_PASSWORD: ${{ secrets.CB_PASSWORD }}
+          CB_SECRET_KEY: ${{ secrets.CB_SECRET_KEY }}
+          CB_BASE: ${{ secrets.CB_BASE }}
+          CB_PK: ${{ secrets.CB_PK }}
+          CB_OUT: codabench_results
+        run: |
+          python get_leaderboard.py
+
+      - name: Commit and push if changed
+        run: |
+          set -e
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add codabench_results
+            git commit -m "Update leaderboard: $(date -u +%FT%TZ)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
