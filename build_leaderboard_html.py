@@ -325,8 +325,32 @@ def build_html_from_df(df: pd.DataFrame) -> str:
 
     # Group by phase and render a figure for each
     phases_from_df = df["phase"].dropna().unique().tolist() if "phase" in df.columns else []
-    # Union with names seen in summaries to ensure empty phases also render
-    phases = list({*(phases_from_df or []), *PHASE_NAMES_SEEN}) or [None]
+    # Merge with names seen in summaries (preserve insertion order)
+    def uniq_preserve(seq):
+        seen = set(); out = []
+        for x in seq:
+            if x is None: 
+                continue
+            if x not in seen:
+                seen.add(x); out.append(x)
+        return out
+    phases = uniq_preserve(phases_from_df)
+    for name in PHASE_NAMES_SEEN:
+        if name not in phases:
+            phases.append(name)
+    if not phases:
+        phases = [None]
+    # Order with Warmup first, Final last
+    def phase_rank(n):
+        if n is None:
+            return 1
+        s = n.lower()
+        if ("warm" in s) or ("phase 1" in s) or ("development" in s) or ("dev" in s):
+            return 0
+        if ("final" in s) or ("phase 2" in s):
+            return 2
+        return 1
+    phases = sorted(phases, key=lambda n: (phase_rank(n), str(n).lower()))
     for idx, ph in enumerate(phases, start=1):
         sub = df[df["phase"].eq(ph)] if ph is not None else df
         label = (sub["label"].iloc[0] if (not sub.empty and "label" in sub.columns) else (OVR_LABEL or "Score"))
