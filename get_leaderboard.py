@@ -6,7 +6,7 @@ import requests
 from urllib.parse import urljoin, urlencode
 
 BASE = os.environ.get("CB_BASE", "https://www.codabench.org")
-PK = int(os.environ.get("CB_PK", 9975))
+PK = 9975 # Competition primary key
 # Read credentials from environment; do NOT hardcode secrets in the repo
 USERNAME = os.environ.get("CB_USERNAME", "")
 PASSWORD = os.environ.get("CB_PASSWORD", "")
