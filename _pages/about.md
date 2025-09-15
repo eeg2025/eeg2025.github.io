@@ -83,12 +83,9 @@ Each participant's data is accompanied by four psychopathology dimensions derive
 
 ## Awards
 
-Top-ranking teams will be awarded with the following prizes:
+The competition offers a list of awards for top-performing teams, including cash awards, NeurIPS presentation opportunities, and travel support. We also have a special Diversity & Inclusion Award to encourage participation from underrepresented groups.
 
-- **Spotlight Talk** for the first team at the [2025 NeurIPS Workshop "Foundation Models for the Brain and Body"](https://brainbodyfm-workshop.github.io) to present their work (December 6-7, 2025)
-- **Cash prizes** of 2500$ each for the top 3 teams (Sponsored by Meta)
-- **Travel costs** covered for the main author of the top 3 teams (Sponsored by Meta)
-- **Registration fees** for the whole NeurIPS 2025 conference covered for the main author of the top 3 teams
+**[View full details about awards and prizes →](/awards/)**
 
 ## Motivation
 

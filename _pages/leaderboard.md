@@ -4,7 +4,7 @@ permalink: /leaderboard/
 title: Leaderboard
 description: Interactive leaderboard summary from Codabench results.
 nav: true
-nav_order: 7
+nav_order: 9
 ---
 
 {% comment %}
