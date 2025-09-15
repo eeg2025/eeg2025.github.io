@@ -43,4 +43,4 @@ A: Yes, mini datasets for each release are available for download. You can acces
 
 ---
 
-For additional questions not covered here, please visit the challenge [Google Group](https://groups.google.com/u/2/g/neurips2025-eeg-competition) to see if other participants have faced similar issues or to ask questions (group is public, but requires membership to post).
+For additional questions not covered here, please visit the challenge [Discord](https://discord.gg/KU25RxGqP8) to see if other participants have faced similar issues or to ask questions.
