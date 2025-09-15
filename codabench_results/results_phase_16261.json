@@ -1,9 +1,9 @@
 {
     "Results - Warmup Phase(16261)": {
-        "sigmanova-371308": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "0.9938600063",
+        "sigmanova-371384": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "0.9831500053",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "0.9442399740",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0151300430"
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "0.9998199940"
         },
         "madhavarora03-370813": {
             "EEG Foundation Warm-up Task(20683)-overall score": "0.9978200197",
@@ -80,15 +80,20 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0743299723",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0024000406"
         },
+        "junglebond-371373": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0656599998",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0697599649",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0638999939"
+        },
+        "jmo_kim-371379": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0679099560",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.3482400179",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "0.9477599859"
+        },
         "wink_ai-368525": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.9504400492",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "4.1660399437",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0009000301"
-        },
-        "jmo_kim-371318": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "2.0050199032",
-            "EEG Foundation Warm-up Task(20683)-challenge 1": "4.4738998413",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "0.9469299912"
         }
     }
 }
