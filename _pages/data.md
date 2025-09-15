@@ -108,6 +108,9 @@ aws s3 cp --recursive s3://nmdatasets/NeurIPS25/R1_mini_L100_bdf ./local_directo
 ```
 This command will download the specified mini release R1 with the BDF format from the AWS S3 bucket to your local directory without requiring AWS credentials.
 
+### Zip Files Direct Download
+The 100Hz downsampled datasets are also available as ZIP files for direct download (Both Mini and Full releases). You can download these files directly from the [SCCN Download Server](https://sccn.ucsd.edu/download/eeg2025/), unpack and put inside the same directory structure as EEGDash expects.
+
 ### Google Drive
 The mini releases, both BDF and SET formats, are also available on Google Drive as ZIP files. You can download them directly from the [HBN Data Page](https://neuromechanist.github.io/data/hbn/).
 
