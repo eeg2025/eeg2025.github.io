@@ -120,4 +120,4 @@ nav_order: 9
 </div>
 
 ## Contact
-For any questions about the competition, please contact us at: [neurips2025-eeg-competition@googlegroups.com](mailto:neurips2025-eeg-competition@googlegroups.com)
+For questions about awards and prizes, please contact us through our [Discord server](https://discord.gg/KU25RxGqP8) or the competition forum.
