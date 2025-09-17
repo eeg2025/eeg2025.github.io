@@ -61,7 +61,7 @@ This supervised learning challenge combines regression and classification object
 
 ### Challenge 2: Psychopathology Factor Prediction (Subject Invariant Representation)
 
-This supervised regression challenge requires teams to predict four continuous psychopathology scores (p-factor, internalizing, externalizing, and attention) from EEG recordings across multiple experimental paradigms. Teams can employ unsupervised or self-supervised pretraining strategies to learn generalizable neural representations, then adapt these foundation models for the regression targets while maintaining robustness across different subjects and experimental conditions. See the [Starter Kit](baseline.md) for more details.
+This supervised regression challenge requires teams to predict four continuous psychopathology scores (p-factor~~, internalizing, externalizing, and attention~~) from EEG recordings across multiple experimental paradigms. Teams can employ unsupervised or self-supervised pretraining strategies to learn generalizable neural representations, then adapt these foundation models for the regression targets while maintaining robustness across different subjects and experimental conditions. See the [Starter Kit](baseline.md) for more details. *Note: Other factors (internalizing, externalizing, and attention) were removed from the challenge to streamline the execution phase.*
 
 ## Dataset
 
