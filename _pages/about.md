@@ -138,7 +138,7 @@ This competition aims to address these challenges by:
 </div>
 
 
-## Core Coordinator
+## Core Coordinators
 
 <div style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; margin-bottom: 20px;">
   <div style="max-width: 160px; text-align: center; margin: 10px;">
