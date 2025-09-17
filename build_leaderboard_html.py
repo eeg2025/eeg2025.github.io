@@ -3,6 +3,7 @@ import re
 import json
 from pathlib import Path
 from datetime import datetime, timezone
+from typing import Any
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -24,6 +25,8 @@ TITLE_PREFIX = os.environ.get("LB_TITLE_PREFIX", "Leaderboard")
 
 # Track phase names seen so we can render a figure even if a phase has no data
 PHASE_NAMES_SEEN: set[str] = set()
+
+SUBMISSION_ID_RE = re.compile(r"-(\d+)$")
 
 
 def parse_time(s: str | None, fallback: float) -> datetime:
@@ -82,7 +85,15 @@ def list_phase_entries(summary: dict) -> list[dict]:
                 jp = (ROOT / jp).resolve()
             if jp.exists() and jp.stat().st_size >= 10:
                 json_path = jp
-        out.append({"name": name, "csv": csv_path, "json": json_path})
+        leader = p.get("leaderboard")
+        leaderboard_path = None
+        if leader:
+            lp = Path(leader)
+            if not lp.is_absolute():
+                lp = (ROOT / lp).resolve()
+            if lp.exists() and lp.stat().st_size >= 10:
+                leaderboard_path = lp
+        out.append({"name": name, "csv": csv_path, "json": json_path, "leaderboard": leaderboard_path})
     # If none, try merged file fallback (rare)
     if not out:
         merged = summary.get("merged_results_json")
@@ -91,8 +102,117 @@ def list_phase_entries(summary: dict) -> list[dict]:
             if not mp.is_absolute():
                 mp = (ROOT / mp).resolve()
             if mp.exists():
-                out.append({"name": "", "csv": None, "json": mp})
+                out.append({"name": "", "csv": None, "json": mp, "leaderboard": None})
     return out
+
+
+def split_user_and_submission(raw: str | None) -> tuple[str, str | None]:
+    if raw is None:
+        return "", None
+    text = str(raw).strip()
+    match = SUBMISSION_ID_RE.search(text)
+    if match:
+        return text[:match.start()], match.group(1)
+    return text, None
+
+
+def load_leaderboard_meta(path: Path | None) -> dict[str, Any]:
+    if not path:
+        return {"by_id": {}, "by_owner": {}}
+    try:
+        data = json.loads(Path(path).read_text())
+    except Exception:
+        return {"by_id": {}, "by_owner": {}}
+
+    id_map: dict[str, dict[str, Any]] = {}
+    owner_map: dict[str, list[dict[str, Any]]] = {}
+
+    def record(entry: dict[str, Any]) -> None:
+        if not isinstance(entry, dict):
+            return
+        sid_raw = entry.get("id") or entry.get("submission_id") or entry.get("pk")
+        if sid_raw is None:
+            return
+        sid = str(sid_raw)
+        created = entry.get("created_when") or entry.get("created_at") or entry.get("submitted_at") or entry.get("created")
+        created_dt = None
+        if created:
+            try:
+                created_dt = parse_time(str(created), 0)
+            except Exception:
+                created_dt = None
+        owner = entry.get("owner") or entry.get("participant") or entry.get("username") or entry.get("user")
+        info = {
+            "submission_id": sid,
+            "created": created,
+            "created_dt": created_dt,
+            "owner": owner,
+        }
+        id_map[sid] = info
+        owner_key = (str(owner).strip().lower()) if owner else ""
+        if owner_key:
+            owner_map.setdefault(owner_key, []).append(info)
+
+    if isinstance(data, dict):
+        submissions = data.get("submissions")
+        if isinstance(submissions, list):
+            for entry in submissions:
+                record(entry)
+        leaderboards = data.get("leaderboards")
+        if isinstance(leaderboards, list):
+            for leaderboard in leaderboards:
+                if isinstance(leaderboard, dict):
+                    for entry in leaderboard.get("submissions", []) or []:
+                        record(entry)
+
+    sentinel = datetime.max.replace(tzinfo=timezone.utc)
+    for key, infos in owner_map.items():
+        infos.sort(key=lambda info: info.get("created_dt") or sentinel)
+
+    return {"by_id": id_map, "by_owner": owner_map}
+
+
+def resolve_submission_times(df: pd.DataFrame, leaderboard_meta: dict[str, Any], fallback: datetime) -> pd.Series:
+    if df.empty:
+        return pd.Series(dtype="datetime64[ns, UTC]")
+
+    fallback_dt = fallback if isinstance(fallback, datetime) else datetime.fromtimestamp(float(fallback), tz=timezone.utc)
+    fallback_ts = fallback_dt.timestamp()
+
+    id_map = leaderboard_meta.get("by_id", {}) if leaderboard_meta else {}
+    owner_map = leaderboard_meta.get("by_owner", {}) if leaderboard_meta else {}
+
+    resolved: list[datetime] = []
+    users = df.get("user") if "user" in df.columns else pd.Series([None] * len(df))
+
+    for submission_id, user in zip(df.get("submission_id", []), users):
+        dt = None
+        if submission_id and id_map:
+            info = id_map.get(str(submission_id))
+            if info:
+                dt = info.get("created_dt")
+                if dt is None and info.get("created"):
+                    try:
+                        dt = parse_time(str(info["created"]), fallback_ts)
+                    except Exception:
+                        dt = None
+        if dt is None and owner_map and user:
+            owner_key = str(user).strip().lower()
+            if owner_key:
+                infos = owner_map.get(owner_key)
+                if infos:
+                    info = infos[0]
+                    dt = info.get("created_dt")
+                    if dt is None and info.get("created"):
+                        try:
+                            dt = parse_time(str(info["created"]), fallback_ts)
+                        except Exception:
+                            dt = None
+        if dt is None:
+            dt = fallback_dt
+        resolved.append(dt)
+
+    return pd.to_datetime(resolved)
 
 
 def phase_xrange(phase_name: str | None) -> tuple[str, str] | None:
@@ -220,6 +340,7 @@ def load_dataframe() -> pd.DataFrame:
         for ph in list_phase_entries(summary):
             phase_name = ph.get("name") or ""
             used_any = False
+            leaderboard_meta = load_leaderboard_meta(ph.get("leaderboard"))
             # CSV first
             csv_path = ph.get("csv")
             if csv_path:
@@ -236,12 +357,16 @@ def load_dataframe() -> pd.DataFrame:
                     mcol, direction, label = select_metric_column(df)
                     if mcol:
                         tmp = df[[user_col, mcol]].copy()
-                        tmp.columns = ["user", "score"]
-                        tmp["user"] = tmp["user"].astype(str).str.replace(r"-\d+$", "", regex=True)
+                        tmp = tmp.rename(columns={user_col: "raw_user", mcol: "score"})
+                        tmp["raw_user"] = tmp["raw_user"].astype(str)
+                        splits = tmp["raw_user"].map(split_user_and_submission)
+                        tmp["user"] = splits.str[0]
+                        tmp["submission_id"] = splits.str[1]
                         tmp["score"] = pd.to_numeric(tmp["score"], errors="coerce")
                         tmp = tmp.dropna(subset=["score"]).reset_index(drop=True)
                         if not tmp.empty:
-                            tmp["when"] = when
+                            tmp["when"] = resolve_submission_times(tmp, leaderboard_meta, when)
+                            tmp = tmp.drop(columns=["raw_user"], errors="ignore")
                             tmp["label"] = label
                             tmp["direction"] = direction
                             tmp["phase"] = phase_name
@@ -289,15 +414,22 @@ def load_dataframe() -> pd.DataFrame:
                 except Exception:
                     continue
                 name = str(user_key)
-                if "-" in name:
-                    parts = name.split("-")
-                    if parts[-1].isdigit():
-                        name = "-".join(parts[:-1])
-                recs.append({"user": name, "score": v})
+                base, submission_id = split_user_and_submission(name)
+                recs.append({
+                    "user": base,
+                    "raw_user": name,
+                    "submission_id": submission_id,
+                    "score": v,
+                })
             if not recs:
                 continue
             tmp = pd.DataFrame(recs)
-            tmp["when"] = when
+            tmp["score"] = pd.to_numeric(tmp["score"], errors="coerce")
+            tmp = tmp.dropna(subset=["score"]).reset_index(drop=True)
+            if tmp.empty:
+                continue
+            tmp["when"] = resolve_submission_times(tmp, leaderboard_meta, when)
+            tmp = tmp.drop(columns=["raw_user"], errors="ignore")
             tmp["label"] = label
             tmp["direction"] = direction
             tmp["phase"] = phase_name
@@ -310,6 +442,108 @@ def load_dataframe() -> pd.DataFrame:
     all_df = pd.concat(rows, ignore_index=True)
     all_df = all_df.sort_values("when")
     return all_df
+
+
+def compute_best_line(sub: pd.DataFrame, direction: str) -> pd.DataFrame:
+    """Return per-day best scores along with the running best for plotting."""
+    if sub.empty:
+        return pd.DataFrame(columns=[
+            "day", "day_best_time", "day_best_score", "day_best_user",
+            "best_score", "best_user", "best_time", "improved", "summary",
+        ])
+
+    work = sub.sort_values("when").copy()
+    work["day"] = work["when"].dt.floor("D")
+
+    try:
+        group = work.groupby("day")["score"]
+        idxs = group.idxmax() if direction == "higher" else group.idxmin()
+    except Exception:
+        return pd.DataFrame(columns=[
+            "day", "day_best_time", "day_best_score", "day_best_user",
+            "best_score", "best_user", "best_time", "improved", "summary",
+        ])
+
+    daily = work.loc[idxs].copy()
+    if daily.empty:
+        return pd.DataFrame(columns=[
+            "day", "day_best_time", "day_best_score", "day_best_user",
+            "best_score", "best_user", "best_time", "improved", "summary",
+        ])
+
+    daily = daily.sort_values("day").reset_index(drop=True)
+    daily = daily.rename(columns={
+        "when": "day_best_time",
+        "score": "day_best_score",
+        "user": "day_best_user",
+    })
+
+    best_scores: list[float] = []
+    best_users: list[str] = []
+    best_times: list[datetime] = []
+    improved_flags: list[bool] = []
+    summaries: list[str] = []
+
+    best_score: float | None = None
+    best_user: str | None = None
+    best_time: datetime | None = None
+
+    for row in daily.itertuples(index=False):
+        score = row.day_best_score
+        user = row.day_best_user
+        when = row.day_best_time
+        day = row.day
+        improved = False
+        if best_score is None:
+            best_score = score
+            best_user = user
+            best_time = when
+            improved = True
+        elif direction == "higher":
+            if score > best_score:
+                best_score = score
+                best_user = user
+                best_time = when
+                improved = True
+        else:
+            if score < best_score:
+                best_score = score
+                best_user = user
+                best_time = when
+                improved = True
+
+        best_scores.append(best_score)
+        best_users.append(best_user or "")
+        best_times.append(best_time)
+        improved_flags.append(improved)
+
+        # Human-readable summary for hover text
+        if when is None:
+            when = day
+        try:
+            when_str = when.strftime("%Y-%m-%d %H:%M UTC")
+        except Exception:
+            when_str = str(when)
+        try:
+            daily_score_str = f"{score:.5f}"
+        except Exception:
+            daily_score_str = "—"
+        daily_user_str = str(user) if user else "—"
+        if improved:
+            prefix = "New best! "
+        else:
+            prefix = "Best held. "
+        summaries.append(
+            prefix + f"Daily best: {daily_user_str} at {when_str} ({daily_score_str})"
+        )
+
+    daily["best_score"] = best_scores
+    daily["best_user"] = best_users
+    daily["best_time"] = best_times
+    daily["improved"] = improved_flags
+    daily["summary"] = summaries
+
+    return daily
 
 
 def build_html_from_df(df: pd.DataFrame) -> str:
@@ -370,23 +604,49 @@ def build_html_from_df(df: pd.DataFrame) -> str:
             traces.append(all_trace)
             # Best-of-day line: pick best score for each date
             direction = sub["direction"].iloc[0] if "direction" in sub.columns else "lower"
-            day = sub["when"].dt.normalize()
-            sub2 = sub.copy()
-            sub2["day"] = day
-            if direction == "higher":
-                idxs = sub2.groupby("day")["score"].idxmax()
-            else:
-                idxs = sub2.groupby("day")["score"].idxmin()
-            best_df = sub2.loc[idxs].sort_values("day")
-            best_trace = go.Scatter(
-                x=best_df["day"], y=best_df["score"], text=best_df["user"],
-                mode="lines+markers+text", name="Best Model",
-                marker=dict(color=accent, size=14, line=dict(width=2, color=accent_dark)),
-                line=dict(color=accent, width=3), textposition="top center",
-                textfont=dict(size=13, color="#333"),
-                hovertemplate="%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>Best " + label + ": %{y:.5f}<extra></extra>"
-            )
-            traces.append(best_trace)
+            best_df = compute_best_line(sub, direction)
+            if not best_df.empty:
+                best_df["best_time_str"] = best_df["best_time"].dt.strftime("%Y-%m-%d %H:%M UTC")
+                best_df["day_time_str"] = best_df["day_best_time"].dt.strftime("%Y-%m-%d %H:%M UTC")
+                marker_sizes = [16 if flag else 12 for flag in best_df["improved"]]
+                marker_text = best_df["best_user"].tolist()
+                customdata = [
+                    [
+                        best_user,
+                        best_time_str,
+                        day_user,
+                        day_time_str,
+                        (f"{day_score:.5f}" if pd.notna(day_score) else "—"),
+                        summary,
+                    ]
+                    for best_user, best_time_str, day_user, day_time_str, day_score, summary in zip(
+                        best_df["best_user"],
+                        best_df["best_time_str"],
+                        best_df["day_best_user"],
+                        best_df["day_time_str"],
+                        best_df["day_best_score"],
+                        best_df["summary"],
+                    )
+                ]
+                best_trace = go.Scatter(
+                    x=best_df["day_best_time"], y=best_df["best_score"], text=marker_text,
+                    mode="lines+markers+text", name="Best Model",
+                    marker=dict(
+                        color=accent,
+                        size=marker_sizes,
+                        line=dict(width=2, color=accent_dark),
+                    ),
+                    line=dict(color=accent, width=3), textposition="top center",
+                    textfont=dict(size=13, color="#333"),
+                    customdata=customdata,
+                    hovertemplate=(
+                        "%{customdata[5]}<br>"
+                        "Best so far: %{customdata[0]} (since %{customdata[1]})<br>"
+                        + "Best " + label + ": %{y:.5f}<extra></extra>"
+                    ),
+                    line_shape="hv",
+                )
+                traces.append(best_trace)
         layout = go.Layout(
             title=dict(text=title_text, x=0.5, font=dict(size=24, color="#2f2f2f")),
             margin=dict(l=70, r=20, t=70, b=80),
@@ -399,9 +659,9 @@ def build_html_from_df(df: pd.DataFrame) -> str:
             ),
             yaxis=dict(
                 title=dict(text=label, font=dict(size=16, color="#334155")),
-                autorange=True, showgrid=True,
+                type="log", autorange=True, showgrid=True,
                 gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
-                tickfont=dict(size=14, color="#3a3a3a")
+                tickfont=dict(size=14, color="#3a3a3a"),
             ),
             legend=dict(orientation="h", x=0.15, y=-0.18, font=dict(size=13, color="#3a3a3a")),
             hovermode="closest",

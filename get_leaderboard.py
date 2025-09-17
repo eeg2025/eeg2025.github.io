@@ -122,12 +122,14 @@ with requests.Session() as s:
         # CSV
         csv_url = add_secret(urljoin(BASE, f"/api/competitions/{PK}/results.csv?phase={pid}"))
         referer = add_secret(urljoin(BASE, f"/competitions/{PK}/"))
+        out_csv = OUT / f"results_phase_{pid}.csv"
         rc = s.get(csv_url, timeout=60, headers={"Referer": referer})
         if rc.ok:
-            out_csv = OUT / f"results_phase_{pid}.csv"
             out_csv.write_bytes(rc.content)
+            csv_path = str(out_csv)
             print("Saved CSV ->", out_csv)
         else:
+            csv_path = None
             if rc.status_code == 403 and not SECRET_KEY:
                 print(f"CSV HTTP 403 for phase {pid} (set CB_SECRET_KEY for access)")
             else:
@@ -148,11 +150,38 @@ with requests.Session() as s:
                 print(f"JSON HTTP {rj.status_code} for phase {pid}")
             json_path = None
 
+        # Leaderboard metadata (includes submission timestamps)
+        leaderboard_path = None
+        leaderboard_url = add_secret(urljoin(BASE, f"/api/phases/{pid}/get_leaderboard/"))
+        try:
+            rl = s.get(
+                leaderboard_url,
+                timeout=60,
+                headers={
+                    "Referer": referer,
+                    "Accept": "application/json",
+                },
+            )
+        except Exception as exc:
+            print(f"Leaderboard fetch error for phase {pid}: {exc}")
+        else:
+            if rl.ok:
+                out_leaderboard = OUT / f"leaderboard_phase_{pid}.json"
+                out_leaderboard.write_bytes(rl.content)
+                leaderboard_path = str(out_leaderboard)
+                print("Saved leaderboard ->", out_leaderboard)
+            else:
+                if rl.status_code == 403 and not SECRET_KEY:
+                    print(f"Leaderboard HTTP 403 for phase {pid} (set CB_SECRET_KEY for access)")
+                else:
+                    print(f"Leaderboard HTTP {rl.status_code} for phase {pid}")
+
         phase_entries.append({
             "id": pid,
             "name": pname,
-            "csv": str(out_csv) if rc.ok else None,
+            "csv": csv_path,
             "json": json_path,
+            "leaderboard": leaderboard_path,
         })
 
     # 5) Write a lightweight summary with timestamp for easy consumption/commits
