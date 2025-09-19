@@ -41,7 +41,7 @@ Join the [discord group](https://discord.gg/yZv8KqKMpH)!
 
 This competition aims to advance the field of EEG decoding by addressing two critical challenges:
 
-1. **Cross-Task Transfer Learning**: Developing models that can effectively transfer knowledge from passive EEG tasks to active tasks
+1. **Cross-Task Transfer Learning**: Developing models that can effectively transfer knowledge from any cognitive EEG tasks to active task
 2. **Subject Invariant Representation**: Creating robust representations that generalize across different subjects while predicting clinical factors
 
 Check out the Challenge paper on arXiv: [10.48550/arXiv.2506.19141](https://arxiv.org/abs/2506.19141) **Note** The preprint is currently out of date with the recent changes made to streamline the challenge during the execution phase. Please refer to the information provided on this website and the [Starter Kit](baseline.md) for the most up-to-date information.
