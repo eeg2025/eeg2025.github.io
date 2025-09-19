@@ -51,7 +51,7 @@ Check out the Challenge paper on arXiv: [10.48550/arXiv.2506.19141](https://arxi
 <div style="padding: 20px; text-align: center;">
   <img alt="introduction" src="https://eeg2025.github.io/assets/img/workflow.png" style="max-width: 100%;" />
   <p style="text-align: left; margin-top: 10px; font-family: sans-serif; font-size: 0.9em">
-    <b>Figure 1</b>: HBN-EEG Dataset and Data split. <b>A.</b> EEG is recorded using a 128-channel system during active tasks (i.e., with user input) or passive tasks. <b>B.</b> The psychopathology and demographic factors. <b>C.</b> The dataset split into Train, Test, and Validation. Details in <b><a href="https://eeg2025.github.io/assets/files/proposal.pdf">subsection 1.2 of the proposal.</a></b>
+    <b>Figure 1</b>: HBN-EEG Dataset and Data split. <b>A.</b> EEG is recorded using a 128-channel system during active tasks (i.e., with user input) or passive tasks. <b>B.</b> The psychopathology and demographic factors. <b>C.</b> The dataset split into Train, Test, and Validation. Details in <b><a href="https://arxiv.org/abs/2506.19141">subsection 1.2 of the proposal.</a></b>
   </p>
 </div>
 
