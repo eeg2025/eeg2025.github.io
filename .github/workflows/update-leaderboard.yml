@@ -37,15 +37,8 @@ jobs:
         run: |
           python get_leaderboard.py
 
-      - name: Build leaderboard HTML
-        env:
-          LB_METRIC_REGEX: '(?i)(normalized|normalised)\s*mse|\bnmse\b|\bmse\b|overall score$'
-          LB_DIRECTION: 'lower'
-          LB_LABEL: 'Normalize MSE'
-          LB_X_START: '2025-09-01'
-          LB_X_END: '2025-10-03'
+      - name: Build leaderboard HTML (new)
         run: |
-          pip install plotly pandas
           python build_leaderboard_html.py
 
       - name: Commit and push if changed
