@@ -539,14 +539,19 @@ def pick_phase_block(results: dict) -> tuple[str, dict]:
     return keys[0], results.get(keys[0], {})
 
 
-def load_dataframe() -> pd.DataFrame:
-    rows = []
+def load_dataframe() -> tuple[pd.DataFrame, datetime | None]:
+    rows: list[pd.DataFrame] = []
+    latest_generated: datetime | None = None
     for sp in discover_summaries(CB_DIR):
         try:
             summary = json.loads(sp.read_text())
         except Exception:
             continue
-        when = parse_time(summary.get("generated_at_utc") or summary.get("generated_at"), sp.stat().st_mtime)
+        generated = parse_time(summary.get("generated_at_utc") or summary.get("generated_at"), sp.stat().st_mtime)
+        if generated:
+            if (latest_generated is None) or (generated > latest_generated):
+                latest_generated = generated
+        when = generated
         # Iterate all phases present in this snapshot
         for ph in list_phase_entries(summary):
             phase_name = ph.get("name") or ""
@@ -682,10 +687,10 @@ def load_dataframe() -> pd.DataFrame:
             "is_best",
             "metric_key",
             "metric_label",
-        ])
+        ]), latest_generated
     all_df = pd.concat(rows, ignore_index=True)
     all_df = all_df.sort_values("when")
-    return all_df
+    return all_df, latest_generated
 
 
 def compute_best_line(sub: pd.DataFrame, direction: str) -> pd.DataFrame:
@@ -790,15 +795,41 @@ def compute_best_line(sub: pd.DataFrame, direction: str) -> pd.DataFrame:
     return daily
 
 
-def build_html_from_df(df: pd.DataFrame) -> str:
+def build_html_from_df(df: pd.DataFrame, last_updated: datetime | None = None) -> str:
+    def ensure_utc(dt: datetime | pd.Timestamp | None) -> datetime | None:
+        if dt is None:
+            return None
+        try:
+            ts = pd.Timestamp(dt)
+        except Exception:
+            return None
+        if ts.tzinfo is None:
+            ts = ts.tz_localize("UTC")
+        else:
+            ts = ts.tz_convert("UTC")
+        return ts.to_pydatetime()
+
+    resolved_last = ensure_utc(last_updated)
+    if resolved_last is None and not df.empty:
+        resolved_last = ensure_utc(df["when"].max())
+
     if df.empty:
+        if resolved_last is not None:
+            stamp = resolved_last.strftime("%Y-%m-%dT%H:%M:%SZ")
+            return (
+                "<div>\n"
+                f"  <p style=\"color:#666; margin-bottom:8px;\">Last updated: {stamp} (UTC)</p>\n"
+                "  <p style=\"color:#666\">No local Codabench results found in codabench_results/. Run get_leaderboard.py first.</p>\n"
+                "</div>"
+            )
         return (
             '<div><p style="color:#666">No local Codabench results found in '
             'codabench_results/. Run get_leaderboard.py first.</p></div>'
         )
-    last = df["when"].max()
+
+    stamp = resolved_last.strftime("%Y-%m-%dT%H:%M:%SZ") if resolved_last else "Unknown"
     pieces: list[str] = [
-        f"<div>\n  <p style=\"color:#666; margin-bottom:8px;\">Last updated: {last.strftime('%Y-%m-%dT%H:%M:%SZ')} (UTC)</p>"
+        f"<div>\n  <p style=\"color:#666; margin-bottom:8px;\">Last updated: {stamp} (UTC)</p>"
     ]
 
     # Group by phase and render a figure for each
@@ -1037,8 +1068,8 @@ def build_html_from_df(df: pd.DataFrame) -> str:
 
 def main() -> int:
     DEST.parent.mkdir(parents=True, exist_ok=True)
-    df = load_dataframe()
-    html = build_html_from_df(df)
+    df, last_generated = load_dataframe()
+    html = build_html_from_df(df, last_generated)
     DEST.write_text(html)
     n_snapshots = df["when"].nunique() if not df.empty else 0
     print(f"Wrote {DEST} with {n_snapshots} snapshot(s)")
