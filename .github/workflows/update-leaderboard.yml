@@ -16,6 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Clean old leaderboard artifacts
+        run: |
+          rm -rf codabench_results || true
+          mkdir -p codabench_results
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -47,7 +52,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add codabench_results _includes/leaderboard_generated.html
+            git add -A codabench_results _includes/leaderboard_generated.html
             git commit -m "Update leaderboard: $(date -u +%FT%TZ)"
             git push
           else
