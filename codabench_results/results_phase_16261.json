@@ -190,6 +190,11 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0743299723",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0024000406"
         },
+        "tensor-376154": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0245399475",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0825400352",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "0.9996799827"
+        },
         "glioi-371502": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0277700424",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0669200420",
