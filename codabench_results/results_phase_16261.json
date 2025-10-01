@@ -60,10 +60,10 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "0.9442399740",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "0.9996500015"
         },
-        "npdrbong-374126": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "0.9843900204",
+        "npdrbong-381825": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "0.9832699895",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "0.9441999793",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0016100407"
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0000200272"
         },
         "fanzhangrd-371787": {
             "EEG Foundation Warm-up Task(20683)-overall score": "0.9888100028",
@@ -164,11 +164,6 @@
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0013699532",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0000000000",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0019600391"
-        },
-        "yohatad-380659": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "1.0015000105",
-            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0000000000",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0021500587"
         },
         "medusa_bci_team-372427": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0018399954",
@@ -349,6 +344,11 @@
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0359699726",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0034500360",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0499000549"
+        },
+        "yohatad-379056": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0559300184",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0773799419",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0467400551"
         },
         "tensortitan-377293": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0845899582",
