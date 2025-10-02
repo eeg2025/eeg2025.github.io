@@ -59,7 +59,7 @@ Check out the Challenge paper on arXiv: [10.48550/arXiv.2506.19141](https://arxi
 
 This supervised learning challenge consists of a regression task. 
 
-Participants will predict behavioral performance metrics (response time via regression and success rate via classification) from an active experimental paradigm (Contrast Change Detection, CCD) using EEG data. 
+Participants will predict behavioral performance metrics (response time via regression) from an active experimental paradigm (Contrast Change Detection, CCD) using EEG data. 
 We suggest that competitors use passive activities as a pretraining and fine-tune into the cognitive task CCD.
 
 We will use our trained model within the competition cluster to make inferences in the CCD set.
