@@ -11,7 +11,8 @@ nav_order: 2
 |   **Date**  |         **Event**          |
 |:---------------------------------:|:---------------------------|
 | 01/09/2025 | **Warm-up Phase Begins**  |
-| 01/10/2025 | **Final Phase Begins**  |
+| 06/10/2025 | **Warm-up Phase Begins**  |
+| 10/10/2025 | **Final Phase Begins**  |
 | 01/11/2025 | **Competition Ends** |
 | 6-7/12/2025 | **NeurIPS Workshop** - Competition session and keynote on lessons learned |
 {: .table}
