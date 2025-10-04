@@ -145,6 +145,11 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0002399683",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0011399984"
         },
+        "bionic_human-384835": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0008800030",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0024399757",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0002100468"
+        },
         "suyeonkwak-380203": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0010199547",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0004700422",
@@ -320,11 +325,6 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0171200037",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0120799541"
         },
-        "bionic_human-380359": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "1.0137300491",
-            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0433700085",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0010199547"
-        },
         "sanpdy-368351": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0161199570",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0213400126",
@@ -419,6 +419,11 @@
             "EEG Foundation Warm-up Task(20683)-overall score": "1.6146199703",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "2.3490400314",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.2998600006"
+        },
+        "mahek-378741": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.6692399979",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "2.8794701099",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.1505700350"
         },
         "sabrinayuy3-382370": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.6763800383",
