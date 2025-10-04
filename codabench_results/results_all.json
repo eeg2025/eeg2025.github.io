@@ -195,6 +195,11 @@
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0038199425",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0010099411"
         },
+        "philadelphia-384856": {
+            "EEG Foundation Warm-up Task(20683)-overall score": "1.0019199848",
+            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0059800148",
+            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0001900196"
+        },
         "saigon-374340": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0020300150",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0004700422",
@@ -379,11 +384,6 @@
             "EEG Foundation Warm-up Task(20683)-overall score": "1.0845899582",
             "EEG Foundation Warm-up Task(20683)-challenge 1": "1.0195100307",
             "EEG Foundation Warm-up Task(20683)-challenge 2": "1.1124900579"
-        },
-        "philadelphia-384805": {
-            "EEG Foundation Warm-up Task(20683)-overall score": "1.1021599770",
-            "EEG Foundation Warm-up Task(20683)-challenge 1": "1.3264800310",
-            "EEG Foundation Warm-up Task(20683)-challenge 2": "1.0060299635"
         },
         "owenk-379273": {
             "EEG Foundation Warm-up Task(20683)-overall score": "1.1205500364",
