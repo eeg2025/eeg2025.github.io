@@ -32,7 +32,7 @@ from sklearn.metrics import root_mean_squared_error as rmse
 score = rmse(y_trues, y_preds) / std(y_trues)
 ```
 
-### Challenge 2: Psychopathology Factor Prediction
+### Challenge 2: Externalizing Factor Prediction
 - Similarly, challenge 2 also uses the **normalized root mean square error**.
 - We encourage participants to use all tasks to make the inference.
 - At the inference stage, we will only use the XXX (will be decided soon after more testing) task to predict the metrics. This is to ensure a timely evaluation due to the competition scale.
