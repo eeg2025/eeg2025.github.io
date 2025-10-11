@@ -597,6 +597,11 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0075399876",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0246200562"
         },
+        "philadelphia-388663": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0337799788",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0350500345",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0332399607"
+        },
         "wurining-388483": {
             "EEG Foundation Final Task(20684)-overall score": "1.0685800314",
             "EEG Foundation Final Task(20684)-challenge 1": "1.2275899649",
@@ -616,11 +621,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.7672899961",
             "EEG Foundation Final Task(20684)-challenge 1": "3.5358300209",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0093400478"
-        },
-        "philadelphia-388100": {
-            "EEG Foundation Final Task(20684)-overall score": "2.1531000137",
-            "EEG Foundation Final Task(20684)-challenge 1": "3.2505400181",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.6827700138"
         }
     }
 }
