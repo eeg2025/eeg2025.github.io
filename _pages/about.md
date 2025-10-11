@@ -35,6 +35,13 @@ bibliography: about.bib
     loading="lazy"></iframe>
 </div>
 
+<div align="center" style="margin: 1.5rem 0;">
+  <h3 style="margin-bottom: 0.75rem;">
+    See also the update below
+  </h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8hXtLF4yR_k?si=FAlVhiFm_lFtBJOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 The 2025 EEG Foundation Challenge: From Cross-Task to Cross-Subject EEG Decoding is a biosignal challenge accepted to the [**NeurIPS 2025 Competition Track**](https://blog.neurips.cc/2025/06/27/neurips-2025-competitions-announced/).
 
 Join the [discord group](https://discord.gg/8jd7nVKwsc)!
