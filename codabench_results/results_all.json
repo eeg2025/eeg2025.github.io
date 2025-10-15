@@ -592,15 +592,15 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9768800139",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0059700012"
         },
+        "aysbtl-392537": {
+            "EEG Foundation Final Task(20684)-overall score": "0.9988600016",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9666500092",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0126700401"
+        },
         "npdrbong-390725": {
             "EEG Foundation Final Task(20684)-overall score": "1.0014200211",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9580199718",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0200200081"
-        },
-        "aysbtl-392193": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0030699968",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9806699753",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0126700401"
         },
         "fanzhangrd-388002": {
             "EEG Foundation Final Task(20684)-overall score": "1.0036300421",
@@ -656,6 +656,11 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0075199604",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0069600344",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0077600479"
+        },
+        "philadelphia-389417": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0076500177",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0128200054",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0054299831"
         },
         "cuong_trinh-391174": {
             "EEG Foundation Final Task(20684)-overall score": "1.0091700554",
@@ -756,11 +761,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.1137599945",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0004199743",
             "EEG Foundation Final Task(20684)-challenge 2": "1.1623300314"
-        },
-        "philadelphia-391429": {
-            "EEG Foundation Final Task(20684)-overall score": "1.2237700224",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.7332700491",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0054099560"
         },
         "adolfo_ramirez-390543": {
             "EEG Foundation Final Task(20684)-overall score": "1.6202299595",
