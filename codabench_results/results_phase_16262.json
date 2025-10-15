@@ -125,6 +125,16 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0013899803",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0142799616"
         },
+        "yurisun-391983": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0114400387",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9929100275",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0193799734"
+        },
+        "aysbtl-391223": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0114699602",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9792500138",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0252900124"
+        },
         "zeege-391452": {
             "EEG Foundation Final Task(20684)-overall score": "1.0115100145",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0085599422",
@@ -144,11 +154,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0130000114",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0206799507",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0096999407"
-        },
-        "aysbtl-390497": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0135200024",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9889500141",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0240499973"
         },
         "turtleneck-391511": {
             "EEG Foundation Final Task(20684)-overall score": "1.0141099691",
@@ -249,11 +254,6 @@
             "EEG Foundation Final Task(20684)-overall score": "2.2368900776",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0032199621",
             "EEG Foundation Final Task(20684)-challenge 2": "2.7655999660"
-        },
-        "yurisun-391012": {
-            "EEG Foundation Final Task(20684)-overall score": "2.2404398918",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0044000149",
-            "EEG Foundation Final Task(20684)-challenge 2": "2.7701699734"
         },
         "bcilab_dpx-389587": {
             "EEG Foundation Final Task(20684)-overall score": "2.2513799667",
