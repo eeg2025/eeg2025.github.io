@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2025-10-20T10:14:05Z",
+  "generated_at_utc": "2025-10-20T11:10:59Z",
   "base": "https://www.codabench.org",
   "competition_pk": 9975,
-  "merged_results_json": null,
+  "merged_results_json": "codabench_results/results_all.json",
   "phases": [
     {
       "id": 16261,
@@ -14,8 +14,8 @@
     {
       "id": 16262,
       "name": "Final Phase",
-      "csv": null,
-      "json": null,
+      "csv": "codabench_results/results_phase_16262.csv",
+      "json": "codabench_results/results_phase_16262.json",
       "leaderboard": "codabench_results/leaderboard_phase_16262.json"
     }
   ]
