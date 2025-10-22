@@ -557,11 +557,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9277499914",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
         },
-        "sneddy-398226": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9785100222",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9268400073",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0006599426"
-        },
         "ugotanielian-397680": {
             "EEG Foundation Final Task(20684)-overall score": "0.9855300188",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9299700260",
@@ -581,6 +576,11 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9889600277",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9575099945",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0024399757"
+        },
+        "sneddy-388562": {
+            "EEG Foundation Final Task(20684)-overall score": "0.9892200232",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9453200102",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0080300570"
         },
         "pearjun-397860": {
             "EEG Foundation Final Task(20684)-overall score": "0.9896299839",
