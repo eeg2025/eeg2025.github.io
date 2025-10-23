@@ -1,14 +1,14 @@
 {
     "Results - Final Phase(16262)": {
+        "sneddy-398957": {
+            "EEG Foundation Final Task(20684)-overall score": "0.9756299853",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9187499881",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
+        },
         "ayana-397840": {
             "EEG Foundation Final Task(20684)-overall score": "0.9783200026",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9277499914",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
-        },
-        "sneddy-397443": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9786000252",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9274100065",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0005400181"
         },
         "ugotanielian-397680": {
             "EEG Foundation Final Task(20684)-overall score": "0.9855300188",
@@ -504,6 +504,11 @@
             "EEG Foundation Final Task(20684)-overall score": "2.7015199661",
             "EEG Foundation Final Task(20684)-challenge 1": "6.6312198639",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0173599720"
+        },
+        "justin97-399285": {
+            "EEG Foundation Final Task(20684)-overall score": "3.8036699295",
+            "EEG Foundation Final Task(20684)-challenge 1": "10.3037204742",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0179300308"
         }
     }
 }
