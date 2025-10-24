@@ -732,11 +732,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9353100061",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0312099457"
         },
-        "durgamabhilash-399939": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0035300255",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9728000164",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0167000294"
-        },
         "idrim-397664": {
             "EEG Foundation Final Task(20684)-overall score": "1.0036300421",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0015100241",
@@ -1106,6 +1101,11 @@
             "EEG Foundation Final Task(20684)-overall score": "3.8036699295",
             "EEG Foundation Final Task(20684)-challenge 1": "10.3037204742",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0179300308"
+        },
+        "durgamabhilash-393395": {
+            "EEG Foundation Final Task(20684)-overall score": "23.0318794250",
+            "EEG Foundation Final Task(20684)-challenge 1": "39.9884986877",
+            "EEG Foundation Final Task(20684)-challenge 2": "15.7647495270"
         }
     }
 }
