@@ -30,6 +30,16 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9278900027",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0087499619"
         },
+        "corentin_puffay-403616": {
+            "fact_sheet_answers": {
+                "team": "ExpORL",
+                "model_name": "XX",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9847199917",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9533500075",
+            "EEG Foundation Final Task(20684)-challenge 2": "0.9981600046"
+        },
         "ugotanielian-397680": {
             "EEG Foundation Final Task(20684)-overall score": "0.9855300188",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9299700260",
@@ -469,11 +479,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0685800314",
             "EEG Foundation Final Task(20684)-challenge 1": "1.2275899649",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0004400015"
-        },
-        "corentin_puffay-402425": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0872100592",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9542400241",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.1441999674"
         },
         "medusa_bci_team-395423": {
             "EEG Foundation Final Task(20684)-overall score": "1.1525599957",
