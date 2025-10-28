@@ -552,17 +552,17 @@
         }
     },
     "Results - Final Phase(16262)": {
-        "sneddy-403950": {
+        "sneddy-403641": {
             "fact_sheet_answers": {
                 "team": "MBZUAI [dsml.kz]",
                 "affiliated": "no",
-                "model_name": "Cindy Crawford v2",
+                "model_name": "Cindy Crawford",
                 "double_team": "no",
                 "diversity_track": "yes"
             },
-            "EEG Foundation Final Task(20684)-overall score": "0.9766100049",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9186499715",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0014499426"
+            "EEG Foundation Final Task(20684)-overall score": "0.9735100269",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9192399979",
+            "EEG Foundation Final Task(20684)-challenge 2": "0.9967700243"
         },
         "bluewater-402301": {
             "EEG Foundation Final Task(20684)-overall score": "1.0135600567",
@@ -683,15 +683,22 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9591199756",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0011199713"
         },
+        "fanzhangrd-404780": {
+            "fact_sheet_answers": {
+                "team": "Neumarker",
+                "affiliated": "no",
+                "model_name": "EEG_Challenge_1",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9941300154",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9595299959",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0089600086"
+        },
         "yurisun-397230": {
             "EEG Foundation Final Task(20684)-overall score": "0.9995800257",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9623200297",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0155500174"
-        },
-        "fanzhangrd-399789": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9977200031",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9628000259",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0126899481"
         },
         "matinpf-393954": {
             "EEG Foundation Final Task(20684)-overall score": "0.9959099889",
