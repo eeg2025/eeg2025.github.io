@@ -604,11 +604,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9356700182",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0119800568"
         },
-        "durgamabhilash-399944": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9839199781",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9381399751",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0035400391"
-        },
         "cduhra-404091": {
             "fact_sheet_answers": {
                 "team": "ETH PBL",
@@ -727,6 +722,11 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9911100268",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9716399908",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9994599819"
+        },
+        "durgamabhilash-399939": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0035300255",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9728000164",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0167000294"
         },
         "wangjc-397317": {
             "EEG Foundation Final Task(20684)-overall score": "1.0639599562",
@@ -1061,11 +1061,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0127099752",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0021899939"
         },
-        "philadelphia-396032": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0302100182",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0135799646",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0373400450"
-        },
         "easily-398871": {
             "EEG Foundation Final Task(20684)-overall score": "1.0158499479",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0177199841",
@@ -1116,6 +1111,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0285999775",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0036400557"
         },
+        "philadelphia-404439": {
+            "fact_sheet_answers": {
+                "team": "Philadelphia",
+                "affiliated": "no",
+                "model_name": "Philly",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0193400383",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0296200514",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0149300098"
+        },
         "wink_ai-395827": {
             "EEG Foundation Final Task(20684)-overall score": "1.0159900188",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0311199427",
@@ -1130,6 +1137,18 @@
             "EEG Foundation Final Task(20684)-overall score": "1.3202600479",
             "EEG Foundation Final Task(20684)-challenge 1": "2.0423901081",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0107699633"
+        },
+        "isaaclee-404487": {
+            "fact_sheet_answers": {
+                "team": "NTKLab2025_EEGFoundationChallenge",
+                "affiliated": "no",
+                "model_name": "PLV",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.6649199724",
+            "EEG Foundation Final Task(20684)-challenge 1": "2.3236100674",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.3826199770"
         },
         "goatyeon-403855": {
             "fact_sheet_answers": {
@@ -1240,7 +1259,7 @@
             },
             "EEG Foundation Final Task(20684)-overall score": "2.0044400692",
             "EEG Foundation Final Task(20684)-challenge 1": "3.7589299679",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.3679100275"
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0723999739"
         },
         "justin97-399285": {
             "EEG Foundation Final Task(20684)-overall score": "3.8036699295",
