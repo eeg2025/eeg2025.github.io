@@ -552,6 +552,18 @@
         }
     },
     "Results - Final Phase(16262)": {
+        "sneddy-403641": {
+            "fact_sheet_answers": {
+                "team": "MBZUAI [dsml.kz]",
+                "affiliated": "no",
+                "model_name": "Cindy Crawford",
+                "double_team": "no",
+                "diversity_track": "yes"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9735100269",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9192399979",
+            "EEG Foundation Final Task(20684)-challenge 2": "0.9967700243"
+        },
         "bluewater-402301": {
             "EEG Foundation Final Task(20684)-overall score": "1.0135600567",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9221500158",
@@ -561,11 +573,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9782099724",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9272999763",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000300407"
-        },
-        "sneddy-397443": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9786000252",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9274100065",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0005400181"
         },
         "ayana-397840": {
             "EEG Foundation Final Task(20684)-overall score": "0.9783200026",
@@ -889,11 +896,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0024199486",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0075199604"
         },
-        "ahmed_sameh-399153": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0205500126",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0024399757",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0283099413"
-        },
         "gundo0102-392781": {
             "EEG Foundation Final Task(20684)-overall score": "1.0080300570",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0025800467",
@@ -908,6 +910,18 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0099300146",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0027400255",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0130100250"
+        },
+        "ahmed_sameh-403884": {
+            "fact_sheet_answers": {
+                "team": "XD",
+                "affiliated": "no",
+                "model_name": "EGG",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0009299517",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0028799772",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0001000166"
         },
         "p14nt5ai-400253": {
             "EEG Foundation Final Task(20684)-overall score": "1.0018899441",
