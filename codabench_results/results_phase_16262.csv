@@ -9,7 +9,7 @@ medusa_bci_team-395423,,,1.1525599957,0.9341499805,1.2461700439
 neuroedge-398277,,,1.0024399757,0.9353100061,1.0312099457
 san_viego-402474,,,0.9890900254,0.9356700182,1.0119800568
 durgamabhilash-399944,,,0.9839199781,0.9381399751,1.0035400391
-cduhra-402551,,,0.9935899973,0.9439799786,1.0148500204
+cduhra-404091,"{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}",0.9931300282,0.9424300194,1.0148500204
 mahdi_ben_ameur-393322,,,0.9899899960,0.9443899989,1.0095299482
 zyzuo-393841,,,1.0013200045,0.9471899867,1.0245200396
 marco_fino-403331,,,0.9861299992,0.9487900138,1.0021400452
@@ -88,7 +88,7 @@ guo_zhao-402948,,,1.0024800301,1.0081100464,1.0000599623
 atharrizwan-391450,,,1.0049200058,1.0085699558,1.0033500195
 joel_kessler-394198,,,1.0188399553,1.0098199844,1.0226999521
 peter-griffin-403106,,,1.0030599833,1.0100599527,1.0000599623
-shiwei-wang-404018,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0035300255,1.0116200447,1.0000599623
+shiwei-wang-404108,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0031900406,1.0104899406,1.0000599623
 ysinha2506-389536,,,1.0053499937,1.0127099752,1.0021899939
 philadelphia-396032,,,1.0302100182,1.0135799646,1.0373400450
 easily-398871,,,1.0158499479,1.0177199841,1.0150500536
@@ -121,4 +121,5 @@ yizheyang-389570,,,1.8546500206,3.7076299191,1.0605200529
 grvkhnl-403663,"{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}",1.8541599512,3.8126099110,1.0148299932
 superabe-388250,,,1.9001599550,3.9990100861,1.0006500483
 zeege-392041,,,2.7015199661,6.6312198639,1.0173599720
+neuarv-404114,"{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}",2.0044400692,3.7589299679,1.3679100275
 justin97-399285,,,3.8036699295,10.3037204742,1.0179300308
