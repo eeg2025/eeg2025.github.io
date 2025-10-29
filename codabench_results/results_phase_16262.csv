@@ -43,6 +43,7 @@ daisy-403030,,,1.0038800240,0.9761899710,1.0157500505
 turtleneck-403716,"{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}",0.9884799719,0.9762399793,0.9937199950
 fangyisu-390003,,,1.0010700226,0.9762600064,1.0116900206
 kechen-hou-404323,"{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}",0.9955999851,0.9766299725,1.0037300587
+saarangp-405537,"{'team': 'UCLA BAIR', 'affiliated': 'no', 'model_name': 'M2J', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'UCLA BAIR', 'affiliated': 'no', 'model_name': 'M2J', 'double_team': 'no', 'diversity_track': 'no'}",0.9941899776,0.9772499800,1.0014499426
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
 mathis-405236,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSA', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSA', 'double_team': 'no', 'diversity_track': 'no'}",1.0338200331,0.9841700196,1.0550999641
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
@@ -55,7 +56,6 @@ anubhav2901-389845,,,1.0099500418,0.9917399883,1.0177600384
 tensortitan-389154,,,1.0242400169,0.9949399829,1.0368000269
 guoanwang-396968,,,1.0217200518,0.9953200221,1.0330300331
 kimliang-405559,"{'team': '538', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': '538', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'yes'}",1.0029300451,0.9987099767,1.0047399998
-saarangp-399200,,,1.0001499653,0.9999799728,1.0002199411
 liubailiushiliu-403091,,,1.0226199627,1.0000100136,1.0323100090
 tommicaste-402610,,,1.0007900000,1.0000900030,1.0010900497
 flowerfan-404912,"{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}",1.0029699802,1.0000900030,1.0041999817
