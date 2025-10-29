@@ -727,6 +727,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9664899707",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0062600374"
         },
+        "raclettedecode-404859": {
+            "fact_sheet_answers": {
+                "team": "RacletteDecoding",
+                "affiliated": "no",
+                "model_name": "SignalJEPA_and_co",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9958400130",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9666299820",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0083600283"
+        },
         "aysbtl-394931": {
             "EEG Foundation Final Task(20684)-overall score": "0.9951199889",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9666500092",
@@ -847,11 +859,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0217200518",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9953200221",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0330300331"
-        },
-        "raclettedecode-403445": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0051200390",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9975699782",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0083600283"
         },
         "saarangp-399200": {
             "EEG Foundation Final Task(20684)-overall score": "1.0001499653",

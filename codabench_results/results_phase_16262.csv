@@ -26,6 +26,7 @@ matinpf-393954,,,0.9959099889,0.9643200040,1.0094399452
 jucls-400278,,,0.9901999831,0.9654399753,1.0008200407
 matthewchen37-404660,"{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}",1.0268199444,0.9657700062,1.0529899597
 quoc-emotiv-390232,,,0.9943299890,0.9664899707,1.0062600374
+raclettedecode-404859,"{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}",0.9958400130,0.9666299820,1.0083600283
 aysbtl-394931,,,0.9951199889,0.9666500092,1.0073200464
 gundo0102-404536,"{'team': 'GSDS', 'affiliated': 'no', 'model_name': 'EEG-Detectives', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'GSDS', 'affiliated': 'no', 'model_name': 'EEG-Detectives', 'double_team': 'no', 'diversity_track': 'no'}",1.1650999784,0.9673699737,1.2498400211
 xw1216-397455,,,0.9946900010,0.9697499871,1.0053800344
@@ -46,7 +47,6 @@ anubhav2901-389845,,,1.0099500418,0.9917399883,1.0177600384
 tensortitan-389154,,,1.0242400169,0.9949399829,1.0368000269
 mathis-396801,,,1.0097700357,0.9953100085,1.0159699917
 guoanwang-396968,,,1.0217200518,0.9953200221,1.0330300331
-raclettedecode-403445,,,1.0051200390,0.9975699782,1.0083600283
 saarangp-399200,,,1.0001499653,0.9999799728,1.0002199411
 liubailiushiliu-403091,,,1.0226199627,1.0000100136,1.0323100090
 tommicaste-402610,,,1.0007900000,1.0000900030,1.0010900497
