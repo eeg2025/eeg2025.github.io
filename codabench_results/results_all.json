@@ -552,17 +552,17 @@
         }
     },
     "Results - Final Phase(16262)": {
-        "sneddy-403641": {
+        "sneddy-404853": {
             "fact_sheet_answers": {
                 "team": "MBZUAI [dsml.kz]",
                 "affiliated": "no",
-                "model_name": "Cindy Crawford",
+                "model_name": "Cindy Crawford v14",
                 "double_team": "no",
                 "diversity_track": "yes"
             },
-            "EEG Foundation Final Task(20684)-overall score": "0.9735100269",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9192399979",
-            "EEG Foundation Final Task(20684)-challenge 2": "0.9967700243"
+            "EEG Foundation Final Task(20684)-overall score": "0.9721300006",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9186599851",
+            "EEG Foundation Final Task(20684)-challenge 2": "0.9950399995"
         },
         "bluewater-402301": {
             "EEG Foundation Final Task(20684)-overall score": "1.0135600567",
@@ -1331,7 +1331,7 @@
                 "diversity_track": "no"
             },
             "EEG Foundation Final Task(20684)-overall score": "1.8783600330",
-            "EEG Foundation Final Task(20684)-challenge 1": "3.7589299679",
+            "EEG Foundation Final Task(20684)-challenge 1": "3.4896600246",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0723999739"
         },
         "justin97-399285": {
