@@ -1,6 +1,7 @@
 Username,fact_sheet_answers,fact_sheet_answers,EEG Foundation Final Task(20684)-overall score,EEG Foundation Final Task(20684)-challenge 1,EEG Foundation Final Task(20684)-challenge 2
 sneddy-403641,"{'team': 'MBZUAI [dsml.kz]', 'affiliated': 'no', 'model_name': 'Cindy Crawford', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'MBZUAI [dsml.kz]', 'affiliated': 'no', 'model_name': 'Cindy Crawford', 'double_team': 'no', 'diversity_track': 'yes'}",0.9735100269,0.9192399979,0.9967700243
 bluewater-402301,,,1.0135600567,0.9221500158,1.0527399778
+jerry1995-404753,"{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}",0.9925600290,0.9255499840,1.0212800503
 rafaelz-401410,,,0.9782099724,0.9272999763,1.0000300407
 ayana-397840,,,0.9783200026,0.9277499914,1.0000000000
 wen_ucf-399752,,,0.9844899774,0.9278900027,1.0087499619
@@ -50,6 +51,7 @@ guoanwang-396968,,,1.0217200518,0.9953200221,1.0330300331
 saarangp-399200,,,1.0001499653,0.9999799728,1.0002199411
 liubailiushiliu-403091,,,1.0226199627,1.0000100136,1.0323100090
 tommicaste-402610,,,1.0007900000,1.0000900030,1.0010900497
+flowerfan-404912,"{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}",1.0029699802,1.0000900030,1.0041999817
 maximeyochum-391812,,,1.0120899677,1.0001300573,1.0172200203
 jesslyn1999-403070,,,1.0174299479,1.0001399517,1.0248399973
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
@@ -99,7 +101,6 @@ sirsam-394910,,,1.0140899420,1.0218499899,1.0107699633
 peuvrierm-394043,,,1.0118299723,1.0226600170,1.0071799755
 madhavarora03-399739,,,1.0072400570,1.0229799747,1.0004999638
 dandan_wang-402747,,,1.0069600344,1.0230699778,1.0000599623
-jerry1995-389716,,,1.0111299753,1.0285999775,1.0036400557
 philadelphia-404439,"{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}",1.0193400383,1.0296200514,1.0149300098
 wink_ai-395827,,,1.0159900188,1.0311199427,1.0095000267
 amin_ansari-403607,,,1.0236400366,1.0468200445,1.0137000084
@@ -123,5 +124,5 @@ yizheyang-389570,,,1.8546500206,3.7076299191,1.0605200529
 grvkhnl-403663,"{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}",1.8541599512,3.8126099110,1.0148299932
 superabe-388250,,,1.9001599550,3.9990100861,1.0006500483
 zeege-392041,,,2.7015199661,6.6312198639,1.0173599720
-neuarv-404114,"{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}",2.0044400692,3.7589299679,1.0723999739
+neuarv-404114,"{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}",1.8783600330,3.7589299679,1.0723999739
 justin97-399285,,,3.8036699295,10.3037204742,1.0179300308
