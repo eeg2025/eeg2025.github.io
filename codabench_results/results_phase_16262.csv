@@ -42,6 +42,7 @@ chenhu-393901,,,2.2290298939,0.9770399928,2.7655999660
 annihilation-404576,"{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'Threestage_corrected', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'Threestage_corrected', 'double_team': 'no', 'diversity_track': 'no'}",1.0001900196,0.9802100062,1.0087499619
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
+madhavarora03-404633,"{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}",1.0058200359,0.9862899780,1.0141899586
 nuoyi-401028,,,1.0007200241,0.9879699945,1.0061899424
 bonibae8-399640,,,2.2242400646,0.9909399748,2.7527999878
 anubhav2901-389845,,,1.0099500418,0.9917399883,1.0177600384
@@ -99,7 +100,6 @@ yeralydsmlkz-404610,"{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 
 hania-397272,,,1.0300199986,1.0211900473,1.0338100195
 sirsam-394910,,,1.0140899420,1.0218499899,1.0107699633
 peuvrierm-394043,,,1.0118299723,1.0226600170,1.0071799755
-madhavarora03-399739,,,1.0072400570,1.0229799747,1.0004999638
 dandan_wang-402747,,,1.0069600344,1.0230699778,1.0000599623
 philadelphia-404439,"{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}",1.0193400383,1.0296200514,1.0149300098
 wink_ai-395827,,,1.0159900188,1.0311199427,1.0095000267
@@ -124,5 +124,5 @@ yizheyang-389570,,,1.8546500206,3.7076299191,1.0605200529
 grvkhnl-403663,"{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'UCA', 'affiliated': 'yes', 'model_name': 'eeg_challenge_v1', 'double_team': 'no', 'diversity_track': 'yes'}",1.8541599512,3.8126099110,1.0148299932
 superabe-388250,,,1.9001599550,3.9990100861,1.0006500483
 zeege-392041,,,2.7015199661,6.6312198639,1.0173599720
-neuarv-404114,"{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}",1.8783600330,3.4896600246,1.0723999739
+neuarv-404114,"{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SnapSync', 'affiliated': 'no', 'model_name': 'Ch_V_0', 'double_team': 'no', 'diversity_track': 'no'}",1.8783600330,3.7589299679,1.0723999739
 justin97-399285,,,3.8036699295,10.3037204742,1.0179300308
