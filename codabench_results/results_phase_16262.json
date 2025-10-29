@@ -182,6 +182,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9657700062",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0529899597"
         },
+        "adesh-405025": {
+            "fact_sheet_answers": {
+                "team": "Hangtree",
+                "affiliated": "no",
+                "model_name": "Alooo",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0206600428",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9660099745",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0440800190"
+        },
         "quoc-emotiv-390232": {
             "EEG Foundation Final Task(20684)-overall score": "0.9943299890",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9664899707",
@@ -235,11 +247,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0639599562",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9735900164",
             "EEG Foundation Final Task(20684)-challenge 2": "1.1026899815"
-        },
-        "adesh-402891": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9931200147",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9739000201",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0013600588"
         },
         "daisy-403030": {
             "EEG Foundation Final Task(20684)-overall score": "1.0038800240",
