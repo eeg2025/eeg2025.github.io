@@ -1,10 +1,10 @@
 Username,fact_sheet_answers,fact_sheet_answers,EEG Foundation Final Task(20684)-overall score,EEG Foundation Final Task(20684)-challenge 1,EEG Foundation Final Task(20684)-challenge 2
-sneddy-405277,"{'team': 'MBZUAI [dsml.kz]', 'affiliated': 'no', 'model_name': 'Cindy Crawford v14', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'MBZUAI [dsml.kz]', 'affiliated': 'no', 'model_name': 'Cindy Crawford v14', 'double_team': 'no', 'diversity_track': 'yes'}",0.9705100060,0.9183999896,0.9928399920
 hubertjb-404906,"{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}",0.9761899710,0.9206399918,1.0000000000
 bluewater-402301,,,1.0135600567,0.9221500158,1.0527399778
 sigmanova-405131,"{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}",0.9784100056,0.9224500060,1.0023900270
+rafaelz-404606,"{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'Bobv1', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'Bobv1', 'double_team': 'no', 'diversity_track': 'yes'}",0.9774299860,0.9246900082,1.0000300407
 jerry1995-404753,"{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}",0.9925600290,0.9255499840,1.0212800503
-rafaelz-401410,,,0.9782099724,0.9272999763,1.0000300407
+sneddy-398226,,,0.9785100222,0.9268400073,1.0006599426
 ayana-397840,,,0.9783200026,0.9277499914,1.0000000000
 wen_ucf-399752,,,0.9844899774,0.9278900027,1.0087499619
 ugotanielian-397680,,,0.9855300188,0.9299700260,1.0093400478
@@ -87,6 +87,7 @@ henrywang621-400331,,,0.9968900084,1.0032600164,0.9941599965
 taveenalotey-392555,,,2.1736900806,1.0033099651,2.6752800941
 wurining-403807,"{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}",1.0108000040,1.0038599968,1.0137799978
 honghaik14-388083,,,1.0129899979,1.0041199923,1.0167900324
+ysinha2506-405249,"{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}",1.0028400421,1.0043499470,1.0021899939
 felixd-390574,,,1.0350899696,1.0046199560,1.0481499434
 qiushui-392621,,,1.0015399456,1.0046800375,1.0001900196
 easily-405240,"{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}",1.0082700253,1.0063300133,1.0090999603
@@ -99,7 +100,6 @@ atharrizwan-391450,,,1.0049200058,1.0085699558,1.0033500195
 shiwei-wang-405118,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0059299469,1.0088299513,1.0046900511
 joel_kessler-394198,,,1.0188399553,1.0098199844,1.0226999521
 peter-griffin-403106,,,1.0030599833,1.0100599527,1.0000599623
-ysinha2506-389536,,,1.0053499937,1.0127099752,1.0021899939
 neurolegend-402823,,,1.0170500278,1.0185300112,1.0164200068
 skku_ljk-390969,,,1.0130000114,1.0206799507,1.0096999407
 yeralydsmlkz-404610,"{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}",1.0121200085,1.0211199522,1.0082600117
