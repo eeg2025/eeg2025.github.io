@@ -50,6 +50,7 @@ mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', '
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
 heremans-404863,,,1.0051100254,0.9856299758,1.0134500265
+gjoelbye-406624,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",0.9982299805,0.9857500196,1.0035799742
 madhavarora03-404633,"{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}",1.0058200359,0.9862899780,1.0141899586
 nuoyi-401028,,,1.0007200241,0.9879699945,1.0061899424
 peuvrierm-405141,"{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}",1.0015900135,0.9885200262,1.0071899891
@@ -64,7 +65,6 @@ flowerfan-404912,"{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegne
 maximeyochum-391812,,,1.0120899677,1.0001300573,1.0172200203
 jesslyn1999-403070,,,1.0174299479,1.0001399517,1.0248399973
 hkevin01-406388,"{'team': 'Kevin', 'affiliated': 'no', 'model_name': 'Kevin', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Kevin', 'affiliated': 'no', 'model_name': 'Kevin', 'double_team': 'no', 'diversity_track': 'no'}",1.0061299801,1.0001900196,1.0086699724
-gjoelbye-405640,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",1.0025899410,1.0002800226,1.0035799742
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
 cyber_dragon-401662,,,1.0039399862,1.0003999472,1.0054500103
 prakash7_-402719,,,1.0002199411,1.0004299879,1.0001200438
