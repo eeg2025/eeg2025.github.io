@@ -16,8 +16,8 @@ junlong-405466,"{'team': 'JLShen', 'affiliated': 'no', 'model_name': 'EEGC', 'do
 cduhra-404091,"{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}",0.9931300282,0.9424300194,1.0148500204
 mahdi_ben_ameur-393322,,,0.9899899960,0.9443899989,1.0095299482
 gundo0102-405406,"{'team': 'GSDS', 'affiliated': 'no', 'model_name': 'EEG-Detectives', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'GSDS', 'affiliated': 'no', 'model_name': 'EEG-Detectives', 'double_team': 'no', 'diversity_track': 'no'}",0.9988899827,0.9458500147,1.0216200352
+marco_fino-406218,"{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}",0.9945200086,0.9462500215,1.0152100325
 zyzuo-393841,,,1.0013200045,0.9471899867,1.0245200396
-marco_fino-403331,,,0.9861299992,0.9487900138,1.0021400452
 deleted_user_37275-393399,,,0.9973599911,0.9502900243,1.0175299644
 annihilation-405144,"{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'Three_stage', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'Three_stage', 'double_team': 'no', 'diversity_track': 'no'}",0.9914000034,0.9509099722,1.0087499619
 corentin_puffay-403616,"{'team': 'ExpORL', 'model_name': 'XX', 'diversity_track': 'no'}","{'team': 'ExpORL', 'model_name': 'XX', 'diversity_track': 'no'}",0.9847199917,0.9533500075,0.9981600046
