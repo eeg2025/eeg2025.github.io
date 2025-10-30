@@ -562,7 +562,14 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0003199577",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0012899637"
         },
-        "cyber_dragon-401662": {
+        "cyber_dragon-406777": {
+            "fact_sheet_answers": {
+                "team": "Theomatica",
+                "affiliated": "no",
+                "model_name": "DYNA",
+                "double_team": "no",
+                "diversity_track": "yes"
+            },
             "EEG Foundation Final Task(20684)-overall score": "1.0039399862",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0003999472",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0054500103"
