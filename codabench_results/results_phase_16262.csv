@@ -24,6 +24,7 @@ corentin_puffay-403616,"{'team': 'ExpORL', 'model_name': 'XX', 'diversity_track'
 nguyentrungky-404020,"{'team': 'IU-UN', 'affiliated': 'no', 'model_name': 'X', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'IU-UN', 'affiliated': 'no', 'model_name': 'X', 'double_team': 'no', 'diversity_track': 'no'}",0.9917299747,0.9545199871,1.0076800585
 marcomorik-400377,,,0.9827700257,0.9549800158,0.9946699739
 venkiiknev-394499,,,0.9889600277,0.9575099945,1.0024399757
+aysbtl-406099,"{'team': 'AI Lab', 'affiliated': 'no', 'model_name': 'BrainFM', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'AI Lab', 'affiliated': 'no', 'model_name': 'BrainFM', 'double_team': 'no', 'diversity_track': 'no'}",0.9817600250,0.9577900171,0.9920399785
 npdrbong-391826,,,0.9985100031,0.9580199718,1.0158599615
 jmo_kim-397219,,,0.9885200262,0.9591199756,1.0011199713
 fanzhangrd-404780,"{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}",0.9941300154,0.9595299959,1.0089600086
@@ -35,7 +36,6 @@ matthewchen37-404660,"{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGA
 adesh-405025,"{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'Alooo', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'Alooo', 'double_team': 'no', 'diversity_track': 'no'}",1.0206600428,0.9660099745,1.0440800190
 quoc-emotiv-390232,,,0.9943299890,0.9664899707,1.0062600374
 raclettedecode-404859,"{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}",0.9958400130,0.9666299820,1.0083600283
-aysbtl-394931,,,0.9951199889,0.9666500092,1.0073200464
 saarangp-405845,"{'team': 'UCLA BAIR', 'affiliated': 'no', 'model_name': 'M2J', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'UCLA BAIR', 'affiliated': 'no', 'model_name': 'M2J', 'double_team': 'no', 'diversity_track': 'no'}",1.1234500408,0.9672600031,1.1903899908
 chenhu-405547,"{'team': 'BCCW', 'affiliated': 'no', 'model_name': 'TLBN', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BCCW', 'affiliated': 'no', 'model_name': 'TLBN', 'double_team': 'no', 'diversity_track': 'no'}",1.0482300520,0.9681299925,1.0825699568
 xw1216-397455,,,0.9946900010,0.9697499871,1.0053800344
@@ -46,8 +46,8 @@ daisy-403030,,,1.0038800240,0.9761899710,1.0157500505
 turtleneck-403716,"{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}",0.9884799719,0.9762399793,0.9937199950
 fangyisu-390003,,,1.0010700226,0.9762600064,1.0116900206
 kechen-hou-404323,"{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}",0.9955999851,0.9766299725,1.0037300587
+mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}",1.0054199696,0.9807900190,1.0159699917
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
-mathis-405236,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSA', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSA', 'double_team': 'no', 'diversity_track': 'no'}",1.0338200331,0.9841700196,1.0550999641
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
 heremans-404863,,,1.0051100254,0.9856299758,1.0134500265
 madhavarora03-404633,"{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}",1.0058200359,0.9862899780,1.0141899586
