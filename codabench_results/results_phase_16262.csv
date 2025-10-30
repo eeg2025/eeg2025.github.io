@@ -28,6 +28,7 @@ npdrbong-391826,,,0.9985100031,0.9580199718,1.0158599615
 jmo_kim-397219,,,0.9885200262,0.9591199756,1.0011199713
 fanzhangrd-404780,"{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}",0.9941300154,0.9595299959,1.0089600086
 yurisun-397230,,,0.9995800257,0.9623200297,1.0155500174
+bcilab_dpx-406062,"{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}",0.9972199798,0.9638100266,1.0115400553
 matinpf-393954,,,0.9959099889,0.9643200040,1.0094399452
 jucls-400278,,,0.9901999831,0.9654399753,1.0008200407
 matthewchen37-404660,"{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}",1.0268199444,0.9657700062,1.0529899597
@@ -62,7 +63,6 @@ tommicaste-402610,,,1.0007900000,1.0000900030,1.0010900497
 flowerfan-404912,"{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegnet', 'double_team': 'no', 'diversity_track': 'no'}",1.0029699802,1.0000900030,1.0041999817
 maximeyochum-391812,,,1.0120899677,1.0001300573,1.0172200203
 jesslyn1999-403070,,,1.0174299479,1.0001399517,1.0248399973
-bcilab_dpx-405133,"{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}",1.0081599951,1.0002700090,1.0115400553
 gjoelbye-405640,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",1.0025899410,1.0002800226,1.0035799742
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
 cyber_dragon-401662,,,1.0039399862,1.0003999472,1.0054500103
@@ -99,6 +99,7 @@ niko_-402950,,,1.0019500256,1.0063500404,1.0000599623
 youzhi-389564,,,1.0207999945,1.0063899755,1.0269800425
 aplneuro-396183,,,1.0137100220,1.0068099499,1.0166699886
 ling-ning-403101,,,1.0021699667,1.0070799589,1.0000599623
+l_peracchio-405570,"{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}",1.0028200150,1.0077099800,1.0007200241
 guo_zhao-402948,,,1.0024800301,1.0081100464,1.0000599623
 shiwei-wang-405915,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0057699680,1.0082900524,1.0046900511
 atharrizwan-391450,,,1.0049200058,1.0085699558,1.0033500195
