@@ -13,6 +13,7 @@ medusa_bci_team-395423,,,1.1525599957,0.9341499805,1.2461700439
 neuroedge-398277,,,1.0024399757,0.9353100061,1.0312099457
 san_viego-405047,"{'team': 'RIML', 'affiliated': 'no', 'model_name': 'GGE', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'RIML', 'affiliated': 'no', 'model_name': 'GGE', 'double_team': 'no', 'diversity_track': 'yes'}",0.9789000154,0.9356700182,0.9974200130
 junlong-405466,"{'team': 'JLShen', 'affiliated': 'no', 'model_name': 'EEGC', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'JLShen', 'affiliated': 'no', 'model_name': 'EEGC', 'double_team': 'no', 'diversity_track': 'no'}",0.9818300009,0.9357399940,1.0015799999
+popovich-400870,,,0.9831799865,0.9413200021,1.0011199713
 cduhra-404091,"{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'ETH PBL', 'affiliated': 'no', 'model_name': 'Nirvana EEG v1', 'double_team': 'no', 'diversity_track': 'no'}",0.9931300282,0.9424300194,1.0148500204
 mahdi_ben_ameur-393322,,,0.9899899960,0.9443899989,1.0095299482
 marco_fino-406389,"{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}",0.9843999743,0.9454299808,1.0011099577
