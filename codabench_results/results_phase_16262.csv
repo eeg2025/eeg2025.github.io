@@ -63,6 +63,7 @@ flowerfan-404912,"{'team': 'yale_test', 'affiliated': 'no', 'model_name': 'eegne
 maximeyochum-391812,,,1.0120899677,1.0001300573,1.0172200203
 jesslyn1999-403070,,,1.0174299479,1.0001399517,1.0248399973
 bcilab_dpx-405133,"{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bci', 'affiliated': 'no', 'model_name': 'sit', 'double_team': 'no', 'diversity_track': 'no'}",1.0081599951,1.0002700090,1.0115400553
+gjoelbye-405640,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",1.0025899410,1.0002800226,1.0035799742
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
 cyber_dragon-401662,,,1.0039399862,1.0003999472,1.0054500103
 prakash7_-402719,,,1.0002199411,1.0004299879,1.0001200438
@@ -92,6 +93,7 @@ honghaik14-388083,,,1.0129899979,1.0041199923,1.0167900324
 ysinha2506-405249,"{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}",1.0028400421,1.0043499470,1.0021899939
 felixd-390574,,,1.0350899696,1.0046199560,1.0481499434
 qiushui-392621,,,1.0015399456,1.0046800375,1.0001900196
+imhyuno-406039,"{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}",1.0017800331,1.0046800375,1.0005400181
 easily-405240,"{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}",1.0082700253,1.0063300133,1.0090999603
 niko_-402950,,,1.0019500256,1.0063500404,1.0000599623
 youzhi-389564,,,1.0207999945,1.0063899755,1.0269800425
