@@ -1418,6 +1418,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0070799589",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000599623"
         },
+        "asortubay-407848": {
+            "fact_sheet_answers": {
+                "team": "CCNYNeuro",
+                "affiliated": "no",
+                "model_name": "CCNYNEURO_V4",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0030200481",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0071200132",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0012700558"
+        },
         "l_peracchio-405570": {
             "fact_sheet_answers": {
                 "team": "MEDAI",

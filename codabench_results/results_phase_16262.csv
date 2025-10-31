@@ -104,6 +104,7 @@ niko_-402950,,,1.0019500256,1.0063500404,1.0000599623
 youzhi-389564,,,1.0207999945,1.0063899755,1.0269800425
 aplneuro-396183,,,1.0137100220,1.0068099499,1.0166699886
 ling-ning-403101,,,1.0021699667,1.0070799589,1.0000599623
+asortubay-407848,"{'team': 'CCNYNeuro', 'affiliated': 'no', 'model_name': 'CCNYNEURO_V4', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CCNYNeuro', 'affiliated': 'no', 'model_name': 'CCNYNEURO_V4', 'double_team': 'no', 'diversity_track': 'no'}",1.0030200481,1.0071200132,1.0012700558
 l_peracchio-405570,"{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}",1.0028200150,1.0077099800,1.0007200241
 shiwei-wang-406952,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0055999756,1.0077199936,1.0046900511
 isaiah1810-406759,"{'team': 'CMU_S3D', 'affiliated': 'no', 'model_name': 'VQ-Forget', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CMU_S3D', 'affiliated': 'no', 'model_name': 'VQ-Forget', 'double_team': 'no', 'diversity_track': 'yes'}",1.0089299679,1.0079799891,1.0093400478
