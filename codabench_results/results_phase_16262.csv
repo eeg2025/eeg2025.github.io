@@ -69,6 +69,7 @@ hkevin01-406388,"{'team': 'Kevin', 'affiliated': 'no', 'model_name': 'Kevin', 'd
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
 cyber_dragon-406777,"{'team': 'Theomatica', 'affiliated': 'no', 'model_name': 'DYNA', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'Theomatica', 'affiliated': 'no', 'model_name': 'DYNA', 'double_team': 'no', 'diversity_track': 'yes'}",1.0039399862,1.0003999472,1.0054500103
 prakash7_-402719,,,1.0002199411,1.0004299879,1.0001200438
+dhruvdarda-406916,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}",1.0018299818,1.0004899502,1.0024100542
 shoni_ai-395303,,,1.0091700554,1.0006300211,1.0128300190
 asifms-401252,,,0.9990100265,1.0009800196,0.9981600046
 tinganli-401737,,,1.0004600286,1.0010900497,1.0001900196
@@ -81,7 +82,6 @@ cuong_trinh-391174,,,1.0091700554,1.0020200014,1.0122300386
 bezrukavaia-397784,,,1.0129599571,1.0021200180,1.0176099539
 hw7907-401474,,,1.0070099831,1.0021799803,1.0090700388
 brandone-399839,,,1.2830699682,1.0023100376,1.4033999443
-dhruvdarda-405190,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}",1.0008100271,1.0024000406,1.0001300573
 henrywang621-406869,"{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}",0.9966800213,1.0025500059,0.9941599965
 gongwx-397347,,,1.0014699697,1.0026600361,1.0009700060
 a_pal-395356,,,1.0099300146,1.0027400255,1.0130100250
