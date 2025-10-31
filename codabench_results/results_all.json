@@ -731,6 +731,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9443899989",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0095299482"
         },
+        "elias082537-407570": {
+            "fact_sheet_answers": {
+                "team": "RacletteDecoding",
+                "affiliated": "no",
+                "model_name": "vae",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9891399741",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9444900155",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0082700253"
+        },
         "nguyentrungky-405592": {
             "fact_sheet_answers": {
                 "team": "IU-UN",
@@ -1530,18 +1542,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0230699778",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000599623"
         },
-        "philadelphia-404439": {
-            "fact_sheet_answers": {
-                "team": "Philadelphia",
-                "affiliated": "no",
-                "model_name": "Philly",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "1.0193400383",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0296200514",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0149300098"
-        },
         "wink_ai-395827": {
             "EEG Foundation Final Task(20684)-overall score": "1.0159900188",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0311199427",
@@ -1570,6 +1570,18 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0829000473",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0435800552",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0997500420"
+        },
+        "philadelphia-407589": {
+            "fact_sheet_answers": {
+                "team": "Philadelphia",
+                "affiliated": "no",
+                "model_name": "Philly",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.2445399761",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.4727100134",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.1467599869"
         },
         "isaaclee-404487": {
             "fact_sheet_answers": {
