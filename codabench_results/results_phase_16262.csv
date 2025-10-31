@@ -30,6 +30,7 @@ aysbtl-406099,"{'team': 'AI Lab', 'affiliated': 'no', 'model_name': 'BrainFM', '
 npdrbong-391826,,,0.9985100031,0.9580199718,1.0158599615
 jmo_kim-397219,,,0.9885200262,0.9591199756,1.0011199713
 fanzhangrd-404780,"{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}",0.9941300154,0.9595299959,1.0089600086
+inesws-406443,"{'team': 'B3-EEG', 'affiliated': 'no', 'model_name': 'abracadabra', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'B3-EEG', 'affiliated': 'no', 'model_name': 'abracadabra', 'double_team': 'no', 'diversity_track': 'no'}",0.9986900091,0.9617999792,1.0145100355
 yurisun-397230,,,0.9995800257,0.9623200297,1.0155500174
 matinpf-393954,,,0.9959099889,0.9643200040,1.0094399452
 jucls-400278,,,0.9901999831,0.9654399753,1.0008200407
@@ -87,7 +88,6 @@ gongwx-397347,,,1.0014699697,1.0026600361,1.0009700060
 a_pal-395356,,,1.0099300146,1.0027400255,1.0130100250
 ahmed_sameh-403884,"{'team': 'XD', 'affiliated': 'no', 'model_name': 'EGG', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'XD', 'affiliated': 'no', 'model_name': 'EGG', 'double_team': 'no', 'diversity_track': 'no'}",1.0009299517,1.0028799772,1.0001000166
 p14nt5ai-400253,,,1.0018899441,1.0029799938,1.0014200211
-inesws-392065,,,1.0110700130,1.0030399561,1.0145100355
 taveenalotey-391418,,,2.1736900806,1.0033099651,2.6752800941
 wurining-403807,"{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}",1.0108000040,1.0038599968,1.0137799978
 honghaik14-388083,,,1.0129899979,1.0041199923,1.0167900324
@@ -102,6 +102,7 @@ niko_-402950,,,1.0019500256,1.0063500404,1.0000599623
 youzhi-389564,,,1.0207999945,1.0063899755,1.0269800425
 aplneuro-396183,,,1.0137100220,1.0068099499,1.0166699886
 ling-ning-403101,,,1.0021699667,1.0070799589,1.0000599623
+eazyal-407114,"{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'eegpt2', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'eegpt2', 'double_team': 'no', 'diversity_track': 'no'}",1.0152000189,1.0072200298,1.0186300278
 l_peracchio-405570,"{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'MEDAI', 'affiliated': 'no', 'model_name': 'ViTReg', 'double_team': 'no', 'diversity_track': 'no'}",1.0028200150,1.0077099800,1.0007200241
 shiwei-wang-406952,"{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'statistic', 'affiliated': 'no', 'model_name': 'EEG2Rep', 'double_team': 'no', 'diversity_track': 'yes'}",1.0055999756,1.0077199936,1.0046900511
 isaiah1810-406759,"{'team': 'CMU_S3D', 'affiliated': 'no', 'model_name': 'VQ-Forget', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CMU_S3D', 'affiliated': 'no', 'model_name': 'VQ-Forget', 'double_team': 'no', 'diversity_track': 'yes'}",1.0089299679,1.0079799891,1.0093400478
@@ -111,7 +112,6 @@ gw_hwang-406205,"{'team': 'gw_hwang', 'affiliated': 'no', 'model_name': 'freqfor
 joel_kessler-394198,,,1.0188399553,1.0098199844,1.0226999521
 peter-griffin-403106,,,1.0030599833,1.0100599527,1.0000599623
 amin_ansari-405685,"{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminSalarNex', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminSalarNex', 'double_team': 'no', 'diversity_track': 'no'}",1.0127199888,1.0104399920,1.0137000084
-eazyal-406804,"{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'base', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'base', 'double_team': 'no', 'diversity_track': 'no'}",1.0163300037,1.0109800100,1.0186300278
 neurolegend-402823,,,1.0170500278,1.0185300112,1.0164200068
 skku_ljk-390969,,,1.0130000114,1.0206799507,1.0096999407
 yeralydsmlkz-404610,"{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}",1.0121200085,1.0211199522,1.0082600117
