@@ -624,6 +624,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9255499840",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0212800503"
         },
+        "bcilab_dpx-407901": {
+            "fact_sheet_answers": {
+                "team": "bci",
+                "affiliated": "no",
+                "model_name": "sit1",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9862400293",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9271900058",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0115400553"
+        },
         "sneddy-397443": {
             "EEG Foundation Final Task(20684)-overall score": "0.9786000252",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9274100065",
@@ -638,18 +650,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9844899774",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9278900027",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0087499619"
-        },
-        "bcilab_dpx-407022": {
-            "fact_sheet_answers": {
-                "team": "bci",
-                "affiliated": "no",
-                "model_name": "sit",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9864900112",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9280499816",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0115400553"
         },
         "medusa_bci_team-395423": {
             "EEG Foundation Final Task(20684)-overall score": "1.1525599957",
@@ -725,6 +725,18 @@
             "EEG Foundation Final Task(20684)-overall score": "2.2135100365",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9425600171",
             "EEG Foundation Final Task(20684)-challenge 2": "2.7582099438"
+        },
+        "saarangp-407917": {
+            "fact_sheet_answers": {
+                "team": "UCLA BAIR",
+                "affiliated": "no",
+                "model_name": "M2J-C",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9932399988",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9443200231",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0141999722"
         },
         "mahdi_ben_ameur-393322": {
             "EEG Foundation Final Task(20684)-overall score": "0.9899899960",
@@ -859,18 +871,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9941300154",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9595299959",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0089600086"
-        },
-        "saarangp-407019": {
-            "fact_sheet_answers": {
-                "team": "UCLA BAIR",
-                "affiliated": "no",
-                "model_name": "M2J",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9980800152",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9596700072",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0145399570"
         },
         "inesws-406443": {
             "fact_sheet_answers": {
