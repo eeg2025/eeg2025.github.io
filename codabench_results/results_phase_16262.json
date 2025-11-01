@@ -162,16 +162,16 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9413200021",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0011199713"
         },
-        "mahdi_ben_ameur-407966": {
+        "mahdi_ben_ameur-408003": {
             "fact_sheet_answers": {
                 "team": "return_sota",
                 "affiliated": "no",
                 "model_name": "sota",
                 "double_team": "no",
-                "diversity_track": "yes"
+                "diversity_track": "no"
             },
-            "EEG Foundation Final Task(20684)-overall score": "0.9893500209",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9422699809",
+            "EEG Foundation Final Task(20684)-overall score": "0.9892299771",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9418699741",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0095299482"
         },
         "gundo0102-407015": {
