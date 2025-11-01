@@ -58,6 +58,7 @@ kechen-hou-404323,"{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGMo
 heremans-406691,"{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}",1.0030699968,0.9788299799,1.0134500265
 mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}",1.0054199696,0.9807900190,1.0159699917
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
+philadelphia-408708,"{'team': 'philadelphia', 'affiliated': 'no', 'model_name': 'philly', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'philadelphia', 'affiliated': 'no', 'model_name': 'philly', 'double_team': 'no', 'diversity_track': 'no'}",0.9980400205,0.9846600294,1.0037699938
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
 chetanrakshe-407137,"{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}",2.2643399239,0.9864599705,2.8120100498
 nuoyi-401028,,,1.0007200241,0.9879699945,1.0061899424
@@ -127,7 +128,6 @@ dandan_wang-402747,,,1.0069600344,1.0230699778,1.0000599623
 wink_ai-395827,,,1.0159900188,1.0311199427,1.0095000267
 wangchance-406619,"{'team': 'CECNL', 'affiliated': 'no', 'model_name': 'tc', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CECNL', 'affiliated': 'no', 'model_name': 'tc', 'double_team': 'no', 'diversity_track': 'no'}",1.0115799904,1.0352699757,1.0014200211
 j0hnny-405630,"{'team': 'Malk', 'affiliated': 'no', 'model_name': 'EEGNeX-0.1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Malk', 'affiliated': 'no', 'model_name': 'EEGNeX-0.1', 'double_team': 'no', 'diversity_track': 'no'}",1.0829000473,1.0435800552,1.0997500420
-philadelphia-407589,"{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Philadelphia', 'affiliated': 'no', 'model_name': 'Philly', 'double_team': 'no', 'diversity_track': 'no'}",1.2445399761,1.4727100134,1.1467599869
 isaaclee-404487,"{'team': 'NTKLab2025_EEGFoundationChallenge', 'affiliated': 'no', 'model_name': 'PLV', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NTKLab2025_EEGFoundationChallenge', 'affiliated': 'no', 'model_name': 'PLV', 'double_team': 'no', 'diversity_track': 'no'}",1.6649199724,2.3236100674,1.3826199770
 goatyeon-403855,"{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'challenge_model', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'challenge_model', 'double_team': 'no', 'diversity_track': 'yes'}",1.4660400152,2.5519599915,1.0006500483
 pearjun-395310,,,1.4783600569,2.5764300823,1.0077600479
