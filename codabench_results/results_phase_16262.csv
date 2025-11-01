@@ -1,12 +1,12 @@
 Username,fact_sheet_answers,fact_sheet_answers,EEG Foundation Final Task(20684)-overall score,EEG Foundation Final Task(20684)-challenge 1,EEG Foundation Final Task(20684)-challenge 2
 liuyin-405766,"{'team': 'compneuro_debug', 'affiliated': 'no', 'model_name': 'debug', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'compneuro_debug', 'affiliated': 'no', 'model_name': 'debug', 'double_team': 'no', 'diversity_track': 'no'}",1.6320699453,0.8985400200,1.9464299679
 hubertjb-405717,"{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}",0.9736700058,0.9122200012,1.0000000000
-sneddy-403441,,,0.9733800292,0.9187999964,0.9967700243
 bcilab_dpx-407941,"{'team': 'BCILab', 'affiliated': 'no', 'model_name': 'SIT', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BCILab', 'affiliated': 'no', 'model_name': 'SIT', 'double_team': 'no', 'diversity_track': 'no'}",0.9845299721,0.9214900136,1.0115400553
 rafaelz-406870,"{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'v5', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'v5', 'double_team': 'no', 'diversity_track': 'yes'}",0.9765300155,0.9216899872,1.0000300407
 sigmanova-405131,"{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}",0.9784100056,0.9224500060,1.0023900270
 ugotanielian-405211,"{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV3', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV3', 'double_team': 'no', 'diversity_track': 'no'}",1.0388000011,0.9250699878,1.0875400305
 jerry1995-404753,"{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}",0.9925600290,0.9255499840,1.0212800503
+sneddy-398226,,,0.9785100222,0.9268400073,1.0006599426
 ayana-397840,,,0.9783200026,0.9277499914,1.0000000000
 wen_ucf-399752,,,0.9844899774,0.9278900027,1.0087499619
 medusa_bci_team-395423,,,1.1525599957,0.9341499805,1.2461700439
@@ -52,9 +52,9 @@ turtleneck-403716,"{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Medi
 fangyisu-390003,,,1.0010700226,0.9762600064,1.0116900206
 kechen-hou-404323,"{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}",0.9955999851,0.9766299725,1.0037300587
 gjoelbye-407888,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",0.9917600155,0.9776600003,0.9977999926
+dhruvdarda-408103,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}",0.9920700192,0.9785400033,0.9978700280
 heremans-406691,"{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}",1.0030699968,0.9788299799,1.0134500265
 mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}",1.0054199696,0.9807900190,1.0159699917
-dhruvdarda-408034,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}",1.0027099848,0.9821500182,1.0115200281
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
 madhavarora03-404633,"{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'OMV', 'affiliated': 'no', 'model_name': 'AttentionBaseNew', 'double_team': 'no', 'diversity_track': 'no'}",1.0058200359,0.9862899780,1.0141899586
@@ -84,7 +84,7 @@ idrim-397664,,,1.0036300421,1.0015100241,1.0045399666
 spruthi-392352,,,1.0161700249,1.0017199516,1.0223599672
 cuong_trinh-391174,,,1.0091700554,1.0020200014,1.0122300386
 bezrukavaia-397784,,,1.0129599571,1.0021200180,1.0176099539
-hw7907-401474,,,1.0070099831,1.0021799803,1.0090700388
+hw7907-401894,,,1.0147299767,1.0021799803,1.0200999975
 brandone-399839,,,1.2830699682,1.0023100376,1.4033999443
 easily-408042,"{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}",1.0093799829,1.0025399923,1.0123000145
 henrywang621-406869,"{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}",0.9966800213,1.0025500059,0.9941599965
@@ -138,6 +138,7 @@ hubert-392710,,,1.6899600029,3.2777900696,1.0094699860
 lianyongfeng-395531,,,1.7065800428,3.3334798813,1.0093400478
 neerajwagh-406703,"{'team': 'n/a', 'affiliated': 'no', 'model_name': 'init', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'n/a', 'affiliated': 'no', 'model_name': 'init', 'double_team': 'no', 'diversity_track': 'no'}",1.7286599874,3.3352499008,1.0401300192
 neuarv-405770,"{'team': 'SynapSync', 'affiliated': 'no', 'model_name': 'SynapSync', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'SynapSync', 'affiliated': 'no', 'model_name': 'SynapSync', 'double_team': 'no', 'diversity_track': 'no'}",1.7081099749,3.3591899872,1.0004999638
+srinivasraj05-407525,"{'team': 'CodeDoc', 'affiliated': 'no', 'model_name': 'SmallEEGNet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CodeDoc', 'affiliated': 'no', 'model_name': 'SmallEEGNet', 'double_team': 'no', 'diversity_track': 'no'}",1.7485300303,3.4889600277,1.0026299953
 adilbai-406446,"{'team': 'Adilbai', 'affiliated': 'no', 'model_name': 'baseline', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Adilbai', 'affiliated': 'no', 'model_name': 'baseline', 'double_team': 'no', 'diversity_track': 'no'}",1.7896300554,3.5115098953,1.0516799688
 yangzijianghao-398509,,,1.7620199919,3.5358200073,1.0018199682
 tjnupf-400984,,,1.7672799826,3.5358200073,1.0093300343
