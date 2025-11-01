@@ -34,6 +34,7 @@ aysbtl-406099,"{'team': 'AI Lab', 'affiliated': 'no', 'model_name': 'BrainFM', '
 daisy-407153,"{'team': 'clouAI', 'affiliated': 'no', 'model_name': 'demo', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'clouAI', 'affiliated': 'no', 'model_name': 'demo', 'double_team': 'no', 'diversity_track': 'no'}",0.9929800034,0.9580000043,1.0079699755
 npdrbong-391826,,,0.9985100031,0.9580199718,1.0158599615
 fanzhangrd-404780,"{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Neumarker', 'affiliated': 'no', 'model_name': 'EEG_Challenge_1', 'double_team': 'no', 'diversity_track': 'no'}",0.9941300154,0.9595299959,1.0089600086
+dhruvdarda-408353,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'test', 'double_team': 'no', 'diversity_track': 'no'}",0.9863899946,0.9596099854,0.9978600144
 inesws-406443,"{'team': 'B3-EEG', 'affiliated': 'no', 'model_name': 'abracadabra', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'B3-EEG', 'affiliated': 'no', 'model_name': 'abracadabra', 'double_team': 'no', 'diversity_track': 'no'}",0.9986900091,0.9617999792,1.0145100355
 yurisun-397230,,,0.9995800257,0.9623200297,1.0155500174
 matinpf-393954,,,0.9959099889,0.9643200040,1.0094399452
@@ -52,7 +53,6 @@ turtleneck-403716,"{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Medi
 fangyisu-390003,,,1.0010700226,0.9762600064,1.0116900206
 kechen-hou-404323,"{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LZU-UAIS', 'affiliated': 'no', 'model_name': 'EEGModel', 'double_team': 'no', 'diversity_track': 'no'}",0.9955999851,0.9766299725,1.0037300587
 gjoelbye-407888,"{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CogSys', 'affiliated': 'no', 'model_name': 'CogSys', 'double_team': 'no', 'diversity_track': 'no'}",0.9917600155,0.9776600003,0.9977999926
-dhruvdarda-408103,"{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Infocusp', 'affiliated': 'no', 'model_name': 'BasicPretrainedEncoder', 'double_team': 'no', 'diversity_track': 'no'}",0.9920700192,0.9785400033,0.9978700280
 heremans-406691,"{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}",1.0030699968,0.9788299799,1.0134500265
 mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}",1.0054199696,0.9807900190,1.0159699917
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
@@ -61,6 +61,7 @@ madhavarora03-404633,"{'team': 'OMV', 'affiliated': 'no', 'model_name': 'Attenti
 chetanrakshe-407137,"{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}",2.2643399239,0.9864599705,2.8120100498
 nuoyi-401028,,,1.0007200241,0.9879699945,1.0061899424
 peuvrierm-405141,"{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}",1.0015900135,0.9885200262,1.0071899891
+ysinha2506-408350,"{'team': 'dv', 'affiliated': 'no', 'model_name': 'sdv', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'dv', 'affiliated': 'no', 'model_name': 'sdv', 'double_team': 'no', 'diversity_track': 'no'}",0.9984700084,0.9897900224,1.0021899939
 bonibae8-399640,,,2.2242400646,0.9909399748,2.7527999878
 anubhav2901-389845,,,1.0099500418,0.9917399883,1.0177600384
 tensortitan-389154,,,1.0242400169,0.9949399829,1.0368000269
@@ -96,7 +97,6 @@ p14nt5ai-400253,,,1.0018899441,1.0029799938,1.0014200211
 taveenalotey-391418,,,2.1736900806,1.0033099651,2.6752800941
 wurining-403807,"{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}",1.0108000040,1.0038599968,1.0137799978
 honghaik14-388083,,,1.0129899979,1.0041199923,1.0167900324
-ysinha2506-405249,"{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'as', 'affiliated': 'no', 'model_name': 'ar', 'double_team': 'no', 'diversity_track': 'no'}",1.0028400421,1.0043499470,1.0021899939
 felixd-390574,,,1.0350899696,1.0046199560,1.0481499434
 qiushui-392621,,,1.0015399456,1.0046800375,1.0001900196
 imhyuno-406039,"{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}",1.0017800331,1.0046800375,1.0005400181
