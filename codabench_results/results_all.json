@@ -1293,6 +1293,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0023100376",
             "EEG Foundation Final Task(20684)-challenge 2": "1.4033999443"
         },
+        "ryanphilips-408170": {
+            "fact_sheet_answers": {
+                "team": "Neuro-oscillo",
+                "affiliated": "no",
+                "model_name": "NOG_submission_v4",
+                "double_team": "no",
+                "diversity_track": "yes"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0549999475",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0023399591",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0775799751"
+        },
         "easily-408042": {
             "fact_sheet_answers": {
                 "team": "bigs2-eeg",
@@ -1514,11 +1526,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0096999407",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9989500046"
         },
-        "joel_kessler-394198": {
-            "EEG Foundation Final Task(20684)-overall score": "1.0188399553",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0098199844",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0226999521"
-        },
         "peter-griffin-403106": {
             "EEG Foundation Final Task(20684)-overall score": "1.0030599833",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0100599527",
@@ -1548,17 +1555,17 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0118299723",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0046800375"
         },
-        "ryanphilips-407965": {
+        "joel_kessler-408169": {
             "fact_sheet_answers": {
-                "team": "Neuro-oscillo",
+                "team": "Joel Kessler",
                 "affiliated": "no",
-                "model_name": "EEGtest",
+                "model_name": "n/a",
                 "double_team": "no",
-                "diversity_track": "yes"
+                "diversity_track": "no"
             },
-            "EEG Foundation Final Task(20684)-overall score": "1.0107100010",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0180200338",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0075800419"
+            "EEG Foundation Final Task(20684)-overall score": "1.0131000280",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0118999481",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0136100054"
         },
         "neurolegend-402823": {
             "EEG Foundation Final Task(20684)-overall score": "1.0170500278",
