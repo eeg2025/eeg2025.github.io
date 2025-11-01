@@ -116,10 +116,10 @@ guo_zhao-402948,,,1.0024800301,1.0081100464,1.0000599623
 atharrizwan-391450,,,1.0049200058,1.0085699558,1.0033500195
 gw_hwang-406205,"{'team': 'gw_hwang', 'affiliated': 'no', 'model_name': 'freqformer', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'gw_hwang', 'affiliated': 'no', 'model_name': 'freqformer', 'double_team': 'no', 'diversity_track': 'no'}",1.0021799803,1.0096999407,0.9989500046
 peter-griffin-403106,,,1.0030599833,1.0100599527,1.0000599623
-amin_ansari-405685,"{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminSalarNex', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminSalarNex', 'double_team': 'no', 'diversity_track': 'no'}",1.0127199888,1.0104399920,1.0137000084
-eazyal-407721,"{'team': 'Eazyali', 'affiliated': 'no', 'model_name': 'EEGNex+preprocessing', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Eazyali', 'affiliated': 'no', 'model_name': 'EEGNex+preprocessing', 'double_team': 'no', 'diversity_track': 'no'}",1.0068299770,1.0118299723,1.0046800375
 joel_kessler-408169,"{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}",1.0131000280,1.0118999481,1.0136100054
+amin_ansari-408601,"{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminGNEXNoG', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminGNEXNoG', 'double_team': 'no', 'diversity_track': 'no'}",1.0132199526,1.0120899677,1.0137000084
 neurolegend-402823,,,1.0170500278,1.0185300112,1.0164200068
+eazyal-408620,"{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'nexer', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'nexer', 'double_team': 'no', 'diversity_track': 'no'}",1.0089000463,1.0187200308,1.0046800375
 skku_ljk-390969,,,1.0130000114,1.0206799507,1.0096999407
 yeralydsmlkz-404610,"{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 'yeralyga', 'double_team': 'no', 'diversity_track': 'no'}",1.0121200085,1.0211199522,1.0082600117
 hania-397272,,,1.0300199986,1.0211900473,1.0338100195
