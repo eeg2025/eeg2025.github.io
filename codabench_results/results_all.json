@@ -1529,6 +1529,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0118299723",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0046800375"
         },
+        "ryanphilips-407965": {
+            "fact_sheet_answers": {
+                "team": "Neuro-oscillo",
+                "affiliated": "no",
+                "model_name": "EEGtest",
+                "double_team": "no",
+                "diversity_track": "yes"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0107100010",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0180200338",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0075800419"
+        },
         "neurolegend-402823": {
             "EEG Foundation Final Task(20684)-overall score": "1.0170500278",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0185300112",
