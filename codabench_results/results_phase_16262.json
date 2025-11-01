@@ -295,6 +295,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9533500075",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9981600046"
         },
+        "ivangarzon-407241": {
+            "fact_sheet_answers": {
+                "team": "DaSCI UGR",
+                "affiliated": "no",
+                "model_name": "X",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "2.2257499695",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9540600181",
+            "EEG Foundation Final Task(20684)-challenge 2": "2.7707600594"
+        },
         "marcomorik-400377": {
             "EEG Foundation Final Task(20684)-overall score": "0.9827700257",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9549800158",
