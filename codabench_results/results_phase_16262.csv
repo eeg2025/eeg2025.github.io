@@ -1,12 +1,12 @@
 Username,fact_sheet_answers,fact_sheet_answers,EEG Foundation Final Task(20684)-overall score,EEG Foundation Final Task(20684)-challenge 1,EEG Foundation Final Task(20684)-challenge 2
 liuyin-405766,"{'team': 'compneuro_debug', 'affiliated': 'no', 'model_name': 'debug', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'compneuro_debug', 'affiliated': 'no', 'model_name': 'debug', 'double_team': 'no', 'diversity_track': 'no'}",1.6320699453,0.8985400200,1.9464299679
 hubertjb-405717,"{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Brain & AI', 'affiliated': 'yes', 'model_name': 'brainmodule', 'double_team': 'no', 'diversity_track': 'no'}",0.9736700058,0.9122200012,1.0000000000
+sneddy-403441,,,0.9733800292,0.9187999964,0.9967700243
 bcilab_dpx-407941,"{'team': 'BCILab', 'affiliated': 'no', 'model_name': 'SIT', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BCILab', 'affiliated': 'no', 'model_name': 'SIT', 'double_team': 'no', 'diversity_track': 'no'}",0.9845299721,0.9214900136,1.0115400553
 rafaelz-406870,"{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'v5', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CyberBobBeta', 'affiliated': 'no', 'model_name': 'v5', 'double_team': 'no', 'diversity_track': 'yes'}",0.9765300155,0.9216899872,1.0000300407
 sigmanova-405131,"{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV2', 'double_team': 'no', 'diversity_track': 'no'}",0.9784100056,0.9224500060,1.0023900270
 ugotanielian-405211,"{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV3', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Sigma Nova', 'affiliated': 'no', 'model_name': 'SigmaNovaV3', 'double_team': 'no', 'diversity_track': 'no'}",1.0388000011,0.9250699878,1.0875400305
 jerry1995-404753,"{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Marque', 'double_team': 'no', 'diversity_track': 'no'}",0.9925600290,0.9255499840,1.0212800503
-sneddy-397443,,,0.9786000252,0.9274100065,1.0005400181
 ayana-397840,,,0.9783200026,0.9277499914,1.0000000000
 wen_ucf-399752,,,0.9844899774,0.9278900027,1.0087499619
 medusa_bci_team-395423,,,1.1525599957,0.9341499805,1.2461700439
