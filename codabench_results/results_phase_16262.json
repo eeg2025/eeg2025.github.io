@@ -530,6 +530,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9766299725",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0037300587"
         },
+        "xuan_yu-404920": {
+            "fact_sheet_answers": {
+                "team": "xuanyu",
+                "affiliated": "no",
+                "model_name": "eeg-fine",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9942100048",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9784399867",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0009700060"
+        },
         "heremans-406691": {
             "fact_sheet_answers": {
                 "team": "Mignot team",
