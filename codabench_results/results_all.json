@@ -670,18 +670,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9326099753",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0086699724"
         },
-        "durgamabhilash-409027": {
-            "fact_sheet_answers": {
-                "team": "Marques",
-                "affiliated": "no",
-                "model_name": "Debuggu=ing",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "2.2121999264",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9333599806",
-            "EEG Foundation Final Task(20684)-challenge 2": "2.7602701187"
-        },
         "annihilation-408398": {
             "fact_sheet_answers": {
                 "team": "Zombiebrain",
@@ -1004,17 +992,17 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9657700062",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0529899597"
         },
-        "adesh-405025": {
+        "adesh-409222": {
             "fact_sheet_answers": {
                 "team": "Hangtree",
                 "affiliated": "no",
-                "model_name": "Alooo",
+                "model_name": "RaiTa",
                 "double_team": "no",
                 "diversity_track": "no"
             },
-            "EEG Foundation Final Task(20684)-overall score": "1.0206600428",
+            "EEG Foundation Final Task(20684)-overall score": "0.9898999929",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9660099745",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0440800190"
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0001399517"
         },
         "quoc-emotiv-390232": {
             "EEG Foundation Final Task(20684)-overall score": "0.9943299890",
@@ -1937,6 +1925,11 @@
             "EEG Foundation Final Task(20684)-overall score": "3.8036699295",
             "EEG Foundation Final Task(20684)-challenge 1": "10.3037204742",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0179300308"
+        },
+        "durgamabhilash-393395": {
+            "EEG Foundation Final Task(20684)-overall score": "23.0318794250",
+            "EEG Foundation Final Task(20684)-challenge 1": "39.9884986877",
+            "EEG Foundation Final Task(20684)-challenge 2": "15.7647495270"
         }
     }
 }

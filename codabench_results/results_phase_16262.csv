@@ -10,7 +10,6 @@ jerry1995-404753,"{'team': 'Team Marque', 'affiliated': 'no', 'model_name': 'Mar
 sneddy-397443,,,0.9786000252,0.9274100065,1.0005400181
 ayana-397840,,,0.9783200026,0.9277499914,1.0000000000
 marco_fino-408916,"{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'PeRCeiVe Lab', 'affiliated': 'no', 'model_name': 'EEGMultiNet', 'double_team': 'no', 'diversity_track': 'no'}",0.9858499765,0.9326099753,1.0086699724
-durgamabhilash-409027,"{'team': 'Marques', 'affiliated': 'no', 'model_name': 'Debuggu=ing', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Marques', 'affiliated': 'no', 'model_name': 'Debuggu=ing', 'double_team': 'no', 'diversity_track': 'no'}",2.2121999264,0.9333599806,2.7602701187
 annihilation-408398,"{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'BraveBrains', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Zombiebrain', 'affiliated': 'no', 'model_name': 'BraveBrains', 'double_team': 'no', 'diversity_track': 'no'}",0.9814599752,0.9339699745,1.0018199682
 medusa_bci_team-395423,,,1.1525599957,0.9341499805,1.2461700439
 neuroedge-398277,,,1.0024399757,0.9353100061,1.0312099457
@@ -45,7 +44,7 @@ yurisun-397230,,,0.9995800257,0.9623200297,1.0155500174
 matinpf-393954,,,0.9959099889,0.9643200040,1.0094399452
 jucls-400278,,,0.9901999831,0.9654399753,1.0008200407
 matthewchen37-404660,"{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'MIBLab', 'affiliated': 'no', 'model_name': 'EEGAutoencoder', 'double_team': 'no', 'diversity_track': 'yes'}",1.0268199444,0.9657700062,1.0529899597
-adesh-405025,"{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'Alooo', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'Alooo', 'double_team': 'no', 'diversity_track': 'no'}",1.0206600428,0.9660099745,1.0440800190
+adesh-409222,"{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'RaiTa', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'RaiTa', 'double_team': 'no', 'diversity_track': 'no'}",0.9898999929,0.9660099745,1.0001399517
 quoc-emotiv-390232,,,0.9943299890,0.9664899707,1.0062600374
 raclettedecode-406210,"{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}",0.9938899875,0.9666299820,1.0055799484
 chenhu-402153,,,2.2263600826,0.9681299925,2.7655999660
@@ -159,3 +158,4 @@ svechinsky-406667,"{'team': 'teemo', 'affiliated': 'no', 'model_name': 'testo', 
 superabe-388250,,,1.9001599550,3.9990100861,1.0006500483
 zeege-392041,,,2.7015199661,6.6312198639,1.0173599720
 justin97-399285,,,3.8036699295,10.3037204742,1.0179300308
+durgamabhilash-393395,,,23.0318794250,39.9884986877,15.7647495270
