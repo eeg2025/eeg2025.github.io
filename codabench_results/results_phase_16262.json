@@ -106,6 +106,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9277499914",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
         },
+        "marco_fino-408916": {
+            "fact_sheet_answers": {
+                "team": "PeRCeiVe Lab",
+                "affiliated": "no",
+                "model_name": "EEGMultiNet",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9858499765",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9326099753",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0086699724"
+        },
         "annihilation-408398": {
             "fact_sheet_answers": {
                 "team": "Zombiebrain",
@@ -139,18 +151,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9789000154",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9356700182",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9974200130"
-        },
-        "marco_fino-408820": {
-            "fact_sheet_answers": {
-                "team": "PeRCeiVe Lab",
-                "affiliated": "no",
-                "model_name": "EEGMultiNet",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9872000217",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9356999993",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0092699528"
         },
         "cduhra-407886": {
             "fact_sheet_answers": {
@@ -1137,6 +1137,11 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0275000334",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0907399654",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0003900528"
+        },
+        "owenk-401360": {
+            "EEG Foundation Final Task(20684)-overall score": "1.0926500559",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.3082100153",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0002599955"
         },
         "isaaclee-404487": {
             "fact_sheet_answers": {
