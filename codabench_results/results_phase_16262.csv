@@ -50,6 +50,7 @@ quoc-emotiv-390232,,,0.9943299890,0.9664899707,1.0062600374
 raclettedecode-406210,"{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'RacletteDecoding', 'affiliated': 'no', 'model_name': 'SignalJEPA_and_co', 'double_team': 'no', 'diversity_track': 'no'}",0.9938899875,0.9666299820,1.0055799484
 chenhu-402153,,,2.2263600826,0.9681299925,2.7655999660
 xw1216-397455,,,0.9946900010,0.9697499871,1.0053800344
+natanshken-407649,"{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'dosa_v8', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Hangtree', 'affiliated': 'no', 'model_name': 'dosa_v8', 'double_team': 'no', 'diversity_track': 'no'}",0.9911599755,0.9705399871,1.0000000000
 yohatad-392317,,,0.9911100268,0.9716399908,0.9994599819
 wangjc-406341,"{'team': 'BIOX_EEG', 'affiliated': 'no', 'model_name': 'BIOX_EEG_MODEL', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BIOX_EEG', 'affiliated': 'no', 'model_name': 'BIOX_EEG_MODEL', 'double_team': 'no', 'diversity_track': 'no'}",1.0639599562,0.9735900164,1.1026899815
 turtleneck-403716,"{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'JaeyunLee', 'affiliated': 'no', 'model_name': 'Median_Time-Frequency_Contrastive', 'double_team': 'no', 'diversity_track': 'no'}",0.9884799719,0.9762399793,0.9937199950
@@ -59,9 +60,9 @@ xuan_yu-404920,"{'team': 'xuanyu', 'affiliated': 'no', 'model_name': 'eeg-fine',
 heremans-406691,"{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Mignot team', 'affiliated': 'no', 'model_name': 'shared effnet normalized v2.', 'double_team': 'no', 'diversity_track': 'no'}",1.0030699968,0.9788299799,1.0134500265
 mathis-406080,"{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'EEGTeam', 'affiliated': 'no', 'model_name': 'TSABig', 'double_team': 'no', 'diversity_track': 'no'}",1.0054199696,0.9807900190,1.0159699917
 sht_apm-388259,,,1.0093599558,0.9835600257,1.0204099417
+chetanrakshe-409142,"{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'Final_test', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'Final_test', 'double_team': 'no', 'diversity_track': 'no'}",2.2639100552,0.9842699766,2.8123300076
 philadelphia-408708,"{'team': 'philadelphia', 'affiliated': 'no', 'model_name': 'philly', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'philadelphia', 'affiliated': 'no', 'model_name': 'philly', 'double_team': 'no', 'diversity_track': 'no'}",0.9980400205,0.9846600294,1.0037699938
 hastrom-397076,,,1.0055099726,0.9855999947,1.0140500069
-chetanrakshe-407137,"{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'IIT BHU', 'affiliated': 'no', 'model_name': 'new123', 'double_team': 'no', 'diversity_track': 'no'}",2.2643399239,0.9864599705,2.8120100498
 nuoyi-401028,,,1.0007200241,0.9879699945,1.0061899424
 peuvrierm-405141,"{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'LTSI', 'affiliated': 'no', 'model_name': 'mths', 'double_team': 'no', 'diversity_track': 'no'}",1.0015900135,0.9885200262,1.0071899891
 ysinha2506-408350,"{'team': 'dv', 'affiliated': 'no', 'model_name': 'sdv', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'dv', 'affiliated': 'no', 'model_name': 'sdv', 'double_team': 'no', 'diversity_track': 'no'}",0.9984700084,0.9897900224,1.0021899939

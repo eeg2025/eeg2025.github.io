@@ -1043,6 +1043,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9697499871",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0053800344"
         },
+        "natanshken-407649": {
+            "fact_sheet_answers": {
+                "team": "Hangtree",
+                "affiliated": "no",
+                "model_name": "dosa_v8",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9911599755",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9705399871",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
+        },
         "yohatad-392317": {
             "EEG Foundation Final Task(20684)-overall score": "0.9911100268",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9716399908",
@@ -1130,6 +1142,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9835600257",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0204099417"
         },
+        "chetanrakshe-409142": {
+            "fact_sheet_answers": {
+                "team": "IIT BHU",
+                "affiliated": "no",
+                "model_name": "Final_test",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "2.2639100552",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9842699766",
+            "EEG Foundation Final Task(20684)-challenge 2": "2.8123300076"
+        },
         "philadelphia-408708": {
             "fact_sheet_answers": {
                 "team": "philadelphia",
@@ -1146,18 +1170,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0055099726",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9855999947",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0140500069"
-        },
-        "chetanrakshe-407137": {
-            "fact_sheet_answers": {
-                "team": "IIT BHU",
-                "affiliated": "no",
-                "model_name": "new123",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "2.2643399239",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9864599705",
-            "EEG Foundation Final Task(20684)-challenge 2": "2.8120100498"
         },
         "nuoyi-401028": {
             "EEG Foundation Final Task(20684)-overall score": "1.0007200241",
