@@ -1168,18 +1168,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9835600257",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0204099417"
         },
-        "chetanrakshe-409142": {
-            "fact_sheet_answers": {
-                "team": "IIT BHU",
-                "affiliated": "no",
-                "model_name": "Final_test",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "2.2639100552",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9842699766",
-            "EEG Foundation Final Task(20684)-challenge 2": "2.8123300076"
-        },
         "philadelphia-408708": {
             "fact_sheet_answers": {
                 "team": "philadelphia",
@@ -1471,6 +1459,18 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0099300146",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0027400255",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0130100250"
+        },
+        "chetanrakshe-409931": {
+            "fact_sheet_answers": {
+                "team": "IIT BHU",
+                "affiliated": "no",
+                "model_name": "test4",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "2.2532498837",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0028599501",
+            "EEG Foundation Final Task(20684)-challenge 2": "2.7891299725"
         },
         "ahmed_sameh-403884": {
             "fact_sheet_answers": {
