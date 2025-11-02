@@ -101,6 +101,7 @@ tommicaste-408671,"{'team': 'CambridgeBrainTeam', 'affiliated': 'no', 'model_nam
 taveenalotey-391418,,,2.1736900806,1.0033099651,2.6752800941
 wurining-403807,"{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NCLab', 'affiliated': 'no', 'model_name': 'EEG2Rep+', 'double_team': 'no', 'diversity_track': 'no'}",1.0108000040,1.0038599968,1.0137799978
 honghaik14-388083,,,1.0129899979,1.0041199923,1.0167900324
+xiaosa-409016,"{'team': 'BIOX_EEG', 'affiliated': 'no', 'model_name': 'BIOX_EEG', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BIOX_EEG', 'affiliated': 'no', 'model_name': 'BIOX_EEG', 'double_team': 'no', 'diversity_track': 'no'}",1.0732300282,1.0045100451,1.1026899815
 felixd-390574,,,1.0350899696,1.0046199560,1.0481499434
 qiushui-392621,,,1.0015399456,1.0046800375,1.0001900196
 imhyuno-406039,"{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}",1.0017800331,1.0046800375,1.0005400181
@@ -133,7 +134,7 @@ j0hnny-405630,"{'team': 'Malk', 'affiliated': 'no', 'model_name': 'EEGNeX-0.1', 
 shawn_xiang-408885,"{'team': 'Shawn', 'affiliated': 'no', 'model_name': 'Shawn', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Shawn', 'affiliated': 'no', 'model_name': 'Shawn', 'double_team': 'no', 'diversity_track': 'no'}",1.0275000334,1.0907399654,1.0003900528
 owenk-401360,,,1.0926500559,1.3082100153,1.0002599955
 isaaclee-404487,"{'team': 'NTKLab2025_EEGFoundationChallenge', 'affiliated': 'no', 'model_name': 'PLV', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'NTKLab2025_EEGFoundationChallenge', 'affiliated': 'no', 'model_name': 'PLV', 'double_team': 'no', 'diversity_track': 'no'}",1.6649199724,2.3236100674,1.3826199770
-goatyeon-403855,"{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'challenge_model', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'challenge_model', 'double_team': 'no', 'diversity_track': 'yes'}",1.4660400152,2.5519599915,1.0006500483
+goatyeon-409086,"{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'ccbramod-fusion', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'goatyeon', 'affiliated': 'no', 'model_name': 'ccbramod-fusion', 'double_team': 'no', 'diversity_track': 'yes'}",1.4657700062,2.5519599915,1.0002700090
 pearjun-395310,,,1.4783600569,2.5764300823,1.0077600479
 thegine-402851,,,1.5223400593,2.7329199314,1.0035200119
 wemby-395196,,,1.5506399870,2.8320000172,1.0014899969
