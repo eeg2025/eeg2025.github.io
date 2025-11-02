@@ -854,6 +854,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9533500075",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9981600046"
         },
+        "raclettedecode-409518": {
+            "fact_sheet_answers": {
+                "team": "RacletteDecoding",
+                "affiliated": "no",
+                "model_name": "VAE",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9926400185",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9534800053",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0094200373"
+        },
         "ivangarzon-407241": {
             "fact_sheet_answers": {
                 "team": "DaSCI UGR",
@@ -1008,18 +1020,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9943299890",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9664899707",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0062600374"
-        },
-        "raclettedecode-406210": {
-            "fact_sheet_answers": {
-                "team": "RacletteDecoding",
-                "affiliated": "no",
-                "model_name": "SignalJEPA_and_co",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9938899875",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9666299820",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0055799484"
         },
         "chenhu-402153": {
             "EEG Foundation Final Task(20684)-overall score": "2.2263600826",
@@ -1648,18 +1648,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "1.0185300112",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0164200068"
         },
-        "eazyal-408620": {
-            "fact_sheet_answers": {
-                "team": "eazyali",
-                "affiliated": "no",
-                "model_name": "nexer",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "1.0089000463",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0187200308",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0046800375"
-        },
         "skku_ljk-390969": {
             "EEG Foundation Final Task(20684)-overall score": "1.0130000114",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0206799507",
@@ -1691,6 +1679,18 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0159900188",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0311199427",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0095000267"
+        },
+        "eazyal-409459": {
+            "fact_sheet_answers": {
+                "team": "eazyal",
+                "affiliated": "no",
+                "model_name": "conformist",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0143799782",
+            "EEG Foundation Final Task(20684)-challenge 1": "1.0317499638",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0069299936"
         },
         "wangchance-406619": {
             "fact_sheet_answers": {
@@ -1799,6 +1799,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "3.2608599663",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0324100256"
         },
+        "adharsh-409579": {
+            "fact_sheet_answers": {
+                "team": "Magnum",
+                "affiliated": "no",
+                "model_name": "mindreader",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.6940699816",
+            "EEG Foundation Final Task(20684)-challenge 1": "3.2677600384",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0196399689"
+        },
         "hubert-392710": {
             "EEG Foundation Final Task(20684)-overall score": "1.6899600029",
             "EEG Foundation Final Task(20684)-challenge 1": "3.2777900696",
@@ -1867,6 +1879,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "3.5358200073",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0093300343"
         },
+        "linbogene-409364": {
+            "fact_sheet_answers": {
+                "team": "Firstimer",
+                "affiliated": "no",
+                "model_name": "01",
+                "double_team": "no",
+                "diversity_track": "yes"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.7672799826",
+            "EEG Foundation Final Task(20684)-challenge 1": "3.5358200073",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0093400478"
+        },
         "abetzzzeng-388103": {
             "EEG Foundation Final Task(20684)-overall score": "1.7672899961",
             "EEG Foundation Final Task(20684)-challenge 1": "3.5358300209",
@@ -1876,18 +1900,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.7858799696",
             "EEG Foundation Final Task(20684)-challenge 1": "3.5898098946",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0127700567"
-        },
-        "adharsh-406204": {
-            "fact_sheet_answers": {
-                "team": "Magnum",
-                "affiliated": "no",
-                "model_name": "MindReader",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "1.8401800394",
-            "EEG Foundation Final Task(20684)-challenge 1": "3.6733400822",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0545400381"
         },
         "yizheyang-389570": {
             "EEG Foundation Final Task(20684)-overall score": "1.8546500206",
