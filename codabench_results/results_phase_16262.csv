@@ -74,6 +74,7 @@ tensortitan-389154,,,1.0242400169,0.9949399829,1.0368000269
 guoanwang-396968,,,1.0217200518,0.9953200221,1.0330300331
 sirsam-406526,"{'team': 'SAT', 'affiliated': 'no', 'model_name': 'lightGBM', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'SAT', 'affiliated': 'no', 'model_name': 'lightGBM', 'double_team': 'no', 'diversity_track': 'yes'}",1.3812400103,0.9961599708,1.5462800264
 prakash7_-405978,"{'team': 'PRA', 'affiliated': 'no', 'model_name': 'na', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'PRA', 'affiliated': 'no', 'model_name': 'na', 'double_team': 'no', 'diversity_track': 'no'}",1.0010099411,1.0000100136,1.0014400482
+eazyal-407408,"{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'eegpt-pretrained', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'eazyali', 'affiliated': 'no', 'model_name': 'eegpt-pretrained', 'double_team': 'no', 'diversity_track': 'no'}",1.0130699873,1.0000900030,1.0186300278
 maximeyochum-391812,,,1.0120899677,1.0001300573,1.0172200203
 hkevin01-409777,"{'team': 'Kevin', 'affiliated': 'no', 'model_name': 'Kevin-V15', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Kevin', 'affiliated': 'no', 'model_name': 'Kevin-V15', 'double_team': 'no', 'diversity_track': 'no'}",1.0001399517,1.0001900196,1.0001200438
 aleka-400438,,,1.0010000467,1.0003199577,1.0012899637
@@ -91,6 +92,7 @@ hw7907-401894,,,1.0147299767,1.0021799803,1.0200999975
 brandone-399839,,,1.2830699682,1.0023100376,1.4033999443
 ryanphilips-408170,"{'team': 'Neuro-oscillo', 'affiliated': 'no', 'model_name': 'NOG_submission_v4', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'Neuro-oscillo', 'affiliated': 'no', 'model_name': 'NOG_submission_v4', 'double_team': 'no', 'diversity_track': 'yes'}",1.0549999475,1.0023399591,1.0775799751
 easily-408042,"{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'bigs2-eeg', 'affiliated': 'no', 'model_name': 'bigs2eeg', 'double_team': 'no', 'diversity_track': 'no'}",1.0093799829,1.0025399923,1.0123000145
+momen_qatr-409866,"{'team': ""Mo'men Qatr"", 'affiliated': 'no', 'model_name': 'NeuroX', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': ""Mo'men Qatr"", 'affiliated': 'no', 'model_name': 'NeuroX', 'double_team': 'no', 'diversity_track': 'yes'}",1.0177899599,1.0025399923,1.0243300200
 henrywang621-406869,"{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'BATH IAH', 'affiliated': 'no', 'model_name': 'CL-Conformer', 'double_team': 'no', 'diversity_track': 'no'}",0.9966800213,1.0025500059,0.9941599965
 gongwx-397347,,,1.0014699697,1.0026600361,1.0009700060
 a_pal-395356,,,1.0099300146,1.0027400255,1.0130100250
@@ -128,7 +130,6 @@ yeralydsmlkz-404610,"{'team': 'Young DSMLKZ', 'affiliated': 'no', 'model_name': 
 hania-397272,,,1.0300199986,1.0211900473,1.0338100195
 dandan_wang-402747,,,1.0069600344,1.0230699778,1.0000599623
 wink_ai-395827,,,1.0159900188,1.0311199427,1.0095000267
-eazyal-409459,"{'team': 'eazyal', 'affiliated': 'no', 'model_name': 'conformist', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'eazyal', 'affiliated': 'no', 'model_name': 'conformist', 'double_team': 'no', 'diversity_track': 'no'}",1.0143799782,1.0317499638,1.0069299936
 shawn_xiang-409587,"{'team': 'Shawn', 'affiliated': 'no', 'model_name': 'Shawn', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Shawn', 'affiliated': 'no', 'model_name': 'Shawn', 'double_team': 'no', 'diversity_track': 'no'}",1.0104099512,1.0343699455,1.0001399517
 wangchance-406619,"{'team': 'CECNL', 'affiliated': 'no', 'model_name': 'tc', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CECNL', 'affiliated': 'no', 'model_name': 'tc', 'double_team': 'no', 'diversity_track': 'no'}",1.0115799904,1.0352699757,1.0014200211
 xuan_yu-409347,"{'team': 'xuanyu', 'affiliated': 'no', 'model_name': 'eeg-fine', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'xuanyu', 'affiliated': 'no', 'model_name': 'eeg-fine', 'double_team': 'no', 'diversity_track': 'no'}",1.0114300251,1.0358300209,1.0009700060
