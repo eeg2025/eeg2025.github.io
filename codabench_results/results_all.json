@@ -588,6 +588,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9185699821",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0104899406"
         },
+        "sigmanova-410149": {
+            "fact_sheet_answers": {
+                "team": "Sigma Nova",
+                "affiliated": "no",
+                "model_name": "SigmaNovaV4",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9756699800",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9189100266",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0000000000"
+        },
         "ayana-407775": {
             "fact_sheet_answers": {
                 "team": "MBZUAI [dsml.kz]",
@@ -635,18 +647,6 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9765200019",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9211199880",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0002599955"
-        },
-        "sigmanova-405131": {
-            "fact_sheet_answers": {
-                "team": "Sigma Nova",
-                "affiliated": "no",
-                "model_name": "SigmaNovaV2",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9784100056",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9224500060",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0023900270"
         },
         "ugotanielian-405211": {
             "fact_sheet_answers": {
