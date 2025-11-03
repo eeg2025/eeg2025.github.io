@@ -118,6 +118,7 @@ felixd-390574,,,1.0350899696,1.0046199560,1.0481499434
 qiushui-392621,,,1.0015399456,1.0046800375,1.0001900196
 imhyuno-406039,"{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'CAUKU', 'affiliated': 'no', 'model_name': 'stmem_submission', 'double_team': 'no', 'diversity_track': 'no'}",1.0017800331,1.0046800375,1.0005400181
 alialavi-407026,"{'team': 'alia', 'affiliated': 'no', 'model_name': 'bmbiR', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'alia', 'affiliated': 'no', 'model_name': 'bmbiR', 'double_team': 'no', 'diversity_track': 'no'}",1.0053700209,1.0053800344,1.0053700209
+joel_kessler-411524,"{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}",1.0077400208,1.0054500103,1.0087300539
 mdabdulazeez-406945,"{'team': 'Icarus', 'affiliated': 'no', 'model_name': 'EEGNeX', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'Icarus', 'affiliated': 'no', 'model_name': 'EEGNeX', 'double_team': 'no', 'diversity_track': 'yes'}",1.0028100014,1.0061999559,1.0013500452
 niko_-402950,,,1.0019500256,1.0063500404,1.0000599623
 youzhi-389564,,,1.0207999945,1.0063899755,1.0269800425
@@ -134,7 +135,6 @@ juliaaayun-409061,"{'team': 'jyaaa', 'affiliated': 'no', 'model_name': 'cbra_reg
 peter-griffin-403106,,,1.0030599833,1.0100599527,1.0000599623
 anarghya-410165,"{'team': 'UB ESC', 'affiliated': 'no', 'model_name': 'cerebro', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'UB ESC', 'affiliated': 'no', 'model_name': 'cerebro', 'double_team': 'no', 'diversity_track': 'yes'}",1.0036300421,1.0101000071,1.0008599758
 amin_ansari-408601,"{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminGNEXNoG', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Amin Ansari', 'affiliated': 'no', 'model_name': 'AminGNEXNoG', 'double_team': 'no', 'diversity_track': 'no'}",1.0132199526,1.0120899677,1.0137000084
-joel_kessler-410545,"{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}","{'team': 'Joel Kessler', 'affiliated': 'no', 'model_name': 'n/a', 'double_team': 'no', 'diversity_track': 'no'}",1.0089800358,1.0132000446,1.0071699619
 yuuuuuuu-410782,"{'team': 'CECNL', 'affiliated': 'yes', 'model_name': 'EEGNeX', 'double_team': 'no', 'diversity_track': 'yes'}","{'team': 'CECNL', 'affiliated': 'yes', 'model_name': 'EEGNeX', 'double_team': 'no', 'diversity_track': 'yes'}",1.0060700178,1.0168999434,1.0014200211
 neurolegend-402823,,,1.0170500278,1.0185300112,1.0164200068
 skku_ljk-390969,,,1.0130000114,1.0206799507,1.0096999407
