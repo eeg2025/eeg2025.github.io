@@ -689,6 +689,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9299100041",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9786700010"
         },
+        "quoc-emotiv-408371": {
+            "fact_sheet_answers": {
+                "team": "Emotiv",
+                "affiliated": "no",
+                "model_name": "EEGMS",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9857599735",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9307600260",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0093400478"
+        },
         "san_viego-409701": {
             "fact_sheet_answers": {
                 "team": "RIML",
@@ -1059,11 +1071,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9660099745",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0001399517"
         },
-        "quoc-emotiv-390232": {
-            "EEG Foundation Final Task(20684)-overall score": "0.9943299890",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9664899707",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0062600374"
-        },
         "chenhu-402153": {
             "EEG Foundation Final Task(20684)-overall score": "2.2263600826",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9681299925",
@@ -1120,6 +1127,18 @@
                 "team": "BIOX_EEG",
                 "affiliated": "no",
                 "model_name": "BIOX_EEG_MODEL",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0639599562",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9735900164",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.1026899815"
+        },
+        "xiaosa-408417": {
+            "fact_sheet_answers": {
+                "team": "BIOX_EEG",
+                "affiliated": "no",
+                "model_name": "BIOX_EEGX",
                 "double_team": "no",
                 "diversity_track": "no"
             },
@@ -1551,18 +1570,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0129899979",
             "EEG Foundation Final Task(20684)-challenge 1": "1.0041199923",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0167900324"
-        },
-        "xiaosa-409016": {
-            "fact_sheet_answers": {
-                "team": "BIOX_EEG",
-                "affiliated": "no",
-                "model_name": "BIOX_EEG",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "1.0732300282",
-            "EEG Foundation Final Task(20684)-challenge 1": "1.0045100451",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.1026899815"
         },
         "felixd-390574": {
             "EEG Foundation Final Task(20684)-overall score": "1.0350899696",
