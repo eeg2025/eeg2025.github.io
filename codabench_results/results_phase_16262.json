@@ -414,6 +414,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9473199844",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0486700535"
         },
+        "alixlam-411360": {
+            "fact_sheet_answers": {
+                "team": "CoCoBRAIn",
+                "affiliated": "no",
+                "model_name": "coco",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9865400195",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9494299889",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0024399757"
+        },
         "deleted_user_37275-393399": {
             "EEG Foundation Final Task(20684)-overall score": "0.9973599911",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9502900243",
