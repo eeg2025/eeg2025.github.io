@@ -578,6 +578,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9623200297",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0155500174"
         },
+        "kechen-hou-412865": {
+            "fact_sheet_answers": {
+                "team": "LZU-UAIS",
+                "affiliated": "no",
+                "model_name": "EEGModel-Ver.0.0,11",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9909600019",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9642300010",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0024100542"
+        },
         "matinpf-393954": {
             "EEG Foundation Final Task(20684)-overall score": "0.9959099889",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9643200040",
@@ -710,18 +722,6 @@
             "EEG Foundation Final Task(20684)-overall score": "1.0010700226",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9762600064",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0116900206"
-        },
-        "kechen-hou-404323": {
-            "fact_sheet_answers": {
-                "team": "LZU-UAIS",
-                "affiliated": "no",
-                "model_name": "EEGModel",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9955999851",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9766299725",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0037300587"
         },
         "heremans-406691": {
             "fact_sheet_answers": {
