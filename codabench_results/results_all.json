@@ -2206,6 +2206,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "3.5358300209",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0093400478"
         },
+        "csun8109-416948": {
+            "fact_sheet_answers": {
+                "team": "choirensun",
+                "affiliated": "no",
+                "model_name": "choirensun v2",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.7912700176",
+            "EEG Foundation Final Task(20684)-challenge 1": "3.5764000416",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0262099504"
+        },
         "orangejuicy-393075": {
             "EEG Foundation Final Task(20684)-overall score": "1.7858799696",
             "EEG Foundation Final Task(20684)-challenge 1": "3.5898098946",
