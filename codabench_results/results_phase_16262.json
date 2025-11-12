@@ -209,6 +209,18 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9312800169",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0099899769"
         },
+        "jujuabn-420800": {
+            "fact_sheet_answers": {
+                "team": "TryAgain",
+                "affiliated": "no",
+                "model_name": "MyModel",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "1.0017600060",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9326500297",
+            "EEG Foundation Final Task(20684)-challenge 2": "1.0313800573"
+        },
         "annihilation-408398": {
             "fact_sheet_answers": {
                 "team": "Zombiebrain",
