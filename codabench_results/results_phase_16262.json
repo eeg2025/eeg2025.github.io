@@ -279,18 +279,6 @@
             "EEG Foundation Final Task(20684)-challenge 1": "0.9383400083",
             "EEG Foundation Final Task(20684)-challenge 2": "1.0223300457"
         },
-        "saarangp-408621": {
-            "fact_sheet_answers": {
-                "team": "UCLA BAIR",
-                "affiliated": "no",
-                "model_name": "M2J",
-                "double_team": "no",
-                "diversity_track": "no"
-            },
-            "EEG Foundation Final Task(20684)-overall score": "0.9918699861",
-            "EEG Foundation Final Task(20684)-challenge 1": "0.9397600293",
-            "EEG Foundation Final Task(20684)-challenge 2": "1.0141999722"
-        },
         "suyeonkwak-412733": {
             "fact_sheet_answers": {
                 "team": "KU_MAILAB",
@@ -302,6 +290,18 @@
             "EEG Foundation Final Task(20684)-overall score": "0.9800800085",
             "EEG Foundation Final Task(20684)-challenge 1": "0.9402099848",
             "EEG Foundation Final Task(20684)-challenge 2": "0.9971699715"
+        },
+        "saarangp-422304": {
+            "fact_sheet_answers": {
+                "team": "UCLA BAIR",
+                "affiliated": "no",
+                "model_name": "M2J",
+                "double_team": "no",
+                "diversity_track": "no"
+            },
+            "EEG Foundation Final Task(20684)-overall score": "0.9815199971",
+            "EEG Foundation Final Task(20684)-challenge 1": "0.9412900209",
+            "EEG Foundation Final Task(20684)-challenge 2": "0.9987699986"
         },
         "popovich-400870": {
             "EEG Foundation Final Task(20684)-overall score": "0.9831799865",
