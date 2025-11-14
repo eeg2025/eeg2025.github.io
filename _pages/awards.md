@@ -49,10 +49,9 @@ The EEG Foundation Challenge 2025 offers prizes and recognition opportunities fo
 ### Special Awards
 
 #### Diversity & Inclusion Award
-- **Prize:** $1,000 USD
-- **NeurIPS Workshop Registration:** Registration for the NeurIPS 2025 workshops
+- **Recognition of the hard work of the team**
 - **Eligibility:** Best-performing first-time team led by and with majority members from underrepresented groups in AI/ML
-- **Note:** This award aligns with NeurIPS Diversity, Inclusion, and Accessibility (DIA) guidelines
+- **Note:** This award aligns with NeurIPS Diversity, Inclusion, and Accessibility (DIA) guidelines. For this reason, it is not associated with a cash prize.
 
 ### Prize Distribution
 
