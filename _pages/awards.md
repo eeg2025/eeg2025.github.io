@@ -13,9 +13,9 @@ The EEG Foundation Challenge 2025 offers prizes and recognition opportunities fo
 
 ### Main Competition Prizes
 
-#### 🥇 First Place
+#### 🏆 First Place
 - **Cash Prize:** $2,500 USD
-- **Spotlight Talk:** Present your work at the [2025 NeurIPS Workshop "Foundation Models for the Brain and Body"](https://brainbodyfm-workshop.github.io) (December 6-7, 2025)
+- **Spotlight Talk:** Present your work at the [2025 NeurIPS Workshop "Foundation Models for the Brain and Body"](https://brainbodyfm-workshop.github.io) (December 6, 2025)
 - **Presentation Slot:** 15-minute presentation during the competition track at NeurIPS 2025
 - **Travel Support:** Coverage of reasonable transportation, accommodation, and NeurIPS 2025 conference registration
 - **Publication:** Co-authorship on the competition publication at NeurIPS
@@ -28,7 +28,14 @@ The EEG Foundation Challenge 2025 offers prizes and recognition opportunities fo
 - **Publication:** Co-authorship on the competition publication at NeurIPS
 - **Code Release:** Your solution will be featured as part of the top 10 released solutions
 
-#### 🥉 Third Place
+#### 🥇 First Place Challenge 2
+- **Cash Prize:** $2,500 USD
+- **Presentation Slot:** 15-minute presentation during the competition track at NeurIPS 2025
+- **Travel Support:** Coverage of reasonable transportation, accommodation, and NeurIPS 2025 conference registration
+- **Publication:** Co-authorship on the competition publication at NeurIPS
+- **Code Release:** Your solution will be featured as part of the top 10 released solutions
+
+#### 🥈 Second Place Challenge 2
 - **Cash Prize:** $2,500 USD
 - **Presentation Slot:** 15-minute presentation during the competition track at NeurIPS 2025
 - **Travel Support:** Coverage of reasonable transportation, accommodation, and NeurIPS 2025 conference registration
