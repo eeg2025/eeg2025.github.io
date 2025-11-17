@@ -38,5 +38,6 @@ score = rmse(y_trues, y_preds) / std(y_trues)
 - At the inference stage, we will only use the XXX (will be decided soon after more testing) task to predict the metrics. This is to ensure a timely evaluation due to the competition scale.
 
 ### Overall Ranking
-- Challenge 1 contributes 30% to final score
-- Challenge 2 contributes 70% to final score
+- ~~Challenge 1 contributes 30% to final score~~
+- ~~Challenge 2 contributes 70% to final score~~
+*Update: The two challenges are now independent, and there will be separate rankings and awards for each challenge. More details can be found in the Leaderboard page*
