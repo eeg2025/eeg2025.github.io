@@ -10,6 +10,8 @@ nav_order: 9
 
 Thank you so much for participating in the 2025 NeurIPS EEG competition. There were 1,183 teams/participants and more than 8,000 submissions on the open source platform Codabench. CodaBench is the newer version of “Codalab competitions” (ranked first by mlcontests.com, ahead of Kaggle and Tianchi of Alibaba), according to mlcontests.com. Our competition is by far the largest, having been organized on Codabench, so far. Our EEGDash library was installed more than 67,000 times, facilitating open-source data transfer and restructuring for AI/ML training and inference. By every metric, this competition was a tremendous success, and we thank you for your contribution.
 
+📄 **[Download the EEG 2025 Impact Report (PDF)]({{ '/assets/files/EEG2025-Impact-Report.pdf' | relative_url }})** — a full wrap-up of participation, submissions, community reach, and scientific outcomes from the challenge.
+
 The jury reviewed the top entries, and no changes were made to the rankings of the leading teams based on that analysis. To maintain transparency and clarify prize distribution, we have updated the final prize structure.
 
 As organizers, we made an error by not randomizing samples in Challenge 2, which allowed some teams to exploit the fact that contiguous trials likely came from the same subjects. During office hours and on the forum, several contestants inquired whether using this information was permitted; however, due to a communication breakdown, they received contradictory answers. Even with this advantage, Challenge 2 remained extremely difficult – only three teams achieved scores below 0.99, our threshold for including this challenge in the final scoring (recall that a score of 1 represents predicting the mean target value).
