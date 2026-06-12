@@ -1,5 +1,6 @@
 import os
 import re
+import ast
 import json
 from pathlib import Path
 from datetime import datetime, timezone
@@ -19,17 +20,19 @@ OVR_DIRECTION = os.environ.get("LB_DIRECTION")  # 'lower' or 'higher'
 PHASE_REGEX = os.environ.get("LB_PHASE_REGEX", r"(?i)(warm\s*up|warmup|development|dev|phase\s*1)")
 X_START = os.environ.get("LB_X_START")  # e.g., '2025-09-01' (UTC)
 X_END = os.environ.get("LB_X_END")      # e.g., '2025-10-03' (UTC)
-ACCENT = os.environ.get("LB_ACCENT", "#F2994A")
-ACCENT_DARK = os.environ.get("LB_ACCENT_DARK", "#D97E2E")
-ACCENT_LIGHT = os.environ.get("LB_ACCENT_LIGHT", "rgba(242,153,74,0.30)")
+# Okabe-Ito colorblind-safe palette (CLAUDE.md data-viz guidelines)
+# Challenge 1 -> blue, Challenge 2 -> vermillion, Combined -> bluish green
+ACCENT = os.environ.get("LB_ACCENT", "#0072B2")
+ACCENT_DARK = os.environ.get("LB_ACCENT_DARK", "#005784")
+ACCENT_LIGHT = os.environ.get("LB_ACCENT_LIGHT", "rgba(0,114,178,0.16)")
 
-CH2_COLOR = os.environ.get("LB_CHALLENGE2_COLOR", "#2D9CDB")
-CH2_DARK = os.environ.get("LB_CHALLENGE2_DARK", "#1B75BB")
-CH2_LIGHT = os.environ.get("LB_CHALLENGE2_LIGHT", "rgba(45,156,219,0.28)")
+CH2_COLOR = os.environ.get("LB_CHALLENGE2_COLOR", "#D55E00")
+CH2_DARK = os.environ.get("LB_CHALLENGE2_DARK", "#A04700")
+CH2_LIGHT = os.environ.get("LB_CHALLENGE2_LIGHT", "rgba(213,94,0,0.15)")
 
-COMBINED_COLOR = os.environ.get("LB_COMBINED_COLOR", "#9B51E0")
-COMBINED_DARK = os.environ.get("LB_COMBINED_DARK", "#6F3AB2")
-COMBINED_LIGHT = os.environ.get("LB_COMBINED_LIGHT", "rgba(155,81,224,0.28)")
+COMBINED_COLOR = os.environ.get("LB_COMBINED_COLOR", "#009E73")
+COMBINED_DARK = os.environ.get("LB_COMBINED_DARK", "#00785A")
+COMBINED_LIGHT = os.environ.get("LB_COMBINED_LIGHT", "rgba(0,158,115,0.15)")
 
 TITLE_PREFIX = os.environ.get("LB_TITLE_PREFIX", "Leaderboard")
 
@@ -277,6 +280,32 @@ def split_user_and_submission(raw: str | None) -> tuple[str, str | None]:
     if match:
         return text[:match.start()], match.group(1)
     return text, None
+
+
+def extract_team(raw: Any) -> str | None:
+    """Pull the team name out of a Codabench fact-sheet answer.
+
+    Fact sheets arrive either as a dict (JSON results) or as a Python-dict
+    string (CSV export), e.g. "{'team': 'KUL_EEG', 'model_name': ...}".
+    Returns None when no usable team name is present (e.g. empty warmup sheets).
+    """
+    if raw is None:
+        return None
+    data: Any = raw
+    if isinstance(raw, str):
+        s = raw.strip()
+        if not s or s.lower() in {"nan", "none", "{}"}:
+            return None
+        try:
+            data = ast.literal_eval(s)
+        except Exception:
+            m = re.search(r"['\"]team['\"]\s*:\s*['\"]([^'\"]+)['\"]", s)
+            return m.group(1).strip() if m and m.group(1).strip() else None
+    if isinstance(data, dict):
+        team = data.get("team") or data.get("team_name")
+        if team is not None and str(team).strip():
+            return str(team).strip()
+    return None
 
 
 def load_leaderboard_meta(path: Path | None) -> dict[str, Any]:
@@ -570,6 +599,10 @@ def load_dataframe() -> tuple[pd.DataFrame, datetime | None]:
                             break
                     if user_col is None:
                         user_col = df.columns[0]
+                    fact_col = next(
+                        (c for c in df.columns if str(c).strip().lower().startswith("fact_sheet_answers")),
+                        None,
+                    )
                     metric_defs = match_metric_configs(list(df.columns))
                     if not metric_defs:
                         metric_defs = fallback_metric_from_df(df)
@@ -578,19 +611,30 @@ def load_dataframe() -> tuple[pd.DataFrame, datetime | None]:
                         if not col_name or col_name not in df.columns:
                             continue
                         ensure_metric_style(metric_def)
-                        tmp = df[[user_col, col_name]].copy()
-                        tmp = tmp.rename(columns={user_col: "raw_user", col_name: "score"})
+                        take_cols = [user_col, col_name] + ([fact_col] if fact_col else [])
+                        tmp = df[take_cols].copy()
+                        rename_map = {user_col: "raw_user", col_name: "score"}
+                        if fact_col:
+                            rename_map[fact_col] = "fact_raw"
+                        tmp = tmp.rename(columns=rename_map)
                         tmp["raw_user"] = tmp["raw_user"].astype(str)
                         splits = tmp["raw_user"].map(split_user_and_submission)
                         tmp["user"] = splits.str[0]
                         tmp["submission_id"] = splits.str[1]
+                        tmp["team"] = tmp["fact_raw"].map(extract_team) if "fact_raw" in tmp.columns else None
                         tmp["score"] = pd.to_numeric(tmp["score"], errors="coerce")
                         tmp = tmp.dropna(subset=["score"]).reset_index(drop=True)
                         if tmp.empty:
                             continue
                         direction = metric_def.get("direction") or "lower"
+                        # Resolve times using the raw username, then prefer the
+                        # team name as the public display label (fall back to user).
                         tmp["when"] = resolve_submission_times(tmp, leaderboard_meta, when)
-                        tmp = tmp.drop(columns=["raw_user"], errors="ignore")
+                        tmp["user"] = [
+                            team if isinstance(team, str) and team.strip() else user
+                            for team, user in zip(tmp["team"], tmp["user"])
+                        ]
+                        tmp = tmp.drop(columns=["raw_user", "fact_raw", "team"], errors="ignore")
                         tmp["label"] = metric_def.get("label", metric_def.get("title", "Score"))
                         tmp["metric_key"] = metric_def.get("key")
                         tmp["metric_label"] = metric_def.get("label", metric_def.get("title", "Score"))
@@ -656,6 +700,7 @@ def load_dataframe() -> tuple[pd.DataFrame, datetime | None]:
                         "raw_user": name,
                         "submission_id": submission_id,
                         "score": v,
+                        "team": extract_team(metrics.get("fact_sheet_answers")),
                     })
                 if not recs:
                     continue
@@ -666,7 +711,12 @@ def load_dataframe() -> tuple[pd.DataFrame, datetime | None]:
                     continue
                 direction = metric_def.get("direction") or "lower"
                 tmp["when"] = resolve_submission_times(tmp, leaderboard_meta, when)
-                tmp = tmp.drop(columns=["raw_user"], errors="ignore")
+                if "team" in tmp.columns:
+                    tmp["user"] = [
+                        team if isinstance(team, str) and team.strip() else user
+                        for team, user in zip(tmp["team"], tmp["user"])
+                    ]
+                tmp = tmp.drop(columns=["raw_user", "team"], errors="ignore")
                 tmp["label"] = metric_def.get("label", metric_def.get("title", "Score"))
                 tmp["metric_key"] = metric_def.get("key")
                 tmp["metric_label"] = metric_def.get("label", metric_def.get("title", "Score"))
@@ -899,48 +949,44 @@ def build_html_from_df(df: pd.DataFrame, last_updated: datetime | None = None) -
                     "axis_id": axis_id,
                     "df": metric_df.copy(),
                 })
-        y_info = compute_axis_range(pd.Series(axis_scores.get("y")))
-        y2_info = compute_axis_range(pd.Series(axis_scores.get("y2")))
-        if y_info:
-            y_range, y_cap = y_info
-        else:
-            y_range, y_cap = (None, None)
-        if y2_info:
-            y2_range, y2_cap = y2_info
-        else:
-            y2_range, y2_cap = (None, None)
-        if not axis_scores.get("y"):
-            axis_label = "Score"
+        # The competition metrics are all normalised scores on the same 0-1
+        # scale where 1.0 == predicting the mean target. We therefore plot
+        # every challenge on ONE shared axis (no confusing dual y-axes) and
+        # focus the range on the competitive band so the record progression
+        # is the dominant element instead of a thin line at the bottom.
+        BASELINE = 1.0
+        FONT_FAMILY = "Helvetica, Arial, sans-serif"
+
+        all_best_vals: list[float] = []
+        all_scatter_vals: list[float] = []
+        winner_labels: list[dict[str, Any]] = []
+        for payload in metric_payloads:
+            all_scatter_vals.extend(payload["df"]["score"].dropna().tolist())
 
         for payload in metric_payloads:
             metric_df = payload["df"].copy()
             metric_label = payload["metric_label"]
             direction = payload["direction"]
             style = payload["style"]
-            axis_id = payload["axis_id"]
             legend_group = payload["metric_key"] or metric_label
+            short_label = re.sub(r"\s*Score$", "", str(metric_label)) or str(metric_label)
 
-            cap = y_cap if axis_id == "y" else y2_cap
-            metric_df["plot_score"] = metric_df["score"]
-            if cap is not None:
-                metric_df["plot_score"] = metric_df["plot_score"].clip(upper=cap)
-
+            # Faint individual submissions for context (competition density).
             scatter = go.Scatter(
                 x=metric_df["when"],
-                y=metric_df["plot_score"],
+                y=metric_df["score"],
                 text=metric_df["user"],
                 mode="markers",
-                name=f"{metric_label} models",
+                name=f"{short_label} submissions",
                 legendgroup=legend_group,
-                yaxis=axis_id,
-                marker=dict(color=style.get("scatter_color", "rgba(140,140,140,0.35)"), size=11),
+                showlegend=False,
+                marker=dict(color=style.get("scatter_color", "rgba(140,140,140,0.16)"), size=5),
                 hovertemplate=(
-                    "%{text}<br>%{x|%Y-%m-%d %H:%M UTC}<br>"
+                    "%{text}<br>%{x|%b %d, %H:%M UTC}<br>"
                     + metric_label
-                    + ": %{customdata[0]:.5f}<extra></extra>"
+                    + ": %{y:.4f}<extra></extra>"
                 ),
-                customdata=metric_df[["score"]].to_numpy(),
-                cliponaxis=False,
+                cliponaxis=True,
             )
             traces.append(scatter)
 
@@ -950,117 +996,149 @@ def build_html_from_df(df: pd.DataFrame, last_updated: datetime | None = None) -
             best_df = best_df[best_df["improved"]].copy()
             if best_df.empty:
                 continue
-            best_df["plot_score"] = best_df["best_score"]
-            if cap is not None:
-                best_df["plot_score"] = best_df["plot_score"].clip(upper=cap)
-            best_df["best_time_str"] = best_df["best_time"].dt.strftime("%Y-%m-%d %H:%M UTC")
-            best_df["day_time_str"] = best_df["day_best_time"].dt.strftime("%Y-%m-%d %H:%M UTC")
-            marker_text = best_df["best_user"].tolist()
-            customdata = [
-                [
-                    best_user,
-                    best_time_str,
-                    day_user,
-                    day_time_str,
-                    (f"{day_score:.5f}" if pd.notna(day_score) else "—"),
-                    summary,
-                    original,
-                ]
-                for best_user, best_time_str, day_user, day_time_str, day_score, summary, original in zip(
-                    best_df["best_user"],
-                    best_df["best_time_str"],
-                    best_df["day_best_user"],
-                    best_df["day_time_str"],
-                    best_df["day_best_score"],
-                    best_df["summary"],
-                    best_df["best_score"],
-                )
-            ]
+            all_best_vals.extend(best_df["best_score"].dropna().tolist())
+            best_df["best_time_str"] = best_df["best_time"].dt.strftime("%b %d, %H:%M UTC")
+
             best_trace = go.Scatter(
                 x=best_df["day_best_time"],
-                y=best_df["plot_score"],
-                text=marker_text,
-                mode="lines+markers+text",
-                name=f"Best {metric_label}",
+                y=best_df["best_score"],
+                mode="lines+markers",
+                name=f"{short_label} (record)",
                 legendgroup=legend_group,
-                yaxis=axis_id,
+                line=dict(color=style.get("line_color", ACCENT), width=3, shape="hv"),
                 marker=dict(
                     color=style.get("line_color", ACCENT),
-                    size=16,
-                    line=dict(width=2, color=style.get("line_dark", ACCENT_DARK)),
+                    size=8,
+                    line=dict(width=1.5, color="white"),
                 ),
-                line=dict(color=style.get("line_color", ACCENT), width=3),
-                textposition=style.get("best_text_position", "top center"),
-                textfont=dict(size=13, color="#333"),
-                customdata=customdata,
+                customdata=best_df[["best_user", "best_time_str"]].to_numpy(),
                 hovertemplate=(
-                    "%{customdata[5]}<br>"
-                    "Best so far: %{customdata[0]} (since %{customdata[1]})<br>"
-                    + "Best " + metric_label + ": %{customdata[6]:.5f}<extra></extra>"
+                    "Best " + metric_label + ": %{y:.4f}<br>"
+                    "%{customdata[0]}<br>since %{customdata[1]}<extra></extra>"
                 ),
-                line_shape="hv",
                 cliponaxis=False,
             )
             traces.append(best_trace)
 
-        x_series = sub["when"].dropna()
+            # Winner label as a paper-safe annotation so it never gets clipped
+            # at the right edge (as in-plot scatter text does).
+            winner_labels.append({
+                "x": best_df["day_best_time"].iloc[-1],
+                "y": float(best_df["best_score"].iloc[-1]),
+                "user": str(best_df["best_user"].iloc[-1]),
+                "score": float(best_df["best_score"].iloc[-1]),
+                "color": style.get("line_dark", style.get("line_color", ACCENT)),
+            })
+
+        # Focused y-range: winners near the bottom, baseline near the top.
+        if all_best_vals:
+            best_anchor = max(all_best_vals)
+            y_lo = min(all_best_vals) - 0.02
+        elif all_scatter_vals:
+            best_anchor = BASELINE
+            y_lo = min(all_scatter_vals) - 0.02
+        else:
+            best_anchor = BASELINE
+            y_lo = 0.80
+        scores_series = pd.Series(all_scatter_vals).dropna()
+        p70 = float(scores_series.quantile(0.70)) if not scores_series.empty else BASELINE + 0.05
+        y_hi = min(p70, best_anchor + 0.30)
+        y_hi = max(y_hi, best_anchor + 0.03, BASELINE + 0.015)
+        y_range = [y_lo, y_hi]
+
+        # X range: hard-coded per phase when known, else padded data range.
         x_range = None
+        x_series = sub["when"].dropna()
         if not x_series.empty:
             date_min = x_series.min()
             date_max = x_series.max()
             if date_min == date_max:
                 x_range = [date_min - pd.Timedelta(days=1), date_max + pd.Timedelta(days=1)]
             else:
-                span = date_max - date_min
-                pad = span * 0.05
+                pad = (date_max - date_min) * 0.05
                 x_range = [date_min - pad, date_max + pad]
+        xr = phase_xrange(ph)
+        if xr:
+            # Keep the phase start fixed, but extend the end to cover late
+            # submissions: scoring lags, so winning entries (and stragglers)
+            # keep landing after the official close date. Clipping them would
+            # hide the actual record holders.
+            start = pd.Timestamp(xr[0], tz="UTC")
+            end = pd.Timestamp(xr[1], tz="UTC")
+            if not x_series.empty:
+                data_max = pd.Timestamp(x_series.max())
+                if data_max.tzinfo is None:
+                    data_max = data_max.tz_localize("UTC")
+                if data_max > end:
+                    end = data_max
+            end = end + (end - start) * 0.05  # room for end-of-line winner labels
+            x_range = [start, end]
+        elif X_START and X_END:
+            x_range = [X_START, X_END]
+
+        phase_title = ph if ph else TITLE_PREFIX
+        title_html = (
+            f"<b>{phase_title} — the race to the top</b><br>"
+            "<span style='font-size:13px;color:#64748b'>"
+            "Bold lines track each challenge's record · faint dots are individual "
+            "submissions · lower is better ↓ (1.0 = predicting the mean)"
+            "</span>"
+        )
 
         layout = go.Layout(
-            title=dict(text=title_text, x=0.5, font=dict(size=24, color="#2f2f2f")),
-            margin=dict(l=70, r=20, t=70, b=80),
+            title=dict(text=title_html, x=0.04, xanchor="left",
+                       font=dict(size=20, color="#1e293b", family=FONT_FAMILY)),
+            font=dict(family=FONT_FAMILY, color="#334155"),
+            margin=dict(l=72, r=158, t=104, b=92),
             paper_bgcolor="white", plot_bgcolor="white",
             xaxis=dict(
-                title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")),
-                type="date", showgrid=True,
-                gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
-                tickfont=dict(size=14, color="#3a3a3a"),
+                title=dict(text="Submission date (UTC)", font=dict(size=14, color="#475569")),
+                type="date", showgrid=False, zeroline=False,
+                tickfont=dict(size=13, color="#475569"),
+                ticks="outside", tickcolor="#cbd5e1", ticklen=5,
+                showline=True, linecolor="#cbd5e1",
                 range=x_range,
             ),
             yaxis=dict(
-                title=dict(text=axis_label, font=dict(size=16, color="#334155")),
-                type="linear", autorange=True, showgrid=True,
-                gridcolor="#e9e9e9", gridwidth=1, zeroline=False,
-                tickfont=dict(size=14, color="#3a3a3a"),
+                title=dict(text="Score  (lower is better ↓)", font=dict(size=14, color="#475569")),
+                type="linear", showgrid=True,
+                gridcolor="#eef2f6", gridwidth=1, zeroline=False,
+                tickfont=dict(size=13, color="#475569"),
                 range=y_range,
             ),
-            yaxis2=dict(
-                title=dict(text="Combined Score", font=dict(size=16, color="#334155")),
-                type="linear", autorange=True, showgrid=False,
-                overlaying="y", side="right",
-                tickfont=dict(size=13, color="#3a3a3a"),
-                range=y2_range,
+            legend=dict(
+                orientation="h", x=0.5, xanchor="center", y=-0.20, yanchor="top",
+                font=dict(size=13, color="#334155"), bgcolor="rgba(0,0,0,0)",
             ),
-            legend=dict(orientation="h", x=0.15, y=-0.18, font=dict(size=13, color="#3a3a3a")),
             hovermode="closest",
-            height=560,
+            height=520,
         )
-        if not axis_scores.get("y2"):
-            layout.update(yaxis2=dict(overlaying="y", side="right", showgrid=False, visible=False, showticklabels=False))
-        # Apply per-phase x-axis range, hard-coded for Warmup/Final
-        xr = phase_xrange(ph)
-        if xr:
-            layout.update(xaxis=dict(title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")), type="date", showgrid=True, range=list(xr), gridcolor="#e9e9e9", gridwidth=1, zeroline=False, tickfont=dict(size=14, color="#3a3a3a")))
-        elif X_START and X_END:
-            layout.update(xaxis=dict(title=dict(text="Snapshot Time (UTC)", font=dict(size=16, color="#334155")), type="date", showgrid=True, range=[X_START, X_END], gridcolor="#e9e9e9", gridwidth=1, zeroline=False, tickfont=dict(size=14, color="#3a3a3a")))
 
         fig = go.Figure(data=traces, layout=layout)
+        # Reference line at the "predict the mean" baseline for context.
+        if traces and y_lo <= BASELINE <= y_hi:
+            fig.add_hline(
+                y=BASELINE,
+                line=dict(color="#94a3b8", width=1.2, dash="dot"),
+                annotation_text="Baseline — predicting the mean",
+                annotation_position="top left",
+                annotation_font=dict(size=11, color="#94a3b8", family=FONT_FAMILY),
+            )
+        # Winner label sits just right of each line's final (record) point.
+        for wl in winner_labels:
+            fig.add_annotation(
+                x=wl["x"], y=wl["y"], xref="x", yref="y",
+                text=f"<b>{wl['user']}</b> · {wl['score']:.4f}",
+                showarrow=False, xanchor="left", yanchor="middle", xshift=10,
+                font=dict(size=12, color=wl["color"], family=FONT_FAMILY),
+            )
         if not traces:
-            # Add a subtle placeholder annotation when no data yet
-            fig.add_annotation(text="No data yet", xref="paper", yref="paper", x=0.5, y=0.5, showarrow=False, font=dict(color="#888", size=14))
+            fig.add_annotation(text="No data yet", xref="paper", yref="paper", x=0.5, y=0.5,
+                               showarrow=False, font=dict(color="#888", size=14))
         div_id = f"leaderboard-plot-{idx}"
-        plot_html = fig.to_html(full_html=False, include_plotlyjs="cdn", div_id=div_id, config={"displaylogo": False})
+        plot_html = fig.to_html(full_html=False, include_plotlyjs="cdn", div_id=div_id, config={"displaylogo": False, "responsive": True})
         pieces.append("  " + plot_html)
-        pieces.append("  <div style=\"height:12px\"></div>")
+        pieces.append("  <div style=\"height:28px\"></div>")
 
     pieces.append("</div>")
     return "\n".join(pieces)
